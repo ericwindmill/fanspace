@@ -1,7 +1,7 @@
 # fanspace.io
 
-[Heroku link]: heroku.com
-[Trello link] [https://trello.com/b/WbdGeDnr/fanspace-io]
+Heroku: [https://fanspaceapp.herokuapp.com/]
+Trello: [https://trello.com/b/WbdGeDnr/fanspace-io]
 
 ## Minimum Viable Product
 
