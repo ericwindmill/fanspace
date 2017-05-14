@@ -14,7 +14,7 @@ fanspace.io is a web application built using Ruby on Rails and React/Redux. The 
     * w/ Search Setlists
 * Setlist Detail
 * Setlist Interaction
-    * Comment and 'I was there' Functionality.
+    * Comment and 'I was there' Functionality. (NB: I was there is like follows)
 * User Profile
     * Displays concerts that were attended by user. 
 
@@ -40,6 +40,7 @@ fanspace.io is a web application built using Ruby on Rails and React/Redux. The 
 **Objective:** Setlists can be searched by year, venue, song, opening act.
 
 ### Bonus Features (TBD):
+    Organize setlists by Tours (think: Notes / Notebooks in evernote)
     Google Maps Concert Tracking
     Messages between users
     Social Media Sharing
