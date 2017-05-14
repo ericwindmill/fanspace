@@ -5,6 +5,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 city        | string    | not null
+state       | string    | not null
 date        | text      | not null
 venue       | text      | not null
 
@@ -25,13 +26,6 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 title       | string    | not null
-
-## songs
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-title       | string    | not null
-album       | string    | not null
 
 ## setlistSongTaggings
 column name | data type | details
