@@ -2,6 +2,11 @@
     currentUser: {
         id: 1,
         username: 'rod-stewart'
+        image_url: 'rodstewartgreenhat.png'
+        location: {
+            city: 'London'
+            state: 'England'
+        }
     },
     setList: {
         date : {

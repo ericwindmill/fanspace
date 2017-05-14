@@ -43,6 +43,8 @@ username        | string    | not null, indexed, unique
 email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
+image_url       | string    |
+location     | string    |
 
 ## comments
 column name | data type | details
