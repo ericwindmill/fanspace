@@ -3,11 +3,12 @@
         id: 1,
         username: 'rod-stewart'
         image_url: 'rodstewartgreenhat.png',
-        about: "My cat is also named Rod Stewart."
+        about: "My cat is also named Rod Stewart.",
         location: {
             city: 'London',
             state: 'England'
-        }
+        },
+        attends: [setlistId1, setlistId2, etc..]
     },
     setList: {
         date : {
@@ -25,13 +26,13 @@
             },
             attends: ['userId', 'userId', 'userId', 'userId', 'userId', 'userId', 'userId', 'userId'... ]
         }
-    },
-    albums: {
+    }
+}
+    <!--albums: {
         albumTitle: {
             songs: [song1, song2, song3, ...]
         }
-    }
-}
+    }-->
 
 
 ### QUESTION

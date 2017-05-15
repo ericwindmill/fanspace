@@ -52,7 +52,8 @@ session_token   | string    | not null, indexed, unique
 image_url       | string    | 
 location        | string    |
 about           | text      |
-songTaggings    | array?    | not null, default [] 
+songTaggings    | array?    | not null, default []
+attends         | array     | not null, default [] 
 
 
 *Question: I want the app to keep track  of which songs a certain user has seen. Is this the right way to access that data?*
