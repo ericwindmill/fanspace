@@ -1,3 +1,4 @@
+``` javascript
 {
     currentUser: {
         id: 1,
@@ -8,12 +9,18 @@
             city: 'London',
             state: 'England'
         },
-        attends: [setlistId1, setlistId2, etc..]
+        attends: [....attendsObjects]
+    },
+    userIndex: {
+        users: [...userObjects]
+    }.
+    setListIndex: {
+        setListID : [setlistObject, setlistObject, etc]
     },
     setList: {
         date : {
             id: 1,
-            songs: ['SongTitle', 'SongTitle', 'SongTitle', 'SongTitle', 'SongTitle', 'SongTitle', 'SongTitle'... ]
+            songs: [...song objects]
             venue: 'Red Rocks Ampitheater',
             date: 01052016,
             city: 'Morrison',
@@ -24,16 +31,8 @@
                     body: 'Laylow let the fetus rock...'
                 }
             },
-            attends: ['userId', 'userId', 'userId', 'userId', 'userId', 'userId', 'userId', 'userId'... ]
+            attends: [...attendsObjetcs]
         }
-    }
+    } 
 }
-    <!--albums: {
-        albumTitle: {
-            songs: [song1, song2, song3, ...]
-        }
-    }-->
-
-
-### QUESTION
-*Do I need a slice of state for a users index?*
+```

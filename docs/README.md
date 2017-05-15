@@ -1,6 +1,5 @@
 # fanspace.io
 
-[fanspace.io link][fanspace] www.fanspace.com
 
 fanspace.io is a full-stack web app where rock and roll meets metrics. It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with Redux on the frontend.
 

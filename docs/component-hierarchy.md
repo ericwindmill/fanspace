@@ -1,58 +1,54 @@
 ## Component Heirarchy
 
-## App
 
-### App
-* Top Level Component
 
-### AuthFormContainer
-* Auth Form
 
-### HomeContainer
-* LandingPage
-* TopNav
-* LeftNav
+## RootContainer
+  ### Not Logged In:
 
-### TopNavContainer
-* Branding
-* Authlinks
+  ### HomeContainer
+    * LandingPage 
 
-### LeftNavContainer
-* Search
-* Nav Links
+  ### AuthFormContainer
+    * Auth Form
+
+  ###Logged In:
+
+  ### AppContainer
+    * Top Level Component
+    * TopNav
+    * LeftNav
+
+  ### TopNavContainer
+    * Branding
+    * Authlinks
+
+  ### LeftNavContainer
+    * Nav Links
 
 
 ## Setlists
 
-### SetlistIndexContainer
-* SetlistsIndex
+  ### SetlistIndexContainer
+    * SetlistsIndex
 
-### SetlistContainer
-* SetlistDetail
-* AttendedButton
-* UpdateSetlist
-* AddCommentForm
+  ### SetlistContainer
+    * SetlistDetail
+    * AttendedButton
+    * UpdateSetlist
+    * AddCommentForm
 
-### NewSetlistContainer
-* NewSetlistForm
+  ### NewSetlistContainer
+    * NewSetlistForm
 
 ## Users
 
-### UserIndexContainer
-* UserIndex
+  ### UserIndexContainer
+    * UserIndex
 
-### UserProfileContainer
-* UserDetail
-* UserStats
-
-## Search
-
-## SetlistSearch
-* SetlistSearch
-
-## UserSearch
-* UserSearch
-
+  ### UserProfileContainer
+    * UserDetail
+    * UserStats
 
 
 
@@ -69,5 +65,3 @@
 | "/setlists/:setlistid/comment" | "AddComment" |
 | "/users" | "UserIndexContainer" |
 | "/users/:userid" | "UserProfileContainer" |
-| "/search" | "SetlistSearch" |
-| "/user-search" | "UserSearch" |

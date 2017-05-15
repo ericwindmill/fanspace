@@ -37,11 +37,3 @@
 ### Songs
 * GET api/songs -- gets all songs
 * GET api/songs/:id -- get specific songs
-
-### Albums
-* GET api/albums -- gets all albums 
-* GET api/albums/:id -- gets individual albums;
-
-
-
-### *Do I need seperate api requests to search by date, venue, etc?*

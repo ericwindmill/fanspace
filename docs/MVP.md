@@ -2,7 +2,6 @@
 * New account creation, login, and demo login
 * Production README.md
 * Home Setlist Feed
-    * w/ Search Setlists
 * Setlist Detail
 * Setlist Interaction
     * Comment and 'I was there' Functionality. (NB: I was there is like follows)
