@@ -21,7 +21,9 @@ column name | data type | details
 id          | integer   | not null, primary key
 title       | string    | not null
 album       | string    | not null, foreign key (references album)
+playCount   | integer   | not null, default: 0
 songTaggings_id | integer |  not null foreign key (refernces songTaggings)
+
 
 
 ## albums
@@ -38,7 +40,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 setlist_id  | integer   | not null, foreign key (references setlist), indexed
 song_id     | integer   | not null, foreign key (references song), indexed
-
+album       | string    | not_null, foreign key (references album)
 
 ## users
 column name     | data type | details
@@ -48,9 +50,13 @@ username        | string    | not null, indexed, unique
 email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
-image_url       | string    |
+image_url       | string    | 
 location        | string    |
 about           | text      |
+songTaggings    | array?    | not null, default [] 
+*Question: I want the app to keep track  of which songs a certain user has seen. Is this the right way to access that data?*
+*I also need to know how to keep track of attends. How will my user be able to see the # of concerts they attended?*
+
 
 ## comments
 column name | data type | details
@@ -68,3 +74,10 @@ id          | integer   | not null, primary key
 attend      | boolean   | not null
 user_id     | integer   | not null, foreign key (references users), indexed
 setlist_id  | integer   | not null, foreign key (references setlist), indexed
+
+
+
+*users can attend and comment on setlists*
+*setlists have many songs*
+*albums have many songs*
+*songs belong to albums and setlists*
