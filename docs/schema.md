@@ -10,9 +10,8 @@ date        | date      | not null
 venue       | text      | not null
 poster_ img | text      | not null *but have default*
 songTaggings | array    | not null, foreign key (references songTaggings), indexed
+
 ###Question *Do I need this or can I just use hasmany: songs?*
-
-
 ###Question *Do I need a cities table? Becuase a city will have many setlists... Same for venues....*
 
 ## songs
@@ -54,6 +53,8 @@ image_url       | string    |
 location        | string    |
 about           | text      |
 songTaggings    | array?    | not null, default [] 
+
+
 *Question: I want the app to keep track  of which songs a certain user has seen. Is this the right way to access that data?*
 *I also need to know how to keep track of attends. How will my user be able to see the # of concerts they attended?*
 
@@ -77,7 +78,7 @@ setlist_id  | integer   | not null, foreign key (references setlist), indexed
 
 
 
-*users can attend and comment on setlists*
-*setlists have many songs*
-*albums have many songs*
-*songs belong to albums and setlists*
+*Users can attend and comment on setlists.*
+*Setlists have many songs.*
+*Albums have many songs.*
+*Songs belong to albums and setlists.*
