@@ -6,11 +6,12 @@ column name | data type | details
 id          | integer   | not null, primary key
 city        | string    | not null
 state       | string    | not null
-date        | text      | not null
+date        | date      | not null
 venue       | text      | not null
-
+poster_ img | text      | not null *but have default*
+songTaggings | array    | not null, foreign key (references songTaggings), indexed
 ###Question *Do I need this or can I just use hasmany: songs?*
-setlistSongTaggiings | integer   | not null, foreign key (references songListTaggings), indexed
+
 
 ###Question *Do I need a cities table? Becuase a city will have many setlists... Same for venues....*
 
@@ -20,14 +21,18 @@ column name | data type | details
 id          | integer   | not null, primary key
 title       | string    | not null
 album       | string    | not null, foreign key (references album)
+songTaggings_id | integer |  not null foreign key (refernces songTaggings)
+
 
 ## albums
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 title       | string    | not null
+cover_img   | string    |
+songTaggings | array    |
 
-## setlistSongTaggings
+## songTaggings
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
