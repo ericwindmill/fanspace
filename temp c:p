@@ -2,3 +2,8 @@
     //   <Route path="/" component={AboutContainer} />
     //   <Route path="/about" component={HomeContainer} />
     // </Switch>
+
+        // <Switch>
+    //   <Route path='/' component={Home} />
+    //   <Route component 
+    // </Switch>

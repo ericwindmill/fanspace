@@ -15,7 +15,7 @@
 
   ##Logged In:
   ### AppContainer
-    * Top Level Component
+    * Content Component
     * LoggedInNav
     * LeftNav
 

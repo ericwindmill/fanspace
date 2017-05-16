@@ -1,19 +1,20 @@
-// This is the top level component if someone is logged in. In other words/ it should render the navs and the MAIN concent component.
-
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, NavLink } from 'react-router-dom'
+import { AuthRoute } from '../util/route_util.jsx'
 import GreetingContainer from './home/greeting_container'
 import SessionFormContainer from './home/session/session_form_container'
+import Home from './home/home'
+import TopNav from './top_nav'
+import LoginPage from './home/session/login_page'
 
 const App = () => (
   <div className="app-component">
-    <header>
-      <h1> Welcome to Fanspace </h1>
-      <GreetingContainer />
-    </header>
-
-    <Route path="/log-in" component={SessionFormContainer} />
-    <Route path="/sign-up" component={SessionFormContainer} />
+    <TopNav />
+    <Switch>
+      <Route  exact path="/" component={Home} />
+      <AuthRoute path="/log-in" component={LoginPage} />
+      <AuthRoute path="/sign-up" component={LoginPage} />
+    </Switch>
   </div>
 )
 
