@@ -4,19 +4,19 @@
 
 
 ## RootContainer
-  ### Not Logged In:
+  ##Logged Out:
+  ### HomeContainer --- '/'
+    * LoggedOutNav / login/signup
+    * LandingComponent
 
-  ### HomeContainer
-    * LandingPage 
+   ### LogInPage --- '/signin' OR '/signup'
+   ### AuthFormContainer
+    * Auth Form  
 
-  ### AuthFormContainer
-    * Auth Form
-
-  ###Logged In:
-
+  ##Logged In:
   ### AppContainer
     * Top Level Component
-    * TopNav
+    * LoggedInNav
     * LeftNav
 
   ### TopNavContainer

@@ -1,22 +1,19 @@
 import { merge } from 'lodash'
-import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from './actions/sessions_actions'
+import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from '../actions/session_actions'
 
-const defaultState = {
+const nullUser = {
   currentUser: null,
   errors: []
 }
 
-const sessionReducer = (state = defaultState, action) => {
+const sessionReducer = (state = nullUser, action) => {
   Object.freeze(state)
-  let currentUser
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      currentUser = merge({}, state, action.user)
       action.errors = []
-      return currentUser
+      return merge({}, state, {currentUser: action.currentUser})
     case RECEIVE_ERRORS:
-      currentUser = null
-      return merge({}, currentUser, action.errors)
+      return {currentUser: null, errors: action.errors}
     default:
       return state
   }
