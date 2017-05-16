@@ -1,3 +1,12 @@
+<script type="text/javascript">
+  <% if logged_in?  %>
+    window.currentUser = <%= render(
+      'api/users/user.json.jbuilder',
+      user: current_user
+    ).html_safe %> 
+  <% end %>
+</script>
+
 <main id="root">
   <marquee behavior="scroll" direction="left" scrollamount="15">
     <h1 style="font-size:3em;"> JUST GIVE UP </h1> 

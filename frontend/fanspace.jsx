@@ -15,8 +15,14 @@ window.login = login
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore()
-  window.store = store
+  let store;
+  if (window.currentUser){
+    const preLoadedState = { session: { currentUser: window.currentUser } }
+    store = configureStore(preLoadedState)
+    delete window.currentUser
+  } else {
+    store = store.configureStore()
+  }
   const root = document.getElementById('root')
   ReactDOM.render(<Root store={ store }/>, root)
 })
