@@ -8,18 +8,70 @@
 
 
 ActiveRecord::Base.transaction do 
-  Setlist.destroy_all
 
-  # setlists = {
-  #   "1" => {
-  #     date: 12/29/2012,
-  #     venue: 'Capitol Theater'
-  #     city: "Port Chester",
-  #     state: "New York",
-  #     country: "USA",
-  #     poster_image_url: asset_path(poster-12292012.jpg)
-  #   }
-  # }
+
+  Setlist.create!(
+    date: Date.new(2005, 11, 05),
+    venue: 'Alladin Theater',
+    city: "Portland",
+    state: "Oregon",
+    country: "USA",
+    poster_img_url:'assets/posters/2005_11_05.jpg'
+  )
+
+   Setlist.create!(
+    date: Date.new(2008, 06, 12),
+    venue: 'Bonnaroo',
+    city: "Manchester",
+    state: "Tennesee",
+    country: "USA",
+    poster_img_url:'assets/posters/2008_06_12.jpg'
+  )
+
+  Setlist.create!(
+    date: Date.new(2008, 06, 20),
+    venue: 'Radio City Music Hall',
+    city: "New York",
+    state: "New York",
+    country: "USA",
+    poster_img_url:'assets/posters/2008_06_20.jpg'
+  )
+
+  Setlist.create!(
+    date: Date.new(2008, 12, 31),
+    venue: 'Madison Square Garden',
+    city: "New York",
+    state: "New York",
+    country: "USA",
+    poster_img_url:'assets/posters/2008_12_31.jpg'
+  )
+
+  Setlist.create!(
+    date: Date.new(2011, 8, 04),
+    venue: 'Red Rocks Ampitheater',
+    city: "Morrison",
+    state: "Colorado",
+    country: "USA",
+    poster_img_url:'assets/posters/2011_08_04.jpg'
+  )
+
+  Setlist.create!(
+    date: Date.new(2012, 8, 03),
+    venue: 'Red Rocks Ampitheater',
+    city: "Morrison",
+    state: "Colorado",
+    country: "USA",
+    poster_img_url:'assets/posters/2012_08_03.jpg'
+  )
+
+  Setlist.create!(
+    date: Date.new(2012, 8, 04),
+    venue: 'Red Rocks Ampitheater',
+    city: "Morrison",
+    state: "Colorado",
+    country: "USA",
+    poster_img_url:'assets/posters/2012_08_03.jpg'
+  )
 
   Setlist.create!(
     date: Date.new(2012, 12, 27),
@@ -39,7 +91,7 @@ ActiveRecord::Base.transaction do
     poster_img_url:'assets/posters/2012_12_28.jpg'
   )
 
-    Setlist.create!(
+  Setlist.create!(
     date: Date.new(2012, 12, 29),
     venue: 'Capitol Theater',
     city: "Port Chester",
@@ -48,5 +100,32 @@ ActiveRecord::Base.transaction do
     poster_img_url:'assets/posters/2012_12_29.jpg'
   )
 
+  Setlist.create!(
+    date: Date.new(2015, 10, 15),
+    venue: 'Masonic Center',
+    city: "San Francisco",
+    state: "California",
+    country: "USA",
+    poster_img_url:'assets/posters/2015_10_15.jpg'
+  )
+
+  Setlist.create!(
+    date: Date.new(2015, 10, 16),
+    venue: 'Masonic Center',
+    city: "San Francisco",
+    state: "California",
+    country: "USA",
+    poster_img_url:'assets/posters/2015_10_16.jpg'
+  )
+
+  Setlist.create!(
+    date: Date.new(2015, 10, 17),
+    venue: 'Masonic Center',
+    city: "San Francisco",
+    state: "California",
+    country: "USA",
+    poster_img_url:'assets/posters/2015_10_16.jpg'
+  )
+  
 
 end
