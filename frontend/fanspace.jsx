@@ -6,10 +6,12 @@ import Root from './components/root'
 // temp vars for testing!
 import {fetchAllSetlists} from './util/setlist_util'
 import {receiveAllSetlists, requestAllSetlists} from './actions/setlist_actions'
+import {selectAllSetlists} from './reducers/selectors'
 
 window.fetchAllSetlists = fetchAllSetlists
 window.receiveAllSetlists = receiveAllSetlists
 window.requestAllSetlists = requestAllSetlists
+window.selectAllSetlists = selectAllSetlists
 
 
 document.addEventListener('DOMContentLoaded', () => {
