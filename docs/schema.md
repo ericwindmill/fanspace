@@ -5,7 +5,8 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 city        | string    | not null
-state       | string    | not null
+state       | string    | 
+country     | string    | 
 date        | date      | not null
 venue       | text      | not null
 poster_img  | text      | not null
