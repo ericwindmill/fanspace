@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom'
 import configureStore from './store/store'
 import Root from './components/root'
 
-
 // temp vars for testing!
-import * as APIUtil from './util/session_api_util.js'
-window.apilogin = APIUtil.login
-window.signup = APIUtil.signup
-window.logout = APIUtil.logout
+import {fetchAllSetlists} from './util/setlist_util'
+import {receiveAllSetlists, requestAllSetlists} from './actions/setlist_actions'
 
-import { login } from './actions/session_actions.js'
-window.login = login
+window.fetchAllSetlists = fetchAllSetlists
+window.receiveAllSetlists = receiveAllSetlists
+window.requestAllSetlists = requestAllSetlists
 
 
 document.addEventListener('DOMContentLoaded', () => {
