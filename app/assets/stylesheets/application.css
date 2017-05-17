@@ -71,14 +71,16 @@ p, a {
 
 .top-nav {
   display: grid;
-  grid-template-columns: repeat(10, 10%);
-  grid-gap: 10px;
+  grid-template-columns: auto;
+  grid-gap: 25px;
 
 }
 
 .title {
-  grid-column: 1;
+  grid-column: 4 / 6;
   text-decoration: none;
+  justify-self: center;
+  align-self: center;
 }
 
 .logged-in-nav, .logged-out-nav {
