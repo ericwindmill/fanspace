@@ -7,3 +7,5 @@
 
   ###Features:
    * Footer Nav
+   * Auth errors
+   * Demo acct

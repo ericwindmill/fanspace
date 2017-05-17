@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170515235507) do
+ActiveRecord::Schema.define(version: 20170517023734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "albums", force: :cascade do |t|
+    t.string   "title",         null: false
+    t.string   "cover_art_url", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "setlist_songs", force: :cascade do |t|
+    t.integer  "setlist_id", null: false
+    t.integer  "song_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "setlists", force: :cascade do |t|
+    t.string   "city",           null: false
+    t.string   "state",          null: false
+    t.date     "date",           null: false
+    t.string   "venue",          null: false
+    t.string   "poster_img_url", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.string   "album",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false

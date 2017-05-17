@@ -8,7 +8,7 @@ city        | string    | not null
 state       | string    | not null
 date        | date      | not null
 venue       | text      | not null
-poster_ img | text      | not null *but have default*
+poster_img  | text      | not null
 
 Associations: has many songs, has many attends, has many comments 
 
@@ -19,11 +19,19 @@ column name | data type | details
 id          | integer   | not null, primary key
 title       | string    | not null
 album       | string    | not null, foreign key (references album)
-playCount   | integer   | not null, default: 0
 
 Associations: belongs to albums, belongs to setlists
 
-*Question* do I need playCount or is it possible to use associations to get all of the songs played over all the setlists and then count uniques? 
+
+## setlistSongs 
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+setlist_id  | integer   | not null, foreign key (references setlist)
+song_id     | integer   | not null, foreign key (references song )
+
+*Join Table* Songs have many setlists, and setlsts have many songs
+
 
 ## albums
 column name | data type | details
