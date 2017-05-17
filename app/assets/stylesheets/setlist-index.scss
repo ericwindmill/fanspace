@@ -1,0 +1,45 @@
+.setlist-index-component {
+  background: black;
+  min-height: 100vh;
+}
+
+.setlist-index-component h1 {
+  margin: 0 auto;
+  color: rgb(75, 231, 252);
+  display:block;
+  text-align: center;
+  
+}
+
+.poster-index-grid {
+  display:grid;
+  grid-template-columns: auto;
+  grid-gap: 20px;
+  justify-content: space-around;
+}
+
+.setlist-index-item {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+
+}
+
+.setlist-index-poster img {
+  max-width: 300px;
+  position: relative;
+  display: inline-block;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+
+  } 
+
+}
+
+.setlist-index-info {
+  color: white;
+  text-align:center;
+  margin: 0;
+}

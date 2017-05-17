@@ -1,4 +1,5 @@
 import React from 'react' 
+import SetlistIndexItem from './setlist_index_item'
 
 class SetlistIndex extends React.Component {
   constructor(props) {
@@ -13,15 +14,17 @@ class SetlistIndex extends React.Component {
 
   render() {
     const { setlists } = this.props
-    console.log(setlists)
-    const setlistItem = setlists.map(setlist => {
-      return setlist.city
-    })
-    console.log(setlistItem)
+
+
     return(
-      <div>
-        {setlistItem[0]}
-      </div>
+      <section className="setlist-index-component">
+        <h1> Were You There? </h1>
+          <div className="poster-index-grid">
+            <ul>
+              {setlists.map(setlist => <SetlistIndexItem key={setlist.id} setlist={setlist} /> )}
+            </ul>
+          </div> 
+      </section>
     )
   }
 }
