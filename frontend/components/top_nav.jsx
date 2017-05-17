@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, NavLink } from 'react-router-dom'
+import { Route, NavLink, Link } from 'react-router-dom'
 
 class TopNav extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class TopNav extends React.Component {
     const renderComponent = this.props.currentUser ? this.loggedInNav() : this.loggedOutNav()
     return(
       <div className="top-nav">
-        <h2 className="title">fanspace.io</h2>
+        <Link to='/'><h2 className="title">fanspace</h2></Link>
         {renderComponent}
       </div>
     )

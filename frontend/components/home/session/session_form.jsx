@@ -34,16 +34,16 @@ class SessionForm extends React.Component {
     const linkText = (this.props.formType === 'login') ? "Sign Up" : "Log In"
     const link = (this.props.formType === 'login') ? "/sign-up" : "/log-in"
     return(
-      <div className="sessionForm">
-         <form> 
-          <h2>{header}</h2>
-          <input type="text" value={this.state.username} 
+      <div className="session-form-container" >
+         <form className="session-form"> 
+          <h2 className="auth-form-head session-grid-a">{header}</h2>
+          <input className="txt-input session-grid-b" type="text" value={this.state.username} 
             onChange={this.updateState("username")} placeholder="username"></input>
-          <input type="password" value={this.state.password}
+          <input className="txt-input session-grid-c" type="password" value={this.state.password}
             onChange={this.updateState("password")} placeholder="password"></input>
-          <input type="submit" value={header} onClick={this.handleSubmit}></input>
+          <input className="btn sign-up-btn session-grid-d" type="submit" value={header} onClick={this.handleSubmit}></input>
+        <Link className="sign-up-link session-grid-e" to={link}>or {linkText}</Link>
         </form>
-        <Link to={link}>{linkText}</Link>
       </div>
     )
   }

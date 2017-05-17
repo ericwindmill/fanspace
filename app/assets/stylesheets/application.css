@@ -14,6 +14,57 @@
  *= require_self
  */
 
+  /************************************************************
+       RESETS
+ ************************************************************/
+/*.app-component {
+  background-color: darkgrey;
+  height: 100vh;
+}*/
+
+
+/****************************
+*     TYPOGRAPHY
+****************************/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+p, a {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+
+/****************************
+*     BUTTONS
+****************************/
+
+.btn {
+  border-radius: 35px;
+  background: white;
+  color: white;
+  background-color: #00a3b9;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+.btn:hover {
+  /*border: solid 2px black;*/
+
+  background-color: #00b6ce;
+
+}
+
+
+ /************************************************************
+       TOP NAVIGATION COMPONENT
+ ************************************************************/
+
 /****************************
 *     TOP NAV GRID 
 ****************************/
@@ -27,10 +78,11 @@
 
 .title {
   grid-column: 1;
+  text-decoration: none;
 }
 
 .logged-in-nav, .logged-out-nav {
-  grid-column: 7 / 9;
+  grid-column: 8 / span 2;
   display:grid;
   grid-template-columns: 50% 50%;
   grid-gap: 10px;
@@ -51,19 +103,190 @@
 *     TOP NAV STYLES 
 ****************************/
  .top-nav {
-  background-color: #333;
+  background-color: black;
   color: white;
  }
 
 .title {
   color: white;
-  padding: 10px 20px;
-
+  font-family: 'Archivo Narrow', Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding: 0 20px;
 }
 
-.nav-link {
+.nav-link, .nav-username {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding:5px 0;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid white;
+}
+
+
+
+ /************************************************************
+       LANDING PAGE COMPONENT
+ ************************************************************/
+
+
+.landing_page {
   color: white;
 }
 
+.landing-img {
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+}
+
+.landing-copy{
+  color: white;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.landing-copy h1 {
+  font-size: 5vw;
+  margin-bottom: 0;
+}
+
+.landing-copy h2 {
+  font-size: 2.5vw;
+  margin-top: 5px;
+}
+
+.landing-grid-a{
+  grid-column: 3 ;
+  grid-row: 7;
+}
+.landing-grid-b{
+  grid-column: 3;
+  grid-row: 8;
+}
+.landing-btn {
+  max-width: 100%;
+  justify-self: center;
+  padding: 15px 60px;
+}
 
 
+
+ /************************************************************
+       LANDING PAGE COMPONENT
+ ************************************************************/
+
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  background: gainsboro;
+  padding:45px 0;
+}
+
+
+.session-form-container {
+
+  width: 100%;
+  border-radius: 5px;
+  width: 500px;
+  margin: auto;
+  background: white;
+  padding: 0 0 50px;
+}
+
+.session-form {
+  margin: auto;
+  width: 470px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.session-grid-a {
+  justify-self: center;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.session-grid-b {
+  justify-self: center;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.session-grid-c {
+  justify-self: center;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.session-grid-d {
+  justify-self: center;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.session-grid-e {
+  justify-self: center;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.auth-form-head {
+  font-size: 2em;
+  text-align: center;
+
+
+}
+
+.txt-input {
+  outline: none;
+  display: block;
+  width: 90%;
+  padding: 3px;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  background: transparent;
+  margin: 0 0 15px;
+  height: 45px;
+  
+
+}
+
+.sign-up-btn {
+  margin: 10px 0 0 0;
+  padding: 10px 30%;
+  text-align: center;
+  border: none;
+}
+
+.sign-up-link {
+  padding: 20px 0 12px;
+  color: black;
+  text-decoration: none;
+  margin: auto;
+}
+
+.sign-up-link:hover {
+
+  color: #00a3b9;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #00a3b9;
+}
