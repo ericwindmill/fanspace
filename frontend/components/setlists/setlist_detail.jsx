@@ -1,5 +1,6 @@
 import React from 'react'
 import LeftNav from '../navs/left_nav_container'
+import SongList from './song_list'
 
 class SetlistDetail extends React.Component {
   constructor(props) {
@@ -14,20 +15,17 @@ class SetlistDetail extends React.Component {
 
   render() {
     const { setlistDetail } = this.props
-    const song = this.props.setlistDetail.set[0] || {title: ""}
-    console.log (song.title)
+        const songList = this.props.setlistDetail.set || []
     return (
       <div className="setlist-detail-main">
         <LeftNav />
         <div className="setlist-detail-profile">
           <figure><img src={setlistDetail.poster_img_url} />  </figure>
-          <h1> {this.props.setlistDetail.city}, {this.props.setlistDetail.state}</h1>
-          <h1> {this.props.setlistDetail.date} </h1>
-          <h1> {this.props.setlistDetail.venue} </h1>
+          <h1> {setlistDetail.city}, {setlistDetail.state}</h1>
+          <h1> {setlistDetail.date} </h1>
+          <h1> {setlistDetail.venue} </h1>
           
-          <ul>
-            <li>{song.title}</li>
-          </ul>
+          <SongList songs={songList}/> 
           
         </div>
         <div className="setlist-songs"></div> 

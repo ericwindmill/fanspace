@@ -152,6 +152,10 @@ ActiveRecord::Base.transaction do
   Song.create!(title: "One in the Same", album_id: 1)
 
   SetlistSong.create!(setlist_id: 1, song_id: 1)
+  SetlistSong.create!(setlist_id: 1, song_id: 2)
+  SetlistSong.create!(setlist_id: 1, song_id: 3)
+  SetlistSong.create!(setlist_id: 1, song_id: 4)
+  SetlistSong.create!(setlist_id: 1, song_id: 5)
   
 
 
