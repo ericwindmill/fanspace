@@ -11,6 +11,7 @@
 
 class Album < ApplicationRecord
   validates :title, :cover_art_url, presence: true;
+  
   has_many :songs
 
 end

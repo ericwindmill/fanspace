@@ -9,6 +9,15 @@
 
 ActiveRecord::Base.transaction do 
 
+  User.create!(
+    username: 'eric',
+    password: 'password'
+  )
+
+  User.create!(
+    username: 'guest',
+    password: 'password'
+  )
 
   Setlist.create!(
     date: Date.new(2005, 11, 05),
@@ -126,6 +135,25 @@ ActiveRecord::Base.transaction do
     country: "USA",
     poster_img_url:'assets/posters/2015_10_16.jpg'
   )
+
+  it_still_moves = Album.create(title: "It Still Moves", cover_art_url: 'assets/album_covers/it_still_moves.jpg' )
+
+  Song.create!(title: "Mahgeetah", album_id: 1)
+  Song.create!(title: "Dancefloors", album_id: 1)
+  Song.create!(title: "Golden", album_id: 1)
+  Song.create!(title: "Master Plan", album_id: 1)
+  Song.create!(title: "One Big Holiday", album_id: 1)
+  Song.create!(title: "I Will Sing You Songs", album_id: 1)
+  Song.create!(title: "Easy Morning Rebel", album_id: 1)
+  Song.create!(title: "Run Thru", album_id: 1)
+  Song.create!(title: "Rollin' Back'", album_id: 1)
+  Song.create!(title: "Just One Thing", album_id: 1)
+  Song.create!(title: "Steam Engine", album_id: 1)
+  Song.create!(title: "One in the Same", album_id: 1)
+
+  SetlistSong.create!(setlist_id: 1, song_id: 1)
   
+
+
 
 end

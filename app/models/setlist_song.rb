@@ -11,7 +11,7 @@
 
 class SetlistSong < ApplicationRecord
 
-  belongs_to :songs
-  belongs_to :setlists
+  belongs_to :song
+  belongs_to :setlist
 
 end

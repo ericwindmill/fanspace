@@ -10,9 +10,12 @@
 #
 
 class Song < ApplicationRecord
-  validates :title, :album, uniqueness: true
+  validates :title, uniqueness: true
+  validates :album_id, presence: true
   
   belongs_to :album
-  has_many :setlists, :through => :setlist_songs, :source => :setlists
+
+  has_many :setlist_songs
+  has_many :setlists, :through => :setlist_songs, :source => :setlist
 
 end
