@@ -7,11 +7,11 @@ class SongList extends React.Component {
   render() {
     const songs = this.props.songs.forEach(song => console.log(song))
     return (
-     <ul>
+     <ul className="setlist-song-list">
       {this.props.songs.map(song => 
-        <li key={song.id}> 
-          <p>{song.title}</p>
-          <p>{song.album.title}</p>  
+        <li className="setlist-song-object" key={song.id}> 
+          <p className="song-title">{song.title}</p>
+          <p className="album-title">{song.album.title}</p>  
         </li>
       )}
      </ul>

@@ -1,0 +1,90 @@
+$background: rgba(10, 10, 10, 1);
+
+// pure style reset
+.setlist-detail-main {
+  background-image: image-url("assets/setlist_background.png");
+  color: white;
+}
+
+//layout 
+.setlist-detail-grid {
+  display: grid; 
+  grid-template-columns: 2fr 3fr;
+  justify-content: space-around;
+  padding: 45px 0 ;
+  height: 100vh;
+  width: 80%;
+  padding-left: 224px;
+
+
+  > .setlist-detail-profile {
+    grid-column: 1;
+    background: none;
+    text-align: center;
+  }
+
+  > .setlist-song-list {
+    grid-column: 2;
+    border-radius: 10px;
+    list-style: none;
+    margin: 10px 0 30px;
+    width: 90%;
+
+  }
+}
+
+
+.setlist-detail-poster {
+  max-width: 300px;
+  min-width: 250px;
+  width: 80%;
+  padding: 10px;
+}
+
+
+.setlist-info-date, .setlist-info-city, .setlist-info-venue {
+  padding: 0 0 10px 0;
+  margin: 0;
+}
+
+
+.setlist-info-date {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.setlist-info-city {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.setlist-info-venue {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.setlist-song-object {
+ width: 50%;
+ padding-bottom: 20px;
+
+}
+
+ .song-title {
+    font-size: 1.4em;
+    font-weight: 400;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.album-title {
+  margin: 0;
+  padding: 0 0 15px 0;
+  font-weight: 300;
+  color: rgba(255,255,255, .6)
+}
+
+.attends-button {
+  margin-top: 20px;
+  padding: 15px 60px;
+}

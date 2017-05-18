@@ -1,7 +1,8 @@
 import React from 'react'
 import LeftNav from '../navs/left_nav_container'
 import SongList from './song_list'
-
+import { Link } from 'react-router-dom'
+ 
 class SetlistDetail extends React.Component {
   constructor(props) {
     super(props)
@@ -19,16 +20,16 @@ class SetlistDetail extends React.Component {
     return (
       <div className="setlist-detail-main">
         <LeftNav />
-        <div className="setlist-detail-profile">
-          <figure><img src={setlistDetail.poster_img_url} />  </figure>
-          <h1> {setlistDetail.city}, {setlistDetail.state}</h1>
-          <h1> {setlistDetail.date} </h1>
-          <h1> {setlistDetail.venue} </h1>
-          
-          <SongList songs={songList}/> 
-          
-        </div>
-        <div className="setlist-songs"></div> 
+          <div className="setlist-detail-grid"> 
+            <div className="setlist-detail-profile">
+              <img className="setlist-detail-poster" src={setlistDetail.poster_img_url} /> 
+              <h3 className="setlist-info-date"> {setlistDetail.date} </h3>
+              <h3 className="setlist-info-city"> {setlistDetail.city}, {setlistDetail.state}</h3>
+              <h3 className="setlist-info-venue"> {setlistDetail.venue} </h3>
+              <Link className="btn attends-button" to="/">I was there</Link>
+            </div>
+            <SongList className="song-list" songs={songList}/> 
+          </div>
       </div>
     )
   }
