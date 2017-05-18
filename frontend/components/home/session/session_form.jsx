@@ -18,7 +18,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state)
     this.props.processForm(user).then(() => {
-      this.props.history.push('/home')
+      this.props.history.push('/setlists')
     })
   }
 
@@ -31,7 +31,6 @@ class SessionForm extends React.Component {
 
 
   render () {
-    console.log(this.props.formType)
     const header = (this.props.formType === 'login') ? "Log In" : "Sign Up"
     const linkText = (this.props.formType === 'login') ? "Sign Up" : "Log In"
     const link = (this.props.formType === 'login') ? "/sign-up" : "/log-in"

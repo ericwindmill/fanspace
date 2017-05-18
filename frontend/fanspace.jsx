@@ -7,11 +7,13 @@ import Root from './components/root'
 import {fetchAllSetlists} from './util/setlist_util'
 import {receiveAllSetlists, requestAllSetlists} from './actions/setlist_actions'
 import {selectAllSetlists} from './reducers/selectors'
-
 window.fetchAllSetlists = fetchAllSetlists
 window.receiveAllSetlists = receiveAllSetlists
 window.requestAllSetlists = requestAllSetlists
 window.selectAllSetlists = selectAllSetlists
+
+import {fetchSingleSetlist} from './util/setlist_util'
+window.fetchSingleSetlist = fetchSingleSetlist
 
 
 document.addEventListener('DOMContentLoaded', () => {

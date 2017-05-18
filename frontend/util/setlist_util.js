@@ -4,3 +4,10 @@ export const fetchAllSetlists = () => (
     url: 'api/setlists'
   })
 )
+
+export const fetchSingleSetlist = id => (
+  $.ajax({
+    method: 'GET',
+    url: `api/setlists/${id}`
+  })
+)
