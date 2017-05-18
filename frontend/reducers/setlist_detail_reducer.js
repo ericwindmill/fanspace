@@ -8,7 +8,8 @@ const defaultSetlist = {
   USA: '',
   date: '',
   venue: '',
-  poster_img_url: ''
+  poster_img_url: '',
+  set: []
 }
 
 

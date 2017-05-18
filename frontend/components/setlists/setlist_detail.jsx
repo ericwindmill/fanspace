@@ -4,33 +4,18 @@ import LeftNav from '../navs/left_nav_container'
 class SetlistDetail extends React.Component {
   constructor(props) {
     super(props)
-
-  // this.formatLocation = this.formatLocation.bind(this)
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.requestSingleSetlist(this.props.match.params.setlistId)
   }
 
-  componentWillReceiveProps(newProps) {
-    if (this.props !== newProps) {
-      this.props.requestSingleSetlist(newProps.match.params.setlistId)
-    }
-  }
-
-  // formatLocation() {
-  //   const details = this.props.setlistDetail
-  //   if (details.country === "USA" ) {
-  //     return ({this.props.setlistDetails.city}, {details.state})
-  //   } else {
-  //     return ({details.city}, {details.country} )
-  //   }
-  // }
 
 
   render() {
     const { setlistDetail } = this.props
-    
+    const song = this.props.setlistDetail.set[0] || {title: ""}
+    console.log (song.title)
     return (
       <div className="setlist-detail-main">
         <LeftNav />
@@ -39,6 +24,11 @@ class SetlistDetail extends React.Component {
           <h1> {this.props.setlistDetail.city}, {this.props.setlistDetail.state}</h1>
           <h1> {this.props.setlistDetail.date} </h1>
           <h1> {this.props.setlistDetail.venue} </h1>
+          
+          <ul>
+            <li>{song.title}</li>
+          </ul>
+          
         </div>
         <div className="setlist-songs"></div> 
       </div>
