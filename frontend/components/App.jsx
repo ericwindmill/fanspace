@@ -10,7 +10,6 @@ import SetlistDetailContainer from './setlists/setlist_detail_container'
 
 const App = () => (
   <div className="app-component">
-    <TopNav />
     <Switch>
       <Route exact path='/' component={Home} />
       <ProtectedRoute path='/setlists/:setlistId' component={SetlistDetailContainer} />

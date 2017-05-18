@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import TopNav from '../navs/top_nav_container'
 
 
 const Home = () => (
   <div className="landing-page" > 
+    <TopNav />
     <img className="landing-img" src="assets/landing_background_1.png"></img>
 
     <div className="landing-copy landing-grid-a">

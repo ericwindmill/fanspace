@@ -1,0 +1,74 @@
+
+ /************************************************************
+       TOP NAVIGATION COMPONENT
+ ************************************************************/
+
+/****************************
+*     TOP NAV GRID 
+****************************/
+
+.top-nav {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 25px;
+
+}
+
+.title {
+  grid-column: 4 / 6;
+  text-decoration: none;
+  justify-self: center;
+  align-self: center;
+}
+
+.logged-in-nav, .logged-out-nav {
+  grid-column: 8 / span 2;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.grid-el-a {
+  grid-column: 1;
+}
+
+.grid-el-b {
+  grid-column: 2;
+}
+
+
+
+
+
+/****************************
+*     TOP NAV STYLES 
+****************************/
+ .top-nav {
+  background-color: black;
+  color: white;
+ }
+
+.title {
+  color: white;
+  font-family: 'Archivo Narrow', Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding: 0 20px;
+}
+
+.nav-link, .nav-username {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding:5px 0;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid white;
+}
+

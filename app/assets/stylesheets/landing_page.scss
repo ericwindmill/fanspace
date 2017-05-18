@@ -1,0 +1,50 @@
+
+
+ /************************************************************
+       LANDING PAGE COMPONENT
+ ************************************************************/
+
+
+.landing_page {
+  color: white;
+}
+
+.landing-img {
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+}
+
+.landing-copy{
+  color: white;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.landing-copy h1 {
+  font-size: 5vw;
+  margin-bottom: 0;
+}
+
+.landing-copy h2 {
+  font-size: 2.5vw;
+  margin-top: 5px;
+}
+
+.landing-grid-a{
+  grid-column: 3 ;
+  grid-row: 7;
+}
+.landing-grid-b{
+  grid-column: 3;
+  grid-row: 8;
+}
+.landing-btn {
+  max-width: 100%;
+  justify-self: center;
+  padding: 15px 60px;
+}
+

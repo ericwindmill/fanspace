@@ -11,7 +11,7 @@ const SetlistIndexItem = ({setlist}) => {
         <div className="setlist-index-poster" style={background_image} alt={setlist.date}></div>
         <p className="setlist-index-info"> {setlist.city}, {setlist.state} {setlist.date}</p>
       </li>
-     </Link> 
+    </Link> 
  )
 }
 

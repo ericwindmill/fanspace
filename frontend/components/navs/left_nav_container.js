@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import LeftNav from './top_nav'
+import LeftNav from './left_nav'
 import { logout } from '../../actions/session_actions'
 
 const mapStateToProps = state => ({
