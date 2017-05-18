@@ -1,9 +1,39 @@
 
 
 .left-nav {
+  position: fixed;
+  padding: 24px;
   background: black;
-  width: 15vw;
-  diplay: grid;
-  grid-template-row: repeat(10, 10%);
+  color: #BBB;
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
+
+.left-title {
+  text-align: center;
+  font-family: 'Archivo Narrow', Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 2em;
+  margin: 0;
+  padding: 24px;
+  margin-bottom: 35px;
+  border-bottom: solid 1px #BBB;
+}
+
+.browse-list {
+  list-style: none;
+}
+
+.top-nav {
+  margin-bottom: 30vh;
+}
+
+.left-link {
+  padding: 15px 0;
+  margin: 0;
 }

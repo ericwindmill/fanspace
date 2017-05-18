@@ -24,7 +24,7 @@ class SetlistIndex extends React.Component {
       <main className="setlist-main">
         <LeftNav />
         <section className="setlist-index-component">
-          <h1> Were You There? </h1>
+          <h1> Explore the Shows </h1>
             <div>
               <ul className="poster-index-grid">
                 {setlists.map(setlist => <SetlistIndexItem key={setlist.id} setlist={setlist} /> )}

@@ -10,8 +10,22 @@ class LeftNav extends React.Component {
   render () {
     return(
       <div className="left-nav">
-        <Link to='/setlists'><h2 className="shows">Shows</h2></Link>
-        <h3 className="nav-username">{this.props.currentUser.username}</h3>
+        <h3 className={"left-title"}>FANSPACE</h3>
+        
+        <div className="top-nav">
+          <p className="left-link">Profile</p>
+          <Link to='/setlists'><p className="left-link" className="shows">Shows</p></Link>
+          <p className="left-link">Browse By</p>
+          <ul className="browse-list">
+            <li className="left-link">Year</li>
+            <li className="left-link">City</li>
+          </ul>
+        </div>
+
+          <div className="bottom-nav">
+            <p className="nav-username left-link">{this.props.currentUser.username}</p>
+            <Link to='/'onClick={this.props.logout} className="left-link left-log-out">Log Out</Link>
+          </div>
       </div>
     )
   }
