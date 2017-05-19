@@ -6,11 +6,14 @@
 #  username        :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
-#  image_url       :string
 #  location        :string
 #  about           :text
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  rank            :string
+#  tagline         :string
+#  email           :string
+#  profile_img_url :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

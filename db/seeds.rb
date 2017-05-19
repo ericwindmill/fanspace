@@ -190,5 +190,10 @@ ActiveRecord::Base.transaction do
   SetlistSong.create!(setlist_id: 1, song_id: 12)
 
 
+  Attend.create!(user_id: 1, setlist_id: 1)
+  Attend.create!(user_id: 2, setlist_id: 1)
+  Attend.create!(user_id: 3, setlist_id: 1)
+
+
 
 end
