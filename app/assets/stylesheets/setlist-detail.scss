@@ -91,6 +91,12 @@ $background: rgba(10, 10, 10, 1);
 }
 
 .attends-button {
-  margin-top: 20px;
+  margin: 20px 0 50px;
   padding: 15px 60px;
+}
+
+.setlist-attendees-count {
+  margin-top: 25px;
+  font-size: .9em;
+  font-weight: 300;
 }

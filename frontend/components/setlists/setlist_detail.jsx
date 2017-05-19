@@ -6,11 +6,19 @@ import { Link } from 'react-router-dom'
 class SetlistDetail extends React.Component {
   constructor(props) {
     super(props)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentWillMount() {
     this.props.requestSingleSetlist(this.props.match.params.setlistId)
   }
+
+
+  handleClick(e) {
+    console.log(this.props)
+  }
+
+
 
   formatDate(date) {
     const months = [
@@ -18,7 +26,6 @@ class SetlistDetail extends React.Component {
       'July', 'August', 'September', 'October', 'November', 'December'
     ]
     let arr = date.split("-")
-    console.log(arr[1]);
     let formattedDate = [];
     formattedDate.push(months[ arr[1]-1 ])
     formattedDate.push(arr[2])
@@ -40,7 +47,8 @@ class SetlistDetail extends React.Component {
               <h3 className="setlist-info-date"> {this.formatDate(setlistDetail.date)} </h3>
               <h3 className="setlist-info-city"> {setlistDetail.city}, {setlistDetail.state}</h3>
               <h3 className="setlist-info-venue"> {setlistDetail.venue} </h3>
-              <Link className="btn attends-button" to="/">I was there</Link>
+              <Link className="btn attends-button" onClick={this.handleClick} to="/">I was there</Link>
+              <p className="setlist-attendees-count"> {setlistDetail.attendees.length} were there! </p>
             </div>
             <SongList className="song-list" songs={songList}/> 
           </div>

@@ -8,8 +8,11 @@ const defaultUser = {
   location: '',
   about: '',
   rank: '',
-  tagline: ''
+  tagline: '',
+  attends: []
 }
+
+
 
 const userDetailReducer = (state = defaultUser, action) => {
   Object.freeze(state)

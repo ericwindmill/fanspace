@@ -8,7 +8,8 @@
 
 
 ActiveRecord::Base.transaction do 
-  
+  User.delete_all
+
 
   User.create!(
     username: 'eric',

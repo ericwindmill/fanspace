@@ -9,7 +9,8 @@ const defaultSetlist = {
   date: '',
   venue: '',
   poster_img_url: '',
-  set: []
+  set: [],
+  attendees: []
 }
 
 

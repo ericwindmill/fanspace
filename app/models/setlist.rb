@@ -17,8 +17,9 @@ class Setlist < ApplicationRecord
   validates :city, :date, :venue, :poster_img_url, presence: true
   
   has_many :setlist_songs
-  has_many :attends
   has_many :songs, :through => :setlist_songs, :source => :song
+  has_many :attends
+  has_many :users, :through => :attends, :source => :user
   
 
 end

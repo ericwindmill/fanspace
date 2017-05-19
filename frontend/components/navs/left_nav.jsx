@@ -8,7 +8,6 @@ class LeftNav extends React.Component {
 
 
   render () {
-    console.log(this.props)
     return(
       <div className="left-nav">
         <Link to="/setlists"><h3 className={"left-title"}>FANSPACE</h3></Link>
