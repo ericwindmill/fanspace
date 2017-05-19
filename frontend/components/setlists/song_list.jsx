@@ -5,7 +5,6 @@ class SongList extends React.Component {
 
 
   render() {
-    const songs = this.props.songs.forEach(song => console.log(song))
     return (
      <ul className="setlist-song-list">
       {this.props.songs.map(song => 
