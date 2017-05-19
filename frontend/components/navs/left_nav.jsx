@@ -11,10 +11,10 @@ class LeftNav extends React.Component {
     return(
       <div className="left-nav">
         <Link to="/setlists"><h3 className={"left-title"}>FANSPACE</h3></Link>
-        
+        <Link className="left-link profile" to={`/users/${this.props.currentUser.id}`}>Profile</Link>
         <div className="left-nav-flex">
         <div className="left-nav-top">
-          <Link className="left-link profile" to='/setlists'>Profile</Link>
+
           <Link className="left-link shows" to='/setlists'>All Shows</Link>
           <p className="browse">Browse By</p>
           <ul className="browse-list">

@@ -33,7 +33,7 @@ fanspace.io is a web application built using Ruby on Rails and React/Redux. The 
 ### Phase 2: Setlist Model, API, and Components (2 Days)
 **Objective:** Setlists can be viewed under each setlist item. 
 ### Phase 3: User profiles
-**Objective:** Users have a profile page that displays their custom signup information information.
+**Objective:** Users have a profile page that displays their custom information.
 ### Phase 4: User / Setlist Interaction
 **Objective:** Comments and 'attends' belong to setlists and users. Data reflects in User profile.
 

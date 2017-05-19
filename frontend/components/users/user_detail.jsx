@@ -9,7 +9,6 @@ class userDetail extends React.Component {
 
   componentWillMount() {
     this.props.requestSingleUser(this.props.match.params.userId)
-    console.log(this.props)
   }
 
   render() {
@@ -20,9 +19,11 @@ class userDetail extends React.Component {
     const { userDetail } = this.props
     return(
       <div>
-        <h1 style={tempStyle}> HELLO FROM USER DETAIL (PROFILE) </h1>
-        <p style={tempStyle}>{userDetail.username}</p>
+        <img src={userDetail.profile_img_url} />
+        <h1 style={tempStyle}>{userDetail.username}</h1>
+        <h2 style={tempStyle}>{userDetail.tagline}</h2>
         <p style={tempStyle}>{userDetail.location}</p>
+        <p style={tempStyle}>{userDetail.rank}</p>
         <p style={tempStyle}>{userDetail.about}</p>
       </div>
     )
