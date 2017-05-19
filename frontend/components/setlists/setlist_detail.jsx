@@ -30,8 +30,7 @@ class SetlistDetail extends React.Component {
 
   render() {
     const { setlistDetail } = this.props
-        const songList = this.props.setlistDetail.set || []
-        this.formatDate(this.props.setlistDetail.date);
+      const songList = this.props.setlistDetail.set || []
     return (
       <div className="setlist-detail-main">
         <LeftNav />

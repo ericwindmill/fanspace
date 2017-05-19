@@ -8,7 +8,8 @@ class userDetail extends React.Component {
   }
 
   componentWillMount() {
-    this.props.requestSingleUser(this.props.match.params.setlistId)
+    this.props.requestSingleUser(this.props.match.params.userId)
+    console.log(this.props)
   }
 
   render() {

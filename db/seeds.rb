@@ -12,17 +12,40 @@ ActiveRecord::Base.transaction do
 
   User.create!(
     username: 'eric',
-    password: 'password'
+    password: 'password',
+    email: 'eric@ericwindmill.com',
+    profile_img_url: 'assets/user_images/user_1_pic.png',
+    location: 'San Francisco',
+    about: 'This is some nice copy to make other users like me more even though Ill never meet them.',
+    rank: 'got that old time feeling',
+    tagline: "It don't matter what yer doin' as long as yer losin' yo head."
+
   )
 
   User.create!(
     username: 'guest',
-    password: 'password'
+    password: 'password',
+    email: 'guest@ericwindmill.com',
+    profile_img_url: 'assets/user_images/default_user2',
+    location: 'The Milkyway Galaxy',
+    about: 'Just a thing navigating the earth trying to not be an asshole.',
+    rank: 'new user',
+    tagline: 'We are the innovators... '
+  )
+
+    User.create!(
+    username: 'Bear',
+    password: 'password',
+    email: 'bear@ericwindmill.com',
+    profile_img_url: 'assets/user_images/default_user',
+    location: 'Pluto (the planet)',
+    about: 'Please be my friend.',
+    rank: 'junior member',
+    tagline: '...they are the imitators! '
   )
 
   Setlist.create!(
-    d = Date.new(2005, 11, 05).strftime("%B %d, %Y")
-    date: d,
+    date: Date.new(2005, 11, 05),
     venue: 'Alladin Theater',
     city: "Portland",
     state: "Oregon",
