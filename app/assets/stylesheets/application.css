@@ -21,10 +21,9 @@
   background-color: darkgrey;
   height: 100vh;
 }*/
-
 html {
-  background: $background;
-}
+  background: black;
+} 
 
 
 /****************************
