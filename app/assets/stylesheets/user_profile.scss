@@ -5,45 +5,47 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 100vh;
 }
 
 .profile-detail-info {
-  height: 100%;
+  // height: 100%;
   max-width: 270px;
 }
 
 //layout 
 .profile-detail-grid {
   display: grid; 
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   padding: 45px 0 0 224px;
-  height: 100vh;
-  width: 80%;
+  width: 70%;
+  justify-items: center;
+  // align-items: center;
+  
 
+    > .profile-detail-column-1 {
+      grid-column: 1;
+      justify-self: end;
+      align-self: end;
+      margin-right: 20px;
+    }
 
-  > .profile-detail-info {
-    grid-column: 1;
-    background: none;
-    justify-self: center;
-    // text-align: center;
-  }
+    > .profile-detail-column-2 {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      grid-column: 2;
+      align-self: end;
+      justify-self: start;
 
-  > .profile-song-list {
-    grid-column: 2;
-    border-radius: 10px;
-    list-style: none;
-    margin: 10px 0 30px;
-    width: 90%;
-
-  }
+    }
 }
+
 
 
 .profile-img {
   border-radius: 50%;
-  width: 250px;
+  width: 200px;
   padding: 10px;
 
 }
@@ -71,15 +73,16 @@
 }
 
 .profile-location {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
 }
 
 .profile-tagline {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   padding-bottom: 16px;
-}
+  
+  }
 
 
 

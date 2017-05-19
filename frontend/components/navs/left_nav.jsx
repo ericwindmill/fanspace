@@ -8,10 +8,10 @@ class LeftNav extends React.Component {
 
 
   render () {
+    console.log(this.props)
     return(
       <div className="left-nav">
         <Link to="/setlists"><h3 className={"left-title"}>FANSPACE</h3></Link>
-        <Link className="left-link profile" to={`/users/${this.props.currentUser.id}`}>Profile</Link>
         <div className="left-nav-flex">
         <div className="left-nav-top">
 
@@ -25,8 +25,8 @@ class LeftNav extends React.Component {
 
           <div className="left-nav-bottom">
             <div className="left-nav-profile-link">
-              <Link className="left-nav-username left-link" to="/setlists">
-               <img className="nav-profile-img" src={this.props.profile_img} />
+              <Link className="left-nav-username left-link" to={`/users/${this.props.currentUser.id}`}>
+               <img className="nav-profile-img" src={this.props.currentUser.profile_img_url} />
                 <p className="profile-name">{this.props.currentUser.username}</p>
               </Link>
             </div> 

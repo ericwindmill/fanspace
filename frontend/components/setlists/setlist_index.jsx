@@ -19,7 +19,6 @@ class SetlistIndex extends React.Component {
   render() {
     const { setlists } = this.props
 
-
     return(
       <main className="setlist-main">
         <LeftNav />

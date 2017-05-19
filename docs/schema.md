@@ -1,6 +1,6 @@
 # Schema Information
 
-## setlist
+## setlists
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
@@ -19,7 +19,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 title       | string    | not null
-album       | string    | not null, foreign key (references album)
+album_id    | integer    | not null, foreign key (references album)
 
 Associations: belongs to albums, belongs to setlists
 
@@ -43,6 +43,7 @@ cover_img   | string    |
 
 Associations: has_many songs
 
+
 ## users
 column name     | data type | details
 ----------------|-----------|-----------------------
@@ -51,9 +52,11 @@ username        | string    | not null, indexed, unique
 email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
-image_url       | string    | 
+profile_img_url | string    | 
 location        | string    |
 about           | text      |
+rank            | string    |
+tagline         | string    |
 
 Associations: Has many comments, has many attends
 
