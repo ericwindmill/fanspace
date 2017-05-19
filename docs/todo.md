@@ -1,11 +1,11 @@
 ###CSS
   * Top nav buttons should be more centered
   * The image is colored well, but it could be better. 
-  * format dates for setlists
 
 
 
   ###Features:
+   * add status / tagline for users
    * Footer Nav
    * Auth errors
    * Demo acct

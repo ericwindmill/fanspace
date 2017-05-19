@@ -4,17 +4,9 @@ import configureStore from './store/store'
 import Root from './components/root'
 
 // temp vars for testing!
-import {fetchAllSetlists} from './util/setlist_util'
-import {receiveAllSetlists, requestAllSetlists} from './actions/setlist_actions'
-import {selectAllSetlists} from './reducers/selectors'
-window.fetchAllSetlists = fetchAllSetlists
-window.receiveAllSetlists = receiveAllSetlists
-window.requestAllSetlists = requestAllSetlists
-window.selectAllSetlists = selectAllSetlists
-
-import {fetchSingleSetlist} from './util/setlist_util'
-window.fetchSingleSetlist = fetchSingleSetlist
-
+import {fetchAllUsers, fetchSingleUser} from  './util/users_util'
+window.fetchSingleUser = fetchSingleUser
+window.fetchAllUsers = fetchAllUsers
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
