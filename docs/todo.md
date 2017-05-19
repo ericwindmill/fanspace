@@ -1,7 +1,7 @@
 ###CSS
-  * Landing Page image should should resize, not stretch.
-  * Top nav should be further left. 
+  * Top nav buttons should be more centered
   * The image is colored well, but it could be better. 
+  * format dates for setlists
 
 
 

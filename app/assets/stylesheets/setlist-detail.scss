@@ -2,9 +2,13 @@ $background: rgba(10, 10, 10, 1);
 
 // pure style reset
 .setlist-detail-main {
-  background-image: image-url("assets/setlist_background.png");
   color: white;
+  background-image: url("setlist_background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
+
 
 //layout 
 .setlist-detail-grid {
@@ -12,7 +16,7 @@ $background: rgba(10, 10, 10, 1);
   grid-template-columns: 2fr 3fr;
   justify-content: space-around;
   padding: 45px 0 ;
-  height: 100vh;
+  height: 100%;
   width: 80%;
   padding-left: 224px;
 

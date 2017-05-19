@@ -1,17 +1,27 @@
-
+$blue: rgb(75, 231, 252);
 
 .left-nav {
   position: fixed;
   padding: 24px;
-  background: black;
+  background: rgba(0,0,0, .7);
   color: #BBB;
   width: 175px;
-  display: flex;
-  flex-direction: column;
-  
-  height: 100vh;
+   height: 100vh;
+  a {
+      display: block;
+    }
 }
 
+.left-nav-flex {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-nav-bottom {
+  margin-bottom: 50px;
+}
 
 .left-title {
   text-align: center;
@@ -24,14 +34,36 @@
   padding: 24px;
   margin-bottom: 35px;
   border-bottom: solid 1px #BBB;
+  color: white;
+}
+
+.browse {
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .browse-list {
-  list-style: none;
+  padding: 0;
+  margin: 0;
+
+   > a {
+     padding: 15px 10px;
+   }
 }
 
 
 .left-link {
   padding: 15px 0;
   margin: 0;
+  color: #BBB;
+  font-weight: bold;
+  
+  &:hover {
+    color: $blue
+  }
+}
+
+.left-nav-username {
+  font-size: 24px;
+  text-transform: uppercase;
 }

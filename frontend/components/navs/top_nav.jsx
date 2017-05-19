@@ -12,7 +12,7 @@ class TopNav extends React.Component {
   loggedInNav() {
     return (
       <div className="logged-in-nav">
-        <h3 className="nav-username grid-el-a">{this.props.currentUser.username}</h3>
+        <Link className="nav-username grid-el-a" to="/setlists">{this.props.currentUser.username}</Link>
         <NavLink className="nav-link grid-el-b" to="/" onClick={this.props.logout}>Sign Out</NavLink>
       </div>
     )

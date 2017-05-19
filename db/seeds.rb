@@ -8,6 +8,7 @@
 
 
 ActiveRecord::Base.transaction do 
+  
 
   User.create!(
     username: 'eric',
@@ -20,7 +21,8 @@ ActiveRecord::Base.transaction do
   )
 
   Setlist.create!(
-    date: Date.new(2005, 11, 05),
+    d = Date.new(2005, 11, 05).strftime("%B %d, %Y")
+    date: d,
     venue: 'Alladin Theater',
     city: "Portland",
     state: "Oregon",
@@ -133,7 +135,7 @@ ActiveRecord::Base.transaction do
     city: "San Francisco",
     state: "California",
     country: "USA",
-    poster_img_url:'assets/posters/2015_10_16.jpg'
+    poster_img_url:'assets/posters/2015_10_17.jpg'
   )
 
   it_still_moves = Album.create(title: "It Still Moves", cover_art_url: 'assets/album_covers/it_still_moves.jpg' )
@@ -156,7 +158,13 @@ ActiveRecord::Base.transaction do
   SetlistSong.create!(setlist_id: 1, song_id: 3)
   SetlistSong.create!(setlist_id: 1, song_id: 4)
   SetlistSong.create!(setlist_id: 1, song_id: 5)
-  
+  SetlistSong.create!(setlist_id: 1, song_id: 6)
+  SetlistSong.create!(setlist_id: 1, song_id: 7)
+  SetlistSong.create!(setlist_id: 1, song_id: 8)
+  SetlistSong.create!(setlist_id: 1, song_id: 9)
+  SetlistSong.create!(setlist_id: 1, song_id: 10)
+  SetlistSong.create!(setlist_id: 1, song_id: 11)
+  SetlistSong.create!(setlist_id: 1, song_id: 12)
 
 
 
