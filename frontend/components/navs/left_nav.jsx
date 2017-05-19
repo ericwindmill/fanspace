@@ -24,7 +24,12 @@ class LeftNav extends React.Component {
         </div>
 
           <div className="left-nav-bottom">
-            <Link className="left-nav-username left-link" to="/setlists">{this.props.currentUser.username}</Link>
+            <div className="left-nav-profile-link">
+              <Link className="left-nav-username left-link" to="/setlists">
+               <img className="nav-profile-img" src={this.props.profile_img} />
+                <p className="profile-name">{this.props.currentUser.username}</p>
+              </Link>
+            </div> 
             <Link to='/'onClick={this.props.logout} className="left-link left-log-out">Log Out</Link>
           </div>
           </div>

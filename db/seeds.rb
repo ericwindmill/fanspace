@@ -16,7 +16,7 @@ ActiveRecord::Base.transaction do
     email: 'eric@ericwindmill.com',
     profile_img_url: 'assets/user_images/user_1_pic.png',
     location: 'San Francisco',
-    about: 'This is some nice copy to make other users like me more even though Ill never meet them.',
+    about: 'This is some nice copy to make other users like me more. I know how important it is to base your self-worth on how well liked you are on the internet.',
     rank: 'got that old time feeling',
     tagline: "It don't matter what yer doin' as long as yer losin' yo head."
 

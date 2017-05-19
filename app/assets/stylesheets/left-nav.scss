@@ -63,7 +63,33 @@ $blue: rgb(75, 231, 252);
   }
 }
 
+
+.left-nav-profile-link{
+  padding-top: 20px;
+  border-top: #BBB 1px solid;
+}
+
 .left-nav-username {
   font-size: 24px;
   text-transform: uppercase;
+  vertical-align: middle;
+
+}
+
+.left-nav-username.left-link {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+}
+
+.profile-name {
+  display: inline-block;
+  margin: 15px 0;
+  position: absolute;
+}
+
+.nav-profile-img {
+  display:inline-block;
+  width: 50px;
+  padding-right: 15px;
 }
