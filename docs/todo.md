@@ -6,7 +6,7 @@
 
 
   ###Features:
-   * add status / tagline for users
    * Footer Nav
    * Auth errors
    * Demo acct
+   * User make profile form
