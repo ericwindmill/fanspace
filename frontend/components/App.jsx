@@ -7,6 +7,7 @@ import TopNav from './navs/top_nav_container'
 import LoginPage from './home/session/login_page'
 import SetlistIndex from './setlists/setlist_index_container'
 import SetlistDetailContainer from './setlists/setlist_detail_container'
+import UserDetailContainer from './users/user_detail_container'
 
 const App = () => (
   <div className="app-component">
@@ -14,6 +15,7 @@ const App = () => (
       <Route exact path='/' component={Home} />
       <ProtectedRoute path='/setlists/:setlistId' component={SetlistDetailContainer} />
       <ProtectedRoute path='/setlists' component={SetlistIndex}/>
+      <ProtectedRoute path='/users/:userId' component={UserDetailContainer}/>
       <AuthRoute path='/log-in' component={LoginPage} />
       <AuthRoute path='/sign-up' component={LoginPage} />
     </Switch>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import LeftNav from '../navs/left_nav_container'
 
-class UserDetail extends React.Component {
+class userDetail extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -12,8 +12,20 @@ class UserDetail extends React.Component {
   }
 
   render() {
+    const tempStyle = {
+      color: 'white'
+    }
+
+    const { userDetail } = this.props
     return(
-      <h1> HELLO FROM USER DETAIL (PROFILE)
+      <div>
+        <h1 style={tempStyle}> HELLO FROM USER DETAIL (PROFILE) </h1>
+        <p style={tempStyle}>{userDetail.username}</p>
+        <p style={tempStyle}>{userDetail.location}</p>
+        <p style={tempStyle}>{userDetail.about}</p>
+      </div>
     )
   }
 }
+
+export default userDetail
