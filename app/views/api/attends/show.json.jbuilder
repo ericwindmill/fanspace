@@ -1,0 +1,1 @@
+json.extract! @attend, :user_id, :setlist_id

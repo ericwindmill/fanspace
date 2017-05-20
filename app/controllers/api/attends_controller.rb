@@ -4,9 +4,7 @@ class Api::AttendsController < ApplicationController
     render 'api/setlists/show'
   end
 
-
-
-
   def attend_params
     params.require(:attend).permit(:user_id, :setlist_id)
+  end
 end

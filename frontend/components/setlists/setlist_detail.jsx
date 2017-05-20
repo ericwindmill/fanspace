@@ -15,7 +15,11 @@ class SetlistDetail extends React.Component {
   }
 
   handleClick(e) {
-    console.log(this.props)
+    e.preventDefault();
+    this.props.newAttend({
+      user_id: this.props.user_id,
+      setlist_id: this.props.setlistDetail.id
+    })
   }
 
 
