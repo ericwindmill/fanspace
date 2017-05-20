@@ -5,3 +5,4 @@ export const addAttend = attend => (
     data: {attend}
   })
 )
+

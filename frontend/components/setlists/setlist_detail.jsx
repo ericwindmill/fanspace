@@ -6,21 +6,43 @@ import { Link } from 'react-router-dom'
 class SetlistDetail extends React.Component {
   constructor(props) {
     super(props)
-
+    this.state = {
+       attend: false,
+       attend_count: 0
+      }
     this.handleClick = this.handleClick.bind(this)
   }
 
   componentWillMount() {
     this.props.requestSingleSetlist(this.props.match.params.setlistId)
+     .then(() => {
+       if (this.props.attendees.includes(this.props.user_id)){
+         this.setState({
+           attend: true
+         })
+       }
+     }
+   )
   }
 
   handleClick(e) {
-    e.preventDefault();
-    this.props.newAttend({
-      user_id: this.props.user_id,
-      setlist_id: this.props.setlistDetail.id
-    })
+    e.preventDefault()
+    if (this.props.attendees.includes(this.props.user_id)){
+      console.log("uh oh!")
+    } else {
+      this.props.newAttend({
+        user_id: this.props.user_id,
+        setlist_id: this.props.setlistDetail.id
+      }).then(
+        this.setState({
+          attend: !this.state.attend,
+          attend_count: this.props.setlistDetail.attendees.length += 1
+        })
+      )
+    }
   }
+  
+
 
 
   formatDate(date) {
@@ -50,7 +72,13 @@ class SetlistDetail extends React.Component {
               <h3 className="setlist-info-date"> {this.formatDate(setlistDetail.date)} </h3>
               <h3 className="setlist-info-city"> {setlistDetail.city}, {setlistDetail.state}</h3>
               <h3 className="setlist-info-venue"> {setlistDetail.venue} </h3>
-              <Link className="btn attends-button"  onClick={this.handleClick} to={`/setlists/${setlistDetail.id}`}>I was there</Link>
+              
+              <Link className="btn attends-button"  
+                onClick={this.handleClick} 
+                to={`/setlists/${setlistDetail.id}`}>
+                {this.state.attend ? "I wasn't there" : "I was there"}
+              </Link>
+
               <p className="setlist-attendees-count"> {setlistDetail.attendees.length} were there! </p>
             </div>
             <SongList className="song-list" songs={songList}/> 

@@ -4,6 +4,12 @@ class Api::AttendsController < ApplicationController
     render 'api/setlists/show'
   end
 
+  def destroy
+    @attend = Attend.delete(attend_params)
+    render 'api/setlist/show'
+  end 
+
+  private
   def attend_params
     params.require(:attend).permit(:user_id, :setlist_id)
   end
