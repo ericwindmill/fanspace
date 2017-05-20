@@ -27,8 +27,15 @@ class SetlistDetail extends React.Component {
 
   handleClick(e) {
     e.preventDefault()
+    this.props.currentAttend
     if (this.props.attendees.includes(this.props.user_id)){
-      console.log("uh oh!")
+     console.log('uhoh')
+     .then(
+        this.setState({
+          attend: !this.state.attend,
+          attend_count: this.props.setlistDetail.attendees.length -= 1
+        })
+      )
     } else {
       this.props.newAttend({
         user_id: this.props.user_id,

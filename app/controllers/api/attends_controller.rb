@@ -5,7 +5,7 @@ class Api::AttendsController < ApplicationController
   end
 
   def destroy
-    @attend = Attend.delete(attend_params)
+    @attend = Attend.delete(params[:id])
     render 'api/setlist/show'
   end 
 

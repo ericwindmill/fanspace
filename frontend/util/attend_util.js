@@ -6,3 +6,9 @@ export const addAttend = attend => (
   })
 )
 
+export const deleteAttend = attendId => (
+  $.ajax({
+    method: 'DELETE',
+    url: `api/attends/${attendId}`
+  })
+)
