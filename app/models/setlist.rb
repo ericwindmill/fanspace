@@ -20,6 +20,7 @@ class Setlist < ApplicationRecord
   has_many :songs, :through => :setlist_songs, :source => :song
   has_many :attends
   has_many :users, :through => :attends, :source => :user
+  has_many :comments
   
 
 end

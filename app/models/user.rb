@@ -24,6 +24,8 @@ class User < ApplicationRecord
   has_many :attends
   has_many :setlists, :through => :attends, :source => :setlist
 
+  has_many :comments
+
   attr_reader :password
   after_initialize :ensure_session_token
 
