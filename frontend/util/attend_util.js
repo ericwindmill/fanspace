@@ -1,14 +1,15 @@
 export const addAttend = attend => (
   $.ajax({
     method: 'POST',
-    url: 'api/attends',
+    url: 'api/attend',
     data: {attend}
   })
 )
 
-export const deleteAttend = attendId => (
+export const deleteAttend = attend => (
   $.ajax({
     method: 'DELETE',
-    url: `api/attends/${attendId}`
+    url: `api/attend/`,
+    data: {attend}
   })
 )

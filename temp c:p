@@ -10,3 +10,11 @@ ranks = [
 member_time = [
   
 ]
+
+
+     .then(
+        this.setState({
+          attend: !this.state.attend,
+          attend_count: this.props.setlistDetail.attendees.length -= 1
+        })
+      )

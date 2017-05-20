@@ -6,46 +6,29 @@ import { Link } from 'react-router-dom'
 class SetlistDetail extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-       attend: false,
-       attend_count: 0
-      }
     this.handleClick = this.handleClick.bind(this)
   }
 
   componentWillMount() {
     this.props.requestSingleSetlist(this.props.match.params.setlistId)
-     .then(() => {
-       if (this.props.attendees.includes(this.props.user_id)){
-         this.setState({
-           attend: true
-         })
-       }
-     }
-   )
   }
 
   handleClick(e) {
     e.preventDefault()
-    this.props.currentAttend
-    if (this.props.attendees.includes(this.props.user_id)){
-     console.log('uhoh')
-     .then(
-        this.setState({
-          attend: !this.state.attend,
-          attend_count: this.props.setlistDetail.attendees.length -= 1
-        })
-      )
-    } else {
-      this.props.newAttend({
-        user_id: this.props.user_id,
+
+    const attend = (
+      this.props.setlistDetail.attendees.some((users) =>
+      users.id === this.props.currentUser.id )
+    );
+    if (attend) {
+    this.props.deleteAttend({
+        user_id: this.props.currentUser.id,
         setlist_id: this.props.setlistDetail.id
-      }).then(
-        this.setState({
-          attend: !this.state.attend,
-          attend_count: this.props.setlistDetail.attendees.length += 1
-        })
-      )
+      }) } else {
+        this.props.newAttend({
+        user_id: this.props.currentUser.id,
+        setlist_id: this.props.setlistDetail.id
+      })
     }
   }
   
@@ -69,7 +52,11 @@ class SetlistDetail extends React.Component {
 
   render() {
     const { setlistDetail } = this.props
-      const songList = this.props.setlistDetail.set || []
+    const songList = this.props.setlistDetail.set || []
+    const attend = (
+      this.props.setlistDetail.attendees.some((users) =>
+      users.id === this.props.currentUser.id )
+    );
     return (
       <div className="setlist-detail-main">
         <LeftNav />
@@ -80,11 +67,11 @@ class SetlistDetail extends React.Component {
               <h3 className="setlist-info-city"> {setlistDetail.city}, {setlistDetail.state}</h3>
               <h3 className="setlist-info-venue"> {setlistDetail.venue} </h3>
               
-              <Link className="btn attends-button"  
+              <button type="button" className="btn attends-button"  
                 onClick={this.handleClick} 
-                to={`/setlists/${setlistDetail.id}`}>
-                {this.state.attend ? "I wasn't there" : "I was there"}
-              </Link>
+                >
+                {attend ? "I wasn't there" : "I was there"}
+              </button>
 
               <p className="setlist-attendees-count"> {setlistDetail.attendees.length} were there! </p>
             </div>

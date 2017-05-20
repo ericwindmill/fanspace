@@ -8,7 +8,7 @@ import { selectAttendeeIds, selectCurrentAttend } from '../../reducers/selectors
 const mapStateToProps = (state) => {
   return ({
     setlistDetail: state.setlistDetail,
-    user_id: state.session.currentUser.id,
+    currentUser: state.session.currentUser,
     attendees: selectAttendeeIds(state),
     currentAttend: selectCurrentAttend(state) || {}
   })
@@ -17,7 +17,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => ({
   requestSingleSetlist: (id) => dispatch(requestSingleSetlist(id)),
   newAttend: (attend) => dispatch(newAttend(attend)),
-  deleteAttend: (attend) => dispatch(deleteAttend(attend))
+  deleteAttend: (id) => dispatch(deleteAttend(id))
+
 })
 
 export default withRouter(connect(
