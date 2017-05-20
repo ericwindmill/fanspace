@@ -195,6 +195,14 @@ ActiveRecord::Base.transaction do
   Attend.create!(user_id: 2, setlist_id: 1)
   Attend.create!(user_id: 3, setlist_id: 1)
 
+  Comment.create!(title: "comment1", body: "what a great comment!", user_id: "1", setlist_id: "1")
+  Comment.create!(title: "comment2", body: "what a great comment!", user_id: "2", setlist_id: "1")
+  Comment.create!(title: "comment3", body: "what a great comment!", user_id: "1", setlist_id: "1")
+  Comment.create!(title: "comment4", body: "what a great comment!", user_id: "2", setlist_id: "1")
+  Comment.create!(title: "comment5", body: "what a great comment!", user_id: "1", setlist_id: "2")
+  Comment.create!(title: "comment6", body: "what a great comment!", user_id: "3", setlist_id: "2")
+
+
 
 
 end

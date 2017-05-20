@@ -13,7 +13,6 @@
 
 class Comment < ApplicationRecord
   validates :setlist_id, :user_id, :body, presence: true;
-  validates :setlist_id, uniqueness: {scope: :user_id}
 
   belongs_to :user
   belongs_to :setlist
