@@ -1,28 +1,21 @@
-// import React from 'react'
+import React from 'react'
 
-// class UpdateForm extends React.Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {
-//       username: this.props.currentUser.username,
-//       tagline: this.props.currentUser.tagname,
-//       location: this.props.currentUser.location,
-//       profile_img_url: this.props.currentUser.profile_img_url
-//     }
+class UpdateForm extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      username: this.props.currentUser.thing,
+      tagline: this.props.currentUser.tagline,
+      location: this.props.currentUser.location,
+      profile_img_url: this.props.currentUser.profile_img_url
+    }
 
-//     this.handleSubmit = this.handleSubmit.bind(this)
-//   }
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
 
   handleSubmit(currentUser){
     return e => (
       this.props.updateCurrentUser(Object.assign(currentUser, this.state))
-    ).then(
-      () => this.setState({
-        username: '',
-        tagline: '',
-        location: '',
-        profile_img_url: ''
-      })
     )
   }
 
@@ -45,7 +38,7 @@
         <input
           type="text"
           value={this.state.location}
-          placeholder="Location"
+          placeholder="Place"
           onChange={this.update('location')}
         />
         <input
@@ -57,7 +50,7 @@
         <input
           type="text"
           value={this.state.profile_img_url}
-          placeholder="Image Url"
+          placeholder="Picture"
           onChange={this.update('profile_img_url')}
         />
         <button>Update Profile</button>

@@ -35,7 +35,6 @@
   }
 
   userMatchRender() {
-    
     let {comment} = this.props
     return(
       <div>
@@ -60,9 +59,9 @@
   render() {
     
     const { comment, deleteComment, updateComment, currentUser } = this.props
-    let userMatch = false;
+    let userMatch = false
     if (currentUser.id === comment.user_id){
-      userMatch = true;
+      userMatch = true
     }
     const renderForm = userMatch ?
       this.userMatchRender() : <div></div>
