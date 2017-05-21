@@ -4,7 +4,7 @@ class UpdateForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      username: this.props.currentUser.thing,
+      username: this.props.currentUser.username,
       tagline: this.props.currentUser.tagline,
       location: this.props.currentUser.location,
       profile_img_url: this.props.currentUser.profile_img_url

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 import LeftNav from '../navs/left_nav_container'
 import UpdateForm from './update_profile_form'
 
@@ -8,12 +8,13 @@ class userDetail extends React.Component {
     super(props)
     
     this.userMatchRender = this.userMatchRender.bind(this)
+    this.displayUpdate = this.displayUpdate.bind(this)
   }
 
 
-  componentWillMount() {
-    this.props.requestSingleUser(this.props.match.params.userId)
-  }
+componentWillMount() {
+  this.props.requestSingleUser(this.props.match.params.userId)
+}
 
 
 userMatchRender(){
@@ -28,9 +29,14 @@ userMatchRender(){
   )
 }
 
+displayUpdate() {
+  this.props.history.push(`${this.props.currentUser.id}/update`)
+}
+
 
 
   render() {
+    console.log(this.props)
     const { currentUser, userDetail } = this.props
     let userMatch = false
     if (currentUser.id === userDetail.id) {
@@ -38,9 +44,7 @@ userMatchRender(){
     }
 
     const renderForm = userMatch ?
-      this.renderForm() : <div></div>
-
-     console.log(userMatch) 
+      this.userMatchRender() : <div></div>
     return(
       <div className='profile-detail-main'>
         <LeftNav profile_img={userDetail.profile_img_url} />
@@ -53,8 +57,15 @@ userMatchRender(){
             <p className="profile-rank" >{userDetail.rank}</p>
             <p className="profile-location"> Location: {userDetail.location}</p>
             <p className="profile-tagline" >{userDetail.tagline}</p>
+            {userMatch ? <button onClick={this.displayUpdate}>Update Profile</button> : <div></div> }
+            
           </div>
-            {renderForm}
+          <Route path="/users/:id/update" render={() => (
+              <UpdateForm
+                userDetail={this.props.userDetail}
+                currentUser={this.props.currentUser}
+                updateCurrentUser={this.props.updateCurrentUser} />
+          )} />
         </div>
       </div>
     )

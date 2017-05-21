@@ -13,7 +13,7 @@
    * Footer Nav
    * Auth errors
    * Demo acct
-   * User update profile form
+   * upload picture
    * comments re-render at the bottom when updated???
    * when user first signs up / before they add a picture/profile the styling is all fucked --> make defaults!
 
