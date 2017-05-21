@@ -31,12 +31,13 @@ html {
 ****************************/
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 700;
 }
 
-p, a, li {
-  font-family: 'Open Sans', sans-serif;
+p, a, li, form, textarea, button {
+  font-family: 'Monsterrat', Helvetica, sans-serif;
+  font-weight: 200;
   text-decoration: none;
 }
 

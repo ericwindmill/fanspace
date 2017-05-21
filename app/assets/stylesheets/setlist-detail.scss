@@ -35,6 +35,10 @@ $background: rgba(10, 10, 10, 1);
     width: 90%;
 
   }
+
+  > .comment-index {
+    grid-column: 1 / span 2;
+  }
 }
 
 

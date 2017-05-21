@@ -17,18 +17,6 @@ componentWillMount() {
 }
 
 
-userMatchRender(){
-  return (
-    <div>
-      <UpdateForm 
-        userDetail={this.props.userDetail}
-        currentUser={this.props.currentUser}
-        updateCurrentUser={this.props.updateCurrentUser}
-      />
-    </div>
-  )
-}
-
 displayUpdate() {
   this.props.history.push(`${this.props.currentUser.id}/update`)
 }
@@ -36,7 +24,6 @@ displayUpdate() {
 
 
   render() {
-    console.log(this.props)
     const { currentUser, userDetail } = this.props
     let userMatch = false
     if (currentUser.id === userDetail.id) {

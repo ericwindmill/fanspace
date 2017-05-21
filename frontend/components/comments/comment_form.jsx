@@ -38,9 +38,9 @@ class CommentForm extends React.Component {
   render() {
     return (
       <section className="">
-        <h1>Leave a comment: </h1>
+        <h2>Leave a comment: </h2>
         <form className="comment-form" onSubmit={this.handleSubmit}>
-          <textarea
+          <textarea className="update-comment-text"
             value={this.state.body}
             placeholder="Comment"
             onChange={this.update('body')}

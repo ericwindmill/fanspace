@@ -16,10 +16,9 @@ class Comments extends React.Component {
 render() {
     const { comments, deleteComment } = this.props.setlistDetail
     return (
-      <div>
-        <h2>Comments</h2>
-          
-          <ul>
+      <div className="comment-index">
+        <h2>Join the Discussion</h2>
+          <ul className="comment-list">
             {comments.map(comment => (
               <li key={comment.id}> 
                 <CommentDetail

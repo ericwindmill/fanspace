@@ -1,0 +1,125 @@
+// Place all the styles related to the api/comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$blue: rgb(75, 231, 252);
+/***************************
+    COMMENT INDEX
+***************************/
+/* comment-index inherits grid from setlist detail page! */
+.comment-index{
+  border-top: 2px solid #bbb;
+  width: 90%;
+  justify-self: center;
+
+
+  > h2 {
+    text-align: center;
+  }
+
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+
+li:nth-child(odd) {
+    background: rgba(0,0,0,.1);
+  }
+}
+
+
+
+
+
+/***************************
+    COMMENT DETAIL
+***************************/
+
+.single-comment-container {
+  margin: 5px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-templat-rows: auto; 
+  max-height: 200px;
+
+
+
+  .comment-creator {
+      grid-row: 1;
+      grid-column: 1;
+      justify-self: center;
+      text-align: center;
+
+    > .comment-creator-name {
+        font-size: 1.3em;
+        color: white;
+
+    > .user-comment-img {
+      max-width: 70px;
+      display: block;
+
+        &:hover{
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+  > .comment-body {
+     color: #DDD;
+     grid-row: 1;
+     grid-column: 2;
+     margin-bottom: 0;
+
+    > .edit-comments {
+        grid-row: 2;
+        grid-column: 2;
+        justify-self: stretch;
+        display: flex;
+        line-height: 1;
+        font-size: 80%;
+        margin: 0 10px;
+
+      > form {
+        display: flex;
+        flex-grow:1;
+      }
+
+      > form > .update-comment-text {
+        color: white;
+        background: none;
+        border-style: none;
+        resize: none;
+        border-bottom: 2px solid #BBB;
+        margin: 0 10px;
+        width: 100%;
+      }
+    } 
+   }
+
+}
+
+
+.comment-update-button {
+  background: none;
+  padding: 10px;
+  font-size: .9em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #BBB;
+    border-bottom: solid 1px $blue;
+    
+  } 
+}
+
+
+
+

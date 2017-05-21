@@ -24,7 +24,6 @@ class UpdateForm extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     let {currentUser} = this.props
     return(
     <div>

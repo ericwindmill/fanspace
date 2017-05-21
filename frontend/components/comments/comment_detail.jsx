@@ -37,21 +37,19 @@
   userMatchRender() {
     let {comment} = this.props
     return(
-      <div>
-        <div className="edit_comments">
+        <div className="edit-comments">
           <form onSubmit={this.handleSubmit(comment)}>
-            <textarea 
+            <textarea className="update-comment-text" 
               value={this.state.body}
-              placeholder="Comment"
+              placeholder="Change comment..."
               onChange={this.update('body')}
             />
-            <button>Update Comment</button>
+            <button className="comment-update-button">Update</button>
           </form>
-          <button value={comment.id} onClick={this.handleClick(comment)}>
-            Delete Comment
+          <button className="comment-update-button" value={comment.id} onClick={this.handleClick(comment)}>
+            Delete
           </button>
         </div>
-      </div>  
     )
   }
 
@@ -67,15 +65,18 @@
       this.userMatchRender() : <div></div>
 
     return(
-     <div> 
-       <div>
-         <Link to={`/users/${comment.user_id}`}><p>{comment.user.username}</p></Link>
-         <p>{comment.title}</p>
-         <p>{comment.body}</p>
-         <p>{comment.id}</p>
+     <div className="single-comment-container"> 
+       <div className="comment-creator">
+         <Link className="comment-creator-name" to={`/users/${comment.user_id}`}>
+          <img className="user-comment-img" src={comment.user.profile_img_url} />
+          {comment.user.username}
+         </Link>
        </div>
-        {renderForm}
-      </div>
+       <div className="comment-body">
+          <p>{comment.body}</p>
+          {renderForm}
+        </div>
+    </div>
 
     )
   }
