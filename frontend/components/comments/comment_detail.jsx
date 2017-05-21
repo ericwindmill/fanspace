@@ -4,10 +4,10 @@
   constructor(props) {
     super(props)
     this.state = {
-      title: '',
+      title: this.props.comment.title,
       body: '',
-      setlist_id: '',
-      user_id: ''
+      setlist_id: this.props.comment.setlist_id,
+      user_id: this.props.comment.user_id
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleClick = this.handleClick.bind(this)
@@ -19,21 +19,8 @@
   }
 
   handleSubmit(comment) {
-    console.log(comment)
     return e => (
-    let updated = Object.assign({}, this.state, comment)
-    console.log(updated)
-    this.props.updateComment({
-      title: this.state.title,
-      body: this.state.body,
-      user_id: this.props.currentUser.id,
-      setlist_id: this.props.setlistDetail.id
-    }).then(
-      () => this.setState({
-        title: "",
-        body: ""
-      })
-      )
+      this.props.updateComment(Object.assign(comment, this.state))
     )
   }
 
@@ -43,8 +30,8 @@
 
 
   render() {
-
     const { comment, deleteComment, updateComment, currentUser } = this.props
+    console.log(this.props)
     return(
       <div>
         <div>
