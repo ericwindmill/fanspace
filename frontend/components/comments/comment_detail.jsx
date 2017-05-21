@@ -11,6 +11,7 @@
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.userMatchRender = this.userMatchRender.bind(this)
   }
 
 
@@ -21,6 +22,10 @@
   handleSubmit(comment) {
     return e => (
       this.props.updateComment(Object.assign(comment, this.state))
+    ).then(
+      () => this.setState({
+        body: ""
+      })
     )
   }
 
@@ -28,19 +33,11 @@
     return e => this.setState({ [property]: e.target.value })
   }
 
-
-  render() {
-    const { comment, deleteComment, updateComment, currentUser } = this.props
-    console.log(this.props)
+  userMatchRender() {
+    let {comment} = this.props
     return(
       <div>
-        <div>
-        <p>{currentUser.username}</p>
-        <p>{comment.title}</p>
-        <p>{comment.body}</p>
-        <p>{comment.id}</p>
-        </div>
-        <div>
+        <div className="edit_comments">
           <form onSubmit={this.handleSubmit(comment)}>
             <textarea 
               value={this.state.body}
@@ -54,6 +51,30 @@
           </button>
         </div>
       </div>  
+    )
+  }
+
+
+  render() {
+    const { comment, deleteComment, updateComment, currentUser } = this.props
+    let userMatch = false;
+    if (currentUser.id === comment.user_id){
+      userMatch = true;
+    }
+    const renderForm = userMatch ?
+      this.userMatchRender() : <div></div>
+
+    return(
+     <div> 
+       <div>
+         <p>{currentUser.username}</p>
+         <p>{comment.title}</p>
+         <p>{comment.body}</p>
+         <p>{comment.id}</p>
+       </div>
+        {renderForm}
+      </div>
+
     )
   }
  }   
