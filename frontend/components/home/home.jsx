@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import TopNav from '../navs/top_nav_container'
+import Footer from '../navs/footer'
 
 
 const Home = () => (
@@ -14,7 +15,9 @@ const Home = () => (
       </div>
       <Link className="btn landing-btn landing-grid-b" to="/sign-up">Sign Up Today</Link>
     </div>
+    <Footer />
   </div>
+    
 )
 
 

@@ -10,3 +10,9 @@ export const deleteComment = comment => dispatch => (
   APIUtil.deleteComment(comment)
   .then(({setlist_id}) => dispatch(requestSingleSetlist(setlist_id)))
 )
+
+export const updateComment = comment => dispatch => (
+  APIUtil.updateComment(comment)
+    .then(({setlist_id}) => dispatch(requestSingleSetlist(setlist_id)))
+)
+

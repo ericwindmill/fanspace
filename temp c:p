@@ -1,20 +1,8 @@
-ranks = [
-  'new member',
-  'junior member',
-  'senior member',
-  'senior member sr.',
-  'got that old time feeling',
-  'admin'
-]
 
-member_time = [
+    
+
+ 
+
+
+
   
-]
-
-
-     .then(
-        this.setState({
-          attend: !this.state.attend,
-          attend_count: this.props.setlistDetail.attendees.length -= 1
-        })
-      )

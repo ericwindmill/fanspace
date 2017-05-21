@@ -17,7 +17,6 @@ class CommentForm extends React.Component {
 
 
   handleSubmit(e) {
-    
     e.preventDefault();
     this.props.newComment({
       title: this.state.title,
@@ -41,12 +40,6 @@ class CommentForm extends React.Component {
       <section className="">
         <h1>Leave a comment: </h1>
         <form className="comment-form" onSubmit={this.handleSubmit}>
-          <input 
-            type="text"
-            value={this.state.title}
-            placeholder="Title"
-            onChange={this.update('title')}
-          />
           <textarea
             value={this.state.body}
             placeholder="Comment"
