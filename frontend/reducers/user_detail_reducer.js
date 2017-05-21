@@ -1,5 +1,5 @@
 import { merge } from 'lodash'
-import { RECEIVE_SINGLE_USER } from '../actions/user_actions'
+import { RECEIVE_SINGLE_USER, UPDATE_USER_PROFILE } from '../actions/user_actions'
 
 const defaultUser = {
   username: '',
@@ -19,7 +19,9 @@ const userDetailReducer = (state = defaultUser, action) => {
   switch (action.type) {
     case RECEIVE_SINGLE_USER:
       return merge({}, action.user)
-    default: 
+    case UPDATE_USER_PROFILE:
+      return merge({}, action.user)
+    default:
       return state
   }
 }

@@ -17,9 +17,9 @@
 #
 
 class User < ApplicationRecord
-  validates :password_digest, :username, :session_token, presence: true
-  validates :username, uniqueness: true
-  validates :password, length: {minimum: 6, allow_nil: true}
+  validates :password_digest, :username, :session_token, presence: true, on: :create
+  validates :username, uniqueness: true, on: :create
+  validates :password, length: {minimum: 6, allow_nil: true}, on: :create
 
   has_many :attends
   has_many :setlists, :through => :attends, :source => :setlist
