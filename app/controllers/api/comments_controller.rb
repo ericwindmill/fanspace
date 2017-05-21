@@ -16,13 +16,20 @@ class Api::CommentsController < ApplicationController
     @comments = Comment.where(setlist_id: params[:comment][:setlist_id])
   end
 
-  def edit
-  end
 
   def update
+    @comment = Comment.find(params[:comment][:id])
+    if @comment.update(comment_params)
+      render json: @comment
+    else 
+      render json: @comment.errors.full_messages, status: 422
+
   end
 
   def destroy
+    @comment = Comment.find(params[:comment][:id])
+    @comment.destroy
+    render json: @comment
   end
 
 
@@ -32,3 +39,4 @@ class Api::CommentsController < ApplicationController
     params.require(:comment).permit(:user_id, :setlist_id, :title, :body)
   end
 end
+p

@@ -6,10 +6,19 @@ export const addComment = comment => (
   })
 )
 
-export const deleteComment = comment => (
-  $.ajax({
+export const deleteComment = comment => {
+  return $.ajax({
     method: 'DELETE',
-    url: `api/comment/`,
+    url: `api/comment`,
     data: {comment}
   })
-)
+}
+
+export const updateComment = comment => {
+  return $.ajax({
+    method: 'PATCH',
+    url: 'api/comment',
+    data: {comment}
+
+  })
+}
