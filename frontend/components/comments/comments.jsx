@@ -1,11 +1,16 @@
 import React from 'react'
 import CommentForm from './comment_form'
 import CommentDetail from './comment_detail'
+import selectAllUsers from '../../reducers/selectors'
 
 
 class Comments extends React.Component {
   constructor(props){
     super(props)
+  }
+
+  componentWillMount(){
+    this.props.requestAllUsers()
   }
 
 render() {
@@ -17,12 +22,13 @@ render() {
           <ul>
             {comments.map(comment => (
               <li key={comment.id}> 
-                <CommentDetail 
+                <CommentDetail
                   comment={comment}
                   setlistDetail={this.props.setlistDetail}
                   currentUser={this.props.currentUser}
                   deleteComment={this.props.deleteComment}
                   updateComment={this.props.updateComment}
+                  users={this.props.users}
                 />
               </li>
             ))}
@@ -30,7 +36,8 @@ render() {
         <CommentForm 
         setlistDetail={this.props.setlistDetail}
         currentUser={this.props.currentUser}
-        newComment={this.props.newComment} />
+        newComment={this.props.newComment}
+        userDetail={this.props.userDetail} />
       </div>
     )
   }

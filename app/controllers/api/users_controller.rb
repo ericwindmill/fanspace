@@ -18,10 +18,14 @@ class Api::UsersController < ApplicationController
     @users = User.all
   end
 
+  def update
+    
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password, :tagline)
   end
 
 end

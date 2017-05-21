@@ -14,7 +14,7 @@
    * Auth errors
    * Demo acct
    * User update profile form
-   * update comments
-   * remove titles from comments.
+   * comments re-render at the bottom when updated???
+   * when user first signs up / before they add a picture/profile the styling is all fucked --> make defaults!
 
    All of the above before moving onto the meat: data viz

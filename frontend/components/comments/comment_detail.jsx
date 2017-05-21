@@ -1,4 +1,5 @@
  import React from 'react'
+ import { Link } from 'react-router-dom'
 
  class CommentDetail extends React.Component {
   constructor(props) {
@@ -34,6 +35,7 @@
   }
 
   userMatchRender() {
+    
     let {comment} = this.props
     return(
       <div>
@@ -56,6 +58,7 @@
 
 
   render() {
+    
     const { comment, deleteComment, updateComment, currentUser } = this.props
     let userMatch = false;
     if (currentUser.id === comment.user_id){
@@ -67,7 +70,7 @@
     return(
      <div> 
        <div>
-         <p>{currentUser.username}</p>
+         <Link to={`/users/${comment.user_id}`}><p>{comment.user.username}</p></Link>
          <p>{comment.title}</p>
          <p>{comment.body}</p>
          <p>{comment.id}</p>
