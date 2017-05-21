@@ -2,7 +2,7 @@ import React from 'react'
 import LeftNav from '../navs/left_nav_container'
 import SongList from './song_list'
 import { Link } from 'react-router-dom'
-import Comments from './comments'
+import Comments from '../comments/comment_container'
  
 class SetlistDetail extends React.Component {
   constructor(props) {
@@ -54,7 +54,6 @@ class SetlistDetail extends React.Component {
   render() {
     const { setlistDetail } = this.props
     const songList = this.props.setlistDetail.set || []
-    const comments = this.props.setlistDetail.comments || []
     const attend = (
       this.props.setlistDetail.attendees.some((users) =>
       users.id === this.props.currentUser.id )
@@ -78,7 +77,7 @@ class SetlistDetail extends React.Component {
               <p className="setlist-attendees-count"> {setlistDetail.attendees.length} were there! </p>
             </div>
             <SongList className="song-list" songs={songList}/> 
-            <Comments comments={comments}/>
+            <Comments setlistDetail={this.props.setlistDetail}/>
           </div>
       </div>
     )

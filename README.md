@@ -44,3 +44,4 @@ fanspace.io is a web application built using Ruby on Rails and React/Redux. The 
     Organize setlists by Tours (think: Notes / Notebooks in evernote)
     Social Media Sharing
     Upload photos from shows to corresponding setlist page
+    Nested Comments (Only one level deep)
