@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.updateState = this.updateState.bind(this)
     this.loadDemoUser = this.loadDemoUser.bind(this)
+    this.renderErrors = this.renderErrors.bind(this)
   }
 
   loadDemoUser(e){
@@ -36,6 +37,18 @@ class SessionForm extends React.Component {
     }
   }
 
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
 
 
   render () {
@@ -46,6 +59,7 @@ class SessionForm extends React.Component {
       <div className="session-form-container" >
          <form className="session-form"> 
           <h2 className="auth-form-head session-grid-a">{header}</h2>
+          <p className="session-grid-g errors">{this.renderErrors()}</p>
           <input className="txt-input session-grid-b" type="text" value={this.state.username} 
             onChange={this.updateState("username")} placeholder="username"></input>
           <input className="txt-input session-grid-c" type="password" value={this.state.password}

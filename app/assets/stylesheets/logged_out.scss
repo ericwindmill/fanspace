@@ -42,41 +42,49 @@
   justify-self: center;
   align-self: center;
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 3;
 }
 
 .session-grid-c {
   justify-self: center;
   align-self: center;
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 4;
 }
 
 .session-grid-d {
   justify-self: center;
   align-self: center;
   grid-column: 1;
-  grid-row: 4;
+  grid-row: 5;
 }
 
 .session-grid-e {
   justify-self: center;
   align-self: center;
   grid-column: 1;
-  grid-row: 5;
+  grid-row: 6;
 }
 
 .session-grid-f {
   justify-self: center;
   align-self: center;
   grid-column: 1;
-  grid-row: 6;
+  grid-row: 7;
 }
+
+.session-grid-g {
+  justify-self: center;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 2;
+}
+
 
 .auth-form-head {
   font-size: 2em;
   text-align: center;
-
+margin-bottom: 0;
 
 }
 
@@ -113,4 +121,8 @@
   color: #00a3b9;
   padding-bottom: 10px;
   border-bottom: 2px solid #00a3b9;
+}
+
+.errors {
+  color: red;
 }

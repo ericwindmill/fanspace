@@ -4,7 +4,7 @@ import { login, signup } from '../../../actions/session_actions'
 
 
 const demoUser = {
-  username: 'guest',
+  username: 'Bear',
   password: 'password'
 }
 

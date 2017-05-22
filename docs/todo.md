@@ -15,7 +15,6 @@
   ###Features:
    * Footer Nav
    * Auth errors
-   * Demo acct
    * set up cloudinary for heroku
 
   Complete All of this but quit adding more.
