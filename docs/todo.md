@@ -14,7 +14,6 @@
 
   ###Features:
    * Footer Nav
-   * Auth errors
    * set up cloudinary for heroku
 
   Complete All of this but quit adding more.
