@@ -19,8 +19,7 @@ componentWillMount() {
 }
 
 componentWillReceiveProps(newProps){
-  console.log(newProps)
-  if(this.props.match.params.url !== newProps.match.params.url) {
+  if(this.props.match.params.userId !== newProps.match.params.userId) {
     newProps.requestSingleUser(newProps.match.params.userId)
    }
 }

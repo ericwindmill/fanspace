@@ -16,7 +16,6 @@
    * Auth errors
    * Demo acct
    * rank
-   * clicking on own profile redirect from other user profile
    * comments re-render at the bottom when updated???
 
   Complete All of this but quit adding more.

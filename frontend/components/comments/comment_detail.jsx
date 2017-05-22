@@ -17,17 +17,23 @@
 
 
   handleClick(comment){
-    return e => this.props.deleteComment(comment)
+    return e => {
+      e.preventDefault();
+      return this.props.deleteComment(comment)
+      }
+
   }
 
   handleSubmit(comment) {
-    return e => (
-      this.props.updateComment(Object.assign(comment, this.state))
-    ).then(
-      () => this.setState({
-        body: ""
-      })
-    )
+    return e => {
+      e.preventDefault()
+      return this.props.updateComment(Object.assign(comment, this.state))
+      .then(
+        this.setState({
+          body: ""
+        })
+      )
+    }    
   }
 
   update(property) {

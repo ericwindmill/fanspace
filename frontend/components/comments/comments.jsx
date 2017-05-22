@@ -7,17 +7,25 @@ import selectAllUsers from '../../reducers/selectors'
 class Comments extends React.Component {
   constructor(props){
     super(props)
+
+
+    this.sortComments = this.sortComments.bind(this)
   }
 
   componentWillMount(){
     this.props.requestAllUsers()
   }
 
+sortComments(comments) {
+  comments.sort(function(a, b) {
+    return parseInt(a.id) - parseInt(b.id)
+  })
+}
 
 
 render() {
     const { comments, deleteComment } = this.props.setlistDetail
-
+    this.sortComments(comments)
 
     return (
       <div className="comment-index">

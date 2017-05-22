@@ -18,7 +18,7 @@ const userDetailReducer = (state = defaultUser, action) => {
   Object.freeze(state)
   switch (action.type) {
     case RECEIVE_SINGLE_USER:
-      return merge({}, action.user)
+      return merge({}, state, action.user)
     case UPDATE_USER_PROFILE:
       return merge({}, action.user)
     default:
