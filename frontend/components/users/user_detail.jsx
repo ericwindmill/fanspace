@@ -6,6 +6,9 @@ import UpdateForm from './update_profile_form'
 class userDetail extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      formShown: false
+    }
     
     this.displayUpdate = this.displayUpdate.bind(this)
   }
@@ -17,7 +20,17 @@ componentWillMount() {
 
 
 displayUpdate() {
-  this.props.history.push(`${this.props.currentUser.id}/update`)
+  if (this.state.formShown) {
+    this.props.history.replace(`/users/${this.props.currentUser.id}`)
+    this.setState({
+      formShown: false
+    })
+  } else {
+    this.props.history.push(`${this.props.currentUser.id}/update`)
+    this.setState({
+      formShown: true
+    })
+  }
 }
 
 
@@ -28,6 +41,8 @@ displayUpdate() {
     if (currentUser.id === userDetail.id) {
       userMatch = true
     }
+    console.log(this.props)
+    const buttonText = this.state.formShown ? <div>Cancel</div> : <div>Update Profile</div>
 
     
     return(
@@ -39,18 +54,25 @@ displayUpdate() {
           </div>
           <div className="profile-detail-column-2">
             <h1 className="profile-username">{userDetail.username}</h1>
-            <p className="profile-rank" >{userDetail.rank}</p>
             <p className="profile-location"> Location: {userDetail.location}</p>
+            <p className="profile-rank" >{userDetail.rank}</p>
             <p className="profile-tagline" >{userDetail.tagline}</p>
-            {userMatch ? <button onClick={this.displayUpdate}>Update Profile</button> : <div></div> }
+
+            
+            {userMatch ? (
+              <button className="update-profile-button" onClick={this.displayUpdate}> {buttonText} </button>
+               ) : (
+              <div></div> 
+             )}
             
           </div>
-          <Route path="/users/:id/update" render={() => (
-              <UpdateForm
-                userDetail={this.props.userDetail}
-                currentUser={this.props.currentUser}
-                updateCurrentUser={this.props.updateCurrentUser} />
-          )} />
+            <Route path="/users/:id/update" render={() => (
+                <UpdateForm
+                  history={this.props.history}
+                  userDetail={this.props.userDetail}
+                  currentUser={this.props.currentUser}
+                  updateCurrentUser={this.props.updateCurrentUser} />
+            )} />
         </div>
       </div>
     )

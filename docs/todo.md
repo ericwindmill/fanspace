@@ -3,7 +3,7 @@
   * The image is colored well, but it could be better. 
   * random backgrounds
   * Landing page parallax
-  * Try new font
+  * Change to new font
   * landing copy
   * size of everything in setlist index 
 
@@ -14,7 +14,8 @@
    * Auth errors
    * Demo acct
    * upload picture
+   * clicking on own profile redirect from other user profile
    * comments re-render at the bottom when updated???
    * when user first signs up / before they add a picture/profile the styling is all fucked --> make defaults!
 
-   All of the above before moving onto the meat: data viz
+  Complete All of this but quit adding more.

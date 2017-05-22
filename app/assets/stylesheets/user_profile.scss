@@ -1,3 +1,5 @@
+$blue: rgb(75, 231, 252);
+
 .profile-detail-main {
   color: white;
   background-image: url("profile_background.png");
@@ -21,7 +23,7 @@
   padding: 45px 0 0 224px;
   width: 70%;
   justify-items: center;
-  // align-items: center;
+  align-items: center;
   
 
     > .profile-detail-column-1 {
@@ -38,6 +40,13 @@
       align-self: end;
       justify-self: start;
 
+    }
+
+    > .profile-grid-3 {
+      grid-column: 1 / 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
 }
 
@@ -83,6 +92,57 @@
   padding-bottom: 16px;
   
   }
+
+.update-profile-button {
+  background: none;
+  border: none; 
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: .8em;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+
+  &:hover {
+    margin-bottom: -5px;
+  }
+
+  &:hover:after {
+    background: $blue none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 50px;
+    margin:auto;
+    margin-top:10px;
+  }
+}
+
+.profile-update-form {
+  width: 70%;
+  margin-top: 25px;
+  justify-self: center;
+
+  > .update-profile-textbox {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background: none;
+    width: 100%;
+    border: none;
+    border: 2px solid #BBB;
+    color: #bbb;
+    margin-bottom: 25px;
+    font-size: .8em;
+    padding: 10px 10px;
+
+    &:focus {
+      border-color: $blue;
+    }
+
+  }
+}
+
+
 
 
 
