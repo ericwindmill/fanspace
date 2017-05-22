@@ -6,6 +6,8 @@
   * Change to new font
   * landing copy
   * size of everything in setlist index 
+  * make profile images not stretch
+  * update profile form needs to not suck so much
 
 
 
@@ -13,9 +15,8 @@
    * Footer Nav
    * Auth errors
    * Demo acct
-   * upload picture
+   * rank
    * clicking on own profile redirect from other user profile
    * comments re-render at the bottom when updated???
-   * when user first signs up / before they add a picture/profile the styling is all fucked --> make defaults!
 
   Complete All of this but quit adding more.

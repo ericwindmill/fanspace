@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522141923) do
+ActiveRecord::Schema.define(version: 20170522151428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,11 @@ ActiveRecord::Schema.define(version: 20170522141923) do
     t.text     "body"
     t.integer  "user_id"
     t.integer  "setlist_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -64,17 +69,17 @@ ActiveRecord::Schema.define(version: 20170522141923) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",        null: false
-    t.string   "password_digest", null: false
-    t.string   "session_token",   null: false
-    t.string   "location"
+    t.string   "username",                                                     null: false
+    t.string   "password_digest",                                              null: false
+    t.string   "session_token",                                                null: false
+    t.string   "location",        default: "The Milky Way"
     t.text     "about"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                                                   null: false
+    t.datetime "updated_at",                                                   null: false
     t.string   "rank"
     t.string   "tagline"
     t.string   "email"
-    t.string   "profile_img_url"
+    t.string   "profile_img_url", default: "assets/user_images/default_user2"
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 

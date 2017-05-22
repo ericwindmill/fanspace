@@ -7,6 +7,7 @@ import Comments from '../comments/comment_container'
 class SetlistDetail extends React.Component {
   constructor(props) {
     super(props)
+
     this.handleClick = this.handleClick.bind(this)
   }
 

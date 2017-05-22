@@ -13,8 +13,12 @@ class Comments extends React.Component {
     this.props.requestAllUsers()
   }
 
+
+
 render() {
     const { comments, deleteComment } = this.props.setlistDetail
+
+
     return (
       <div className="comment-index">
         <h2>Join the Discussion</h2>

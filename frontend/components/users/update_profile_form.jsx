@@ -1,4 +1,10 @@
 import React from 'react'
+import Dropzone from 'react-dropzone'
+import request from 'superagent'
+
+const CLOUDINARY_UPLOAD_PRESET = 's31kgua8';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/ericwindmill/image/upload';
+
 
 class UpdateForm extends React.Component {
   constructor(props) {
@@ -11,7 +17,32 @@ class UpdateForm extends React.Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.onImageDrop = this.onImageDrop.bind(this)
   }
+
+ 
+onImageDrop(files) {
+  this.handleImageUpload(files[0])
+}
+
+handleImageUpload(file) {
+    let upload = request.post(CLOUDINARY_UPLOAD_URL)
+                        .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+                        .field('file', file);
+
+    upload.end((err, response) => {
+      if (err) {
+        console.error(err);
+      }
+
+      if (response.body.secure_url !== '') {
+        this.setState({
+          profile_img_url: response.body.secure_url
+        });
+      }
+    });
+  }
+
 
   handleSubmit(currentUser){
     return e => (
@@ -31,6 +62,18 @@ class UpdateForm extends React.Component {
     return(
     <div className="profile-grid-3">
       <form className="profile-update-form" onSubmit={this.handleSubmit(currentUser)}>
+
+        <Dropzone
+          className="dropzone"
+          multiple={false}
+          value={this.state.profile_img_url}
+          accept="image/*"
+          onDrop={this.onImageDrop.bind(this)}>
+          <label>Upload Photo</label>
+          <i className="fa fa-plus-circle" aria-hidden="true"></i>
+        </Dropzone>
+
+
         <label>Username</label> 
         <input
           className="update-profile-textbox"
@@ -58,14 +101,11 @@ class UpdateForm extends React.Component {
           onChange={this.update('tagline')}
         />
 
-        <label>Profile Image</label> 
-        <input
-          className="update-profile-textbox"
-          type="text"
-          value={this.state.profile_img_url}
-          placeholder="Picture"
-          onChange={this.update('profile_img_url')}
-        />
+        
+
+
+
+
         <button className="update-profile-button">Submit Changes</button>
       </form>
     </div>

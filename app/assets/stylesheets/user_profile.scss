@@ -55,8 +55,8 @@ $blue: rgb(75, 231, 252);
 .profile-img {
   border-radius: 50%;
   width: 200px;
+  height: auto;
   padding: 10px;
-
 }
 
 
@@ -142,6 +142,23 @@ $blue: rgb(75, 231, 252);
   }
 }
 
+
+.dropzone {
+  border: none;
+
+  > .label {
+    vertical-align: middle;
+  }
+
+  > .fa-plus-circle {
+    font-size: 2em;
+    padding: 10px;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
 
 
 

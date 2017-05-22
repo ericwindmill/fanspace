@@ -18,8 +18,16 @@ componentWillMount() {
   this.props.requestSingleUser(this.props.match.params.userId)
 }
 
+componentWillReceiveProps(newProps){
+  console.log(newProps)
+  if(this.props.match.params.url !== newProps.match.params.url) {
+    newProps.requestSingleUser(newProps.match.params.userId)
+   }
+}
 
-displayUpdate() {
+
+displayUpdate(e) {
+  e.preventDefault()
   if (this.state.formShown) {
     this.props.history.replace(`/users/${this.props.currentUser.id}`)
     this.setState({
@@ -41,7 +49,6 @@ displayUpdate() {
     if (currentUser.id === userDetail.id) {
       userMatch = true
     }
-    console.log(this.props)
     const buttonText = this.state.formShown ? <div>Cancel</div> : <div>Update Profile</div>
 
     
