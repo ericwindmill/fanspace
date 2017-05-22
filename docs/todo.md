@@ -13,7 +13,6 @@
 
 
   ###Features:
-   * Footer Nav
    * set up cloudinary for heroku
 
   Complete All of this but quit adding more.
