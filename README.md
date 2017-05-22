@@ -45,3 +45,4 @@ fanspace.io is a web application built using Ruby on Rails and React/Redux. The 
     Social Media Sharing
     Upload photos from shows to corresponding setlist page
     Nested Comments (Only one level deep)
+    Ranks

@@ -3,6 +3,10 @@ import SessionForm from './session_form'
 import { login, signup } from '../../../actions/session_actions'
 
 
+const demoUser = {
+  username: 'guest',
+  password: 'password'
+}
 
 const mapStateToProps = (state, ownProps) => {
   let type = (ownProps.location.pathname === '/log-in') ? 'login' : 'signup'
@@ -16,7 +20,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   let action = (ownProps.location.pathname === '/log-in') ? login : signup
   return ({
-    processForm: (user) => dispatch(action(user))
+    processForm: (user) => dispatch(action(user)),
+    loadDemo: () => dispatch(login(demoUser))
   })
 }
 

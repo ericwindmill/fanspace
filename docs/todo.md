@@ -8,6 +8,7 @@
   * size of everything in setlist index 
   * make profile images not stretch
   * update profile form needs to not suck so much
+  * username too long for nav!
 
 
 
@@ -15,7 +16,6 @@
    * Footer Nav
    * Auth errors
    * Demo acct
-   * rank
-   * comments re-render at the bottom when updated???
+   * set up cloudinary for heroku
 
   Complete All of this but quit adding more.

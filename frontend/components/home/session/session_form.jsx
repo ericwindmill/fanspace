@@ -12,10 +12,18 @@ class SessionForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this)
     this.updateState = this.updateState.bind(this)
+    this.loadDemoUser = this.loadDemoUser.bind(this)
+  }
+
+  loadDemoUser(e){
+    e.preventDefault()
+    this.props.loadDemo().then(() => {
+      this.props.history.push('/setlists')
+    })
   }
 
   handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
     const user = Object.assign({}, this.state)
     this.props.processForm(user).then(() => {
       this.props.history.push('/setlists')
@@ -44,6 +52,8 @@ class SessionForm extends React.Component {
             onChange={this.updateState("password")} placeholder="password"></input>
           <input className="btn sign-up-btn session-grid-d" type="submit" value={header} onClick={this.handleSubmit}></input>
         <Link className="sign-up-link session-grid-e" to={link}>or {linkText}</Link>
+
+        <Link className="sign-up-link session-grid-f" onClick={this.loadDemoUser} to="/log-in">Click for Demo</Link>
         </form>
       </div>
     )
