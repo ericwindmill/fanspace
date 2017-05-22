@@ -1,7 +1,90 @@
 
-
-
+$blue: rgb(75, 231, 252);
+$red: rgb(255, 0, 0);
+$green: rgb(0, 134, 57);
+$orange: rgb(210, 138, 62);
+/*************************
+    FOOTER LAYOUT
+*************************/
 .footer {
   color: white;
-  display:block;
+  background: black;
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  justify-items: center;
+  padding: 25px 25px 0;
+
+  &.div {
+    text-align: center;
+  }
+
+  > .footer-grid-a {
+    grid-row: 1;
+    margin-bottom: 5px;
+  }
+
+  > .footer-grid-b {
+    grid-row: 2;  
+    padding: 10px 0 20px;  
+    margin-bottom: 10px;
+  }
+
+  > .footer-grid-c {
+    grid-row: 3;
+    max-width: 50%;
+    text-align: center;    
+  }
+
+  > .footer-grid-d {
+    grid-row: 4;
+    
+    > p {
+      display: inline-block;
+      padding: 0 25px;
+    }
+  }
+}
+
+
+
+/*************************
+    FOOTER STYLES 
+*************************/
+
+.email-link {
+  transition: all 0.1s ease;
+  color: white ;
+  background: rgba(75, 231, 252, .9);
+  padding: 10px 15px;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 300;
+
+  &:hover{
+    background: rgba(75, 231, 252, .5);
+    border-radius: 0 25px 25px 25px;
+  }
+
+}
+
+.social-icon {
+  font-size: 2em;
+  color: white;
+  padding: 10px;
+}
+
+.github:hover {
+  color: $green;
+}
+
+.email:hover {
+  color: $red;
+}
+
+.linkedin:hover {
+  color: $orange;
+}
+
+a.mmj-link:hover, a.name-link:hover {
+  border-bottom: 2px solid $blue;
 }
