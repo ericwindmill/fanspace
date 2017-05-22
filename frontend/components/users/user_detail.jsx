@@ -7,7 +7,6 @@ class userDetail extends React.Component {
   constructor(props) {
     super(props)
     
-    this.userMatchRender = this.userMatchRender.bind(this)
     this.displayUpdate = this.displayUpdate.bind(this)
   }
 
@@ -30,8 +29,7 @@ displayUpdate() {
       userMatch = true
     }
 
-    const renderForm = userMatch ?
-      this.userMatchRender() : <div></div>
+    
     return(
       <div className='profile-detail-main'>
         <LeftNav profile_img={userDetail.profile_img_url} />

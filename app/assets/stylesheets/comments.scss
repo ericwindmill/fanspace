@@ -13,7 +13,7 @@ $blue: rgb(75, 231, 252);
 
 
   > h2 {
-    text-align: center;
+  margin-left: 5px;
   }
 
 }
@@ -122,4 +122,46 @@ li:nth-child(odd) {
 
 
 
+/***************************
+    COMMENT INDEX
+***************************/
+.add-comment-container {
+  margin: 50px 0 0 5px;
+  width: 100%;
+}
 
+.comment-form {
+  display: flex;
+  margin: 0 10px;
+  flex-wrap: nowrap;
+}
+
+.add-comment-text {
+        color: white;
+        background: none;
+        border-style: none;
+        resize: none;
+        border-bottom: 1px solid #BBB;
+        margin: 0 10px;
+        width: 100%;
+        height: 50px
+}
+
+.comment-add-button {
+  background: none;
+  padding: 10px;
+  font-size: .8em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #BBB;
+    border-bottom: solid 1px $blue;
+    
+  } 
+}

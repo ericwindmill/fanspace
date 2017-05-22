@@ -37,15 +37,15 @@ class CommentForm extends React.Component {
 
   render() {
     return (
-      <section className="">
+      <section className="add-comment-container">
         <h2>Leave a comment: </h2>
         <form className="comment-form" onSubmit={this.handleSubmit}>
-          <textarea className="update-comment-text"
+          <textarea className="add-comment-text"
             value={this.state.body}
             placeholder="Comment"
             onChange={this.update('body')}
             />
-          <button>Add Comment</button>
+          <button className="comment-add-button">Comment</button>
         </form>
       </section>
 
