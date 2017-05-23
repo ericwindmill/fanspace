@@ -10,43 +10,69 @@
 }
 
 
+
 .landing-copy{
   color: white;
   display: grid;
-  justify-content: center;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  position: absolute;
+  grid-gap: 1px;
+  position: relative;
   top:50%;
   left: 50%;
-  // background: rgba(0,0,0,.1);
   transform: translate(-50%, -50%);
-  padding: 50px;
-
-  > .landing-copy h1 {
-    font-size: 5vw;
-    margin-bottom: 0;
-  }
-
-  > .landing-copy h2 {
-    font-size: 2.5vw;
-    margin-top: 5px;
-  }
 }
-
 
 .landing-grid-a{
-  grid-column: 3 ;
-  grid-row: 7;
+  grid-column: 1 ;
+  grid-row: 1;
 }
 .landing-grid-b{
-  grid-column: 3;
-  grid-row: 8;
+  grid-column: 1;
+  grid-row: 2;
 }
+
+.landing-grid-c{
+  flex-direction: column;
+  grid-column: 1;
+  grid-row: 3;
+  position: relative;
+}
+
+.copy-header {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.landing-learn-more {
+  text-align: center;
+  color:white;
+  position: absolute;
+  top:90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  > .fa-angle-double-down {
+    z-index: 10;
+    font-size: 40px;
+    padding: 5px;
+    margin: 0 0 10px 0;
+  }
+}
+
+.landing-learn-more-text {
+  text-align: center;
+  color:white;
+  margin-bottom: 3px;
+}
+
+
 .landing-btn {
   max-width: 100%;
   justify-self: center;
   padding: 15px 60px;
+
 }
 
 
@@ -80,45 +106,35 @@
   left: 0;
 }
 
-  .parallax__layer--fore {
-    -webkit-transform: translateZ(90px) scale(.7);
-    transform: translateZ(90px) scale(.7);
-    z-index: 1;
-  }
-
   .parallax__layer--base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    z-index: 4;
   }
 
   .parallax__layer--back {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
-    z-index: 3;
-  }
-
-  .parallax__layer--deep {
-    -webkit-transform: translateZ(-600px) scale(3);
-    transform: translateZ(-600px) scale(3);
-    z-index: 2;
   }
 
 
 #group1 {
-  z-index: 5;
-
   &.parallax-group {
       position: relative;
       height: 500px;
-      height: 100vh;
+      height: 95vh;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
   }
 
+  > .parallax__layer--base {
+    z-index: 6;
+  }
+
   > .parallax__layer--back {
+    z-index: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
     background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
     width: 100vw;
   }
@@ -126,26 +142,8 @@
 
 }
 
-#group2 {
-  z-index: 3;
-
-  &.parallax-group {
-      position: relative;
-      height: 500px;
-      height: 100vh;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-  }
-
-  > .parallax__layer--back {
-    background: rgba(45, 45, 45, 1);
-  }
-}
-
 
 #group3 {
-  z-index: 4;
-
   &.parallax-group {
       position: relative;
       height: 500px;
@@ -155,7 +153,17 @@
   }
 
   > .parallax__layer--base {
+    z-index: 6;
+
+  }
+
+  > .parallax__layer--back {
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
+    width: 100vw;
   }
 }
 
@@ -172,9 +180,11 @@
   }
 
   > .parallax__layer--base {
-    background: rgba(35, 162, 205, 1);
+    background: white;
   }
 }
+
+
 
 .copy {
  text-align: center;
