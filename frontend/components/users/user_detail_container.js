@@ -7,7 +7,11 @@ import * as Metrics from './metrics_selectors'
 const mapStateToProps = state => ({
   userDetail: state.userDetail,
   currentUser: state.session.currentUser,
-  uniqCities: Metrics.uniqCities(state)
+  uniqCities: Metrics.uniqCities(state),
+  uniqVenues: Metrics.uniqVenues(state),
+  performances: Metrics.performances(state),
+  uniqSongs: Metrics.uniqSongs(state),
+  albumPercent: Metrics.albumPercent(state)
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -13,9 +13,13 @@
    * set up cloudinary for heroku
    * log in log out bug ??
    * add 'i was there' button to detail page
+   * setlist detail metrics
+   * browse by things
+   * fix comments
    
 ### User Metrics
-*Cities
-*Unique Songs
-*Venues
-*Album %
+*Album%
+*shows per year
+*missing songs
+*covers
+*number of times seeing a song

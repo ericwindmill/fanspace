@@ -8,8 +8,12 @@
 
 
 ActiveRecord::Base.transaction do 
-  User.delete_all
 
+
+  #############
+  # SETLIST SEEDS!
+  #############
+  User.delete_all
 
   User.create!(
     username: 'eric',
@@ -20,7 +24,6 @@ ActiveRecord::Base.transaction do
     about: 'This is some nice copy to make other users like me more. I know how important it is to base your self-worth on how well liked you are on the internet.',
     rank: 'got that old time feeling',
     tagline: "It don't matter what yer doin' as long as yer losin' yo head."
-
   )
 
   User.create!(
@@ -45,6 +48,53 @@ ActiveRecord::Base.transaction do
     tagline: '...they are the imitators! '
   )
 
+
+  #############
+  # ALBUMS AND SONGS
+  #############
+
+  Song.delete_all
+  Album.delete_all
+
+  the_tennessee_fire = Album.create(title: "The Tennessee Fire", cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495561387/album%20covers/the_tennessee_fire_copy.jpg' )
+  Song.create!(title: "Heartbreakin' Man", album_id: 1)
+  Song.create!(title: "They Ran", album_id: 1)
+  Song.create!(title: "The Bear", album_id: 1)
+  Song.create!(title: "Nashville to Kentucky", album_id: 1)
+  Song.create!(title: "Old Sept. Blues", album_id: 1)
+  Song.create!(title: "If All Else Fails", album_id: 1)
+  Song.create!(title: "It's About Twilight Now", album_id: 1)
+  Song.create!(title: "Evelyn Is Not Real", album_id: 1)
+  Song.create!(title: "War Begun", album_id: 1)
+  Song.create!(title: "Picture of You", album_id: 1)
+  Song.create!(title: "I Will Be There When You Die", album_id: 1)
+  Song.create!(title: "The Dark", album_id: 1)
+  Song.create!(title: "By My Car", album_id: 1)
+  Song.create!(title: "Butch Cassidy", album_id: 1)
+  Song.create!(title: "I Think I'm Going To Hell", album_id: 1)
+  Song.create!(title: "Untitled", album_id: 1)
+
+  at_dawn = Album.create(title: "At Dawn", cover_art_url: 'assets/album_covers/it_still_moves.jpg' )
+  
+  it_still_moves = Album.create(title: "It Still Moves", cover_art_url: 'assets/album_covers/it_still_moves.jpg' )
+  Song.create!(title: "Mahgeetah", album_id: 3)
+  Song.create!(title: "Dancefloors", album_id: 3)
+  Song.create!(title: "Golden", album_id: 3)
+  Song.create!(title: "Master Plan", album_id: 3)
+  Song.create!(title: "One Big Holiday", album_id: 3)
+  Song.create!(title: "I Will Sing You Songs", album_id: 3)
+  Song.create!(title: "Easy Morning Rebel", album_id: 3)
+  Song.create!(title: "Run Thru", album_id: 3)
+  Song.create!(title: "Rollin' Back'", album_id: 3)
+  Song.create!(title: "Just One Thing", album_id: 3)
+  Song.create!(title: "Steam Engine", album_id: 3)
+  Song.create!(title: "One in the Same", album_id: 3)
+
+  #############
+  # SETLIST SEEDS!
+  #############
+  Setlist.delete_all
+
   Setlist.create!(
     date: Date.new(2005, 11, 05),
     venue: 'Alladin Theater',
@@ -53,8 +103,20 @@ ActiveRecord::Base.transaction do
     country: "USA",
     poster_img_url:'assets/posters/2005_11_05.jpg'
   )
+  SetlistSong.create!(setlist_id: 1, song_id: 1)
+  SetlistSong.create!(setlist_id: 1, song_id: 2)
+  SetlistSong.create!(setlist_id: 1, song_id: 3)
+  SetlistSong.create!(setlist_id: 1, song_id: 4)
+  SetlistSong.create!(setlist_id: 1, song_id: 5)
+  SetlistSong.create!(setlist_id: 1, song_id: 6)
+  SetlistSong.create!(setlist_id: 1, song_id: 7)
+  SetlistSong.create!(setlist_id: 1, song_id: 8)
+  SetlistSong.create!(setlist_id: 1, song_id: 9)
+  SetlistSong.create!(setlist_id: 1, song_id: 10)
+  SetlistSong.create!(setlist_id: 1, song_id: 11)
+  SetlistSong.create!(setlist_id: 1, song_id: 12)
 
-   Setlist.create!(
+  Setlist.create!(
     date: Date.new(2008, 06, 12),
     venue: 'Bonnaroo',
     city: "Manchester",
@@ -62,6 +124,20 @@ ActiveRecord::Base.transaction do
     country: "USA",
     poster_img_url:'assets/posters/2008_06_12.jpg'
   )
+  SetlistSong.create!(setlist_id: 2, song_id: 13)
+  SetlistSong.create!(setlist_id: 2, song_id: 14)
+  SetlistSong.create!(setlist_id: 2, song_id: 15)
+  SetlistSong.create!(setlist_id: 2, song_id: 16)
+  SetlistSong.create!(setlist_id: 2, song_id: 28)
+  SetlistSong.create!(setlist_id: 2, song_id: 24)
+  SetlistSong.create!(setlist_id: 2, song_id: 19)
+  SetlistSong.create!(setlist_id: 2, song_id: 12)
+  SetlistSong.create!(setlist_id: 2, song_id: 1)
+  SetlistSong.create!(setlist_id: 2, song_id: 21)
+  SetlistSong.create!(setlist_id: 2, song_id: 20)
+  SetlistSong.create!(setlist_id: 2, song_id: 3)
+
+
 
   Setlist.create!(
     date: Date.new(2008, 06, 20),
@@ -71,6 +147,18 @@ ActiveRecord::Base.transaction do
     country: "USA",
     poster_img_url:'assets/posters/2008_06_20.jpg'
   )
+  SetlistSong.create!(setlist_id: 3, song_id: 22)
+  SetlistSong.create!(setlist_id: 3, song_id: 21)
+  SetlistSong.create!(setlist_id: 3, song_id: 19)
+  SetlistSong.create!(setlist_id: 3, song_id: 11)
+  SetlistSong.create!(setlist_id: 3, song_id: 9)
+  SetlistSong.create!(setlist_id: 3, song_id: 27)
+  SetlistSong.create!(setlist_id: 3, song_id: 8)
+  SetlistSong.create!(setlist_id: 3, song_id: 3)
+  SetlistSong.create!(setlist_id: 3, song_id: 2)
+  SetlistSong.create!(setlist_id: 3, song_id: 25)
+  SetlistSong.create!(setlist_id: 3, song_id: 20)
+  SetlistSong.create!(setlist_id: 3, song_id: 3)
 
   Setlist.create!(
     date: Date.new(2008, 12, 31),
@@ -162,34 +250,11 @@ ActiveRecord::Base.transaction do
     poster_img_url:'assets/posters/2015_10_17.jpg'
   )
 
-  it_still_moves = Album.create(title: "It Still Moves", cover_art_url: 'assets/album_covers/it_still_moves.jpg' )
 
-  Song.create!(title: "Mahgeetah", album_id: 1)
-  Song.create!(title: "Dancefloors", album_id: 1)
-  Song.create!(title: "Golden", album_id: 1)
-  Song.create!(title: "Master Plan", album_id: 1)
-  Song.create!(title: "One Big Holiday", album_id: 1)
-  Song.create!(title: "I Will Sing You Songs", album_id: 1)
-  Song.create!(title: "Easy Morning Rebel", album_id: 1)
-  Song.create!(title: "Run Thru", album_id: 1)
-  Song.create!(title: "Rollin' Back'", album_id: 1)
-  Song.create!(title: "Just One Thing", album_id: 1)
-  Song.create!(title: "Steam Engine", album_id: 1)
-  Song.create!(title: "One in the Same", album_id: 1)
 
-  SetlistSong.create!(setlist_id: 1, song_id: 1)
-  SetlistSong.create!(setlist_id: 1, song_id: 2)
-  SetlistSong.create!(setlist_id: 1, song_id: 3)
-  SetlistSong.create!(setlist_id: 1, song_id: 4)
-  SetlistSong.create!(setlist_id: 1, song_id: 5)
-  SetlistSong.create!(setlist_id: 1, song_id: 6)
-  SetlistSong.create!(setlist_id: 1, song_id: 7)
-  SetlistSong.create!(setlist_id: 1, song_id: 8)
-  SetlistSong.create!(setlist_id: 1, song_id: 9)
-  SetlistSong.create!(setlist_id: 1, song_id: 10)
-  SetlistSong.create!(setlist_id: 1, song_id: 11)
-  SetlistSong.create!(setlist_id: 1, song_id: 12)
-
+  #############
+  # User Interactions
+  #############
 
   Attend.create!(user_id: 1, setlist_id: 1)
   Attend.create!(user_id: 2, setlist_id: 1)

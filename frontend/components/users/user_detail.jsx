@@ -84,6 +84,10 @@ displayUpdate(e) {
                 userDetail={this.props.userDetail}
                 currentUser={this.props.currentUser}
                 uniqCities={this.props.uniqCities}
+                uniqVenues={this.props.uniqVenues}
+                performances={this.props.performances}
+                uniqSongs={this.props.uniqSongs}
+                albumPercent={this.props.albumPercent}
             />
           </div>
         </div>
