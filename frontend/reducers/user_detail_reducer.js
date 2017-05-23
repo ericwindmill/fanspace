@@ -9,7 +9,7 @@ const defaultUser = {
   about: '',
   rank: '',
   tagline: '',
-  attends: []
+  setlist: []
 }
 
 

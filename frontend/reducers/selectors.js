@@ -1,6 +1,5 @@
 
 import { values } from 'lodash'
-import { fetchAllUsers } from '../util/users_util'
 
 export const selectAllSetlists = state => (
   values(state.setlists)

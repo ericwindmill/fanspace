@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import LeftNav from '../navs/left_nav_container'
 import UpdateForm from './update_profile_form'
+import UserMetrics from './user_metrics'
 
 class userDetail extends React.Component {
   constructor(props) {
@@ -49,8 +50,6 @@ displayUpdate(e) {
       userMatch = true
     }
     const buttonText = this.state.formShown ? <div>Cancel</div> : <div>Update Profile</div>
-
-    
     return(
       <div className='profile-detail-main'>
         <LeftNav profile_img={userDetail.profile_img_url} />
@@ -79,7 +78,17 @@ displayUpdate(e) {
                   currentUser={this.props.currentUser}
                   updateCurrentUser={this.props.updateCurrentUser} />
             )} />
+          <div className="metrics-main">
+            <UserMetrics 
+                history={this.props.history}
+                userDetail={this.props.userDetail}
+                currentUser={this.props.currentUser}
+                uniqCities={this.props.uniqCities}
+            />
+          </div>
         </div>
+
+
       </div>
     )
   }
