@@ -37,6 +37,7 @@
     "react-dropzone": "^3.13.1",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
+    "react-scrollable-anchor": "^0.4.2",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "superagent": "^3.5.2",

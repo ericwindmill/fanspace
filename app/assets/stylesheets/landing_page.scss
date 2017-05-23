@@ -1,48 +1,113 @@
 
 
- /************************************************************
-       LANDING PAGE COMPONENT
- ************************************************************/
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
 
 
-.landing_page {
-  color: white;
+.container {
+  max-width: 100vw;
+  margin: 0 auto;
 }
 
 
+section.module.parallax-1 {
+  background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
+  height: 90vh;
+}
+section.module.parallax-2 {
+  background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
+  height: 90vh;
+}
+section.module.parallax-3 {
+  background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
+  height: 90vh;
+}
 
-.landing-copy{
-  color: white;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-gap: 1px;
-  position: relative;
-  top:50%;
+
+section.module h2 {
+  margin-bottom: 40px;
+}
+
+section.module h3 {
+  margin-bottom: 40px;
+}
+
+section.module p {
+  margin-bottom: 40px;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+}
+section.module.parallax {
+  padding-top: 50px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+// @media all and (min-width: 600px) {
+//   section.module h2 {
+//     font-size: 42px;
+//   }
+//   section.module p {
+//     font-size: 20px;
+//   }
+//   section.module.parallax h1 {
+//     font-size: 96px;
+//   }
+// }
+// @media all and (min-width: 960px) {
+//   section.module.parallax h1 {
+//     font-size: 160px;
+//   }
+// }
+
+
+
+
+
+/* ============================================================
+  SECTIONS
+============================================================ */
+
+/*******************************
+Container 1
+*******************************/
+section.module.parallax > .container-1 h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 5vw;
+  position: absolute;
+  top: 40%;
   left: 50%;
+  width: 80%;
+  text-align: center;
+  // text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 700;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
-.landing-grid-a{
-  grid-column: 1 ;
-  grid-row: 1;
-}
-.landing-grid-b{
-  grid-column: 1;
-  grid-row: 2;
-}
+section.module .btn {
+  top: 57%;
+  left: 50%;
+  position: absolute;
+  padding: 15px 60px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
 
-.landing-grid-c{
-  flex-direction: column;
-  grid-column: 1;
-  grid-row: 3;
-  position: relative;
-}
-
-.copy-header {
-  font-size: 3em;
-  text-align: center;
-  margin-bottom: 10px;
+  &:focus {
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, .4);
+  }
 }
 
 .landing-learn-more {
@@ -52,145 +117,53 @@
   top:90%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+
+  > .landing-learn-more-text {
+    margin-bottom: 3px;
+  }
 
   > .fa-angle-double-down {
     z-index: 10;
     font-size: 40px;
     padding: 5px;
     margin: 0 0 10px 0;
-  }
-}
-
-.landing-learn-more-text {
-  text-align: center;
-  color:white;
-  margin-bottom: 3px;
-}
-
-
-.landing-btn {
-  max-width: 100%;
-  justify-self: center;
-  padding: 15px 60px;
-
-}
-
-
- /**********************************
-       PARALAX EFFECT
- **********************************/
-
-
-.parallax {
-  height: 500px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px;
-}
-
-.parallax__group {
-  position: relative;
-  height: 500px;
-  height: 100vh;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-  .parallax__layer--base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    transition: all .3s ease;
   }
 
-  .parallax__layer--back {
-    -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-300px) scale(2);
-  }
-
-
-#group1 {
-  &.parallax-group {
-      position: relative;
-      height: 500px;
-      height: 95vh;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-  }
-
-  > .parallax__layer--base {
-    z-index: 6;
-  }
-
-  > .parallax__layer--back {
-    z-index: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
-    width: 100vw;
-  }
-
-
-}
-
-
-#group3 {
-  &.parallax-group {
-      position: relative;
-      height: 500px;
-      height: 100vh;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-  }
-
-  > .parallax__layer--base {
-    z-index: 6;
-
-  }
-
-  > .parallax__layer--back {
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
-    width: 100vw;
+  &:hover {
+    cursor: default;
+     > .fa-angle-double-down {
+          font-size: 50px;
+     }
   }
 }
 
 
-#group4 {
-  z-index: 3;
+/*******************************
+Container 2
+*******************************/
+section.module > .container-2 h2 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 3vw;
+  // text-transform: uppercase;
+  // text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 700;
+}
 
-  &.parallax-group {
-      position: relative;
-      height: 500px;
-      height: 100vh;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-  }
-
-  > .parallax__layer--base {
-    background: white;
-  }
+section.module > .container-2 h3 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 2vw;
+  // text-transform: uppercase;
+  // text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 700;
 }
 
 
 
-.copy {
- text-align: center;
- position: absolute;
- left: 50%;
- top: 50%;
--webkit-transform: translate(-50%, -50%);
- transform: translate(-50%, -50%);
-}
+/*******************************
+Container 2
+*******************************/
+
