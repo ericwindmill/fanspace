@@ -61,6 +61,10 @@ export const albumPercent = state => {
       }
     })
   })
+
+  
+  const tnFire = Math.floor((album[1].songs.length / 16) * 100)
+  console.log(tnFire)
 }
 
 

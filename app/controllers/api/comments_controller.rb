@@ -23,7 +23,7 @@ class Api::CommentsController < ApplicationController
       render json: @comment
     else 
       render json: @comment.errors.full_messages, status: 422
-    endq
+    end
   end
 
   def destroy

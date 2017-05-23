@@ -15,7 +15,6 @@
    * add 'i was there' button to detail page
    * setlist detail metrics
    * browse by things
-   * fix comments
    
 ### User Metrics
 *Album%
