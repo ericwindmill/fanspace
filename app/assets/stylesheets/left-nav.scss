@@ -7,9 +7,10 @@ $blue: rgb(75, 231, 252);
   color: #BBB;
   width: 175px;
    height: 100vh;
-  a {
-      display: block;
-    }
+
+}
+.left-nav-top a {
+  display: block;
 }
 
 .left-nav-flex {
@@ -19,9 +20,6 @@ $blue: rgb(75, 231, 252);
   justify-content: space-between;
 }
 
-.left-nav-bottom {
-  margin-bottom: 15px;
-}
 
 .left-title {
   text-align: center;
@@ -64,32 +62,34 @@ $blue: rgb(75, 231, 252);
 }
 
 
+.left-nav-bottom {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
 .left-nav-profile-link{
   padding-top: 20px;
   border-top: #BBB 1px solid;
+
 }
 
 .left-nav-username {
-  font-size: 24px;
   text-transform: uppercase;
   vertical-align: middle;
-
-}
-
-.left-nav-username.left-link {
-  display: inline-block;
   padding: 0;
-  position: relative;
+
 }
+
 
 .profile-name {
   display: inline-block;
   margin: 15px 0;
-  position: absolute;
 }
 
 .nav-profile-img {
-  display:inline-block;
   width: 50px;
   padding-right: 15px;
 }

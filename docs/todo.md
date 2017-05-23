@@ -13,5 +13,7 @@
 
   ###Features:
    * set up cloudinary for heroku
+   * log in log out bug
+   
 
   Complete All of this but quit adding more.
