@@ -10,7 +10,6 @@
 #
 
 class Song < ApplicationRecord
-  validates :title, uniqueness: true
   validates :album_id, presence: true
   
   belongs_to :album
