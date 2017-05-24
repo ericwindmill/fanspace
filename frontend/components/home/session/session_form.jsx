@@ -59,7 +59,7 @@ class SessionForm extends React.Component {
       <div className="session-form-container" >
          <form className="session-form"> 
           <h2 className="auth-form-head session-grid-a">{header}</h2>
-          <p className="session-grid-g errors">{this.renderErrors()}</p>
+          <div className="session-grid-g errors">{this.renderErrors()}</div>
           <input className="txt-input session-grid-b" type="text" value={this.state.username} 
             onChange={this.updateState("username")} placeholder="username"></input>
           <input className="txt-input session-grid-c" type="password" value={this.state.password}

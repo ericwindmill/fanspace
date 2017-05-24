@@ -15,7 +15,7 @@ class UserMetrics extends React.Component {
         <h2>Seen {this.props.userDetail.setlist.length} shows</h2>
         <ul>
           {this.props.userDetail.setlist.map(set => {
-            return <li key={set.id}><Link to="/setlists/set.id" >{set.date}{set.city}</Link></li>
+            return <li key={set.id}><Link to={`/setlists/${set.id}`}>{set.date}{set.city}</Link></li>
           })}
         </ul>
         

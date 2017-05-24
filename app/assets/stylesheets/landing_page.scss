@@ -1,5 +1,8 @@
 
-
+$blue: rgb(75, 231, 252);
+$red: rgb(255, 0, 0);
+$green: rgb(0, 134, 57);
+$orange: rgb(210, 138, 62);
 /* ============================================================
   PRIMARY STRUCTURE
 ============================================================ */
@@ -68,8 +71,51 @@ section.module.parallax {
 //   }
 // }
 
+/* Makes a fixed background wrapper
+which the user cannot interact with */
+
+.iframe-wrapper {
+  position: fixed;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Make the iframe keep an aspect ratio, and
+position it in the middle of its parent wrapper*/
+
+.iframe-wrapper iframe {
+  width: 100vw;
+  height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+  max-height: 100vh;
+  min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mmj-gif-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%;
+  position: relative;
+}
 
 
+.mmj-gif {
+  position:absolute;
+}
+// <div className="iframe-wrapper">  
+//   <iframe src="https://player.vimeo.com/video/121352461?autoplay=1&loop=1&title=0&byline=0&portrait=0"></iframe>  
+// </div>
+  //         <img className="guitar-green" src="http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495592752/design/Flying-V-Green.png" />
+  //         <img className="guitar-blue" src="http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495592745/design/Flying-V-Blue.png" />
+  //         <img className="guitar-red" src="http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495592754/design/Flying-V-Red.png" />
 
 
 /* ============================================================
@@ -79,11 +125,11 @@ section.module.parallax {
 /*******************************
 Container 1
 *******************************/
-section.module.parallax > .container-1 h1 {
+section.module.parallax > .container-1 > h1 {
   color: rgba(255, 255, 255, 0.8);
   font-size: 5vw;
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   width: 80%;
   text-align: center;
@@ -95,8 +141,41 @@ section.module.parallax > .container-1 h1 {
   transform: translate(-50%, -50%);
 }
 
+section.module.parallax > .container-1 > h3 {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.25em;
+  font-size: 2vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  text-align: center;
+  // text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 400;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+section.module.parallax > .container-1 > p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25vw;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 50%;
+  text-align: center;
+  // text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 400;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 section.module .btn {
-  top: 57%;
+  top: 70%;
   left: 50%;
   position: absolute;
   padding: 15px 60px;
@@ -143,23 +222,125 @@ section.module .btn {
 /*******************************
 Container 2
 *******************************/
-section.module > .container-2 h2 {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 3vw;
+.container.container-2 {
+  margin: auto ;
+  // margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: 90%;
+  // height: 80vh;
+
+  > .container-2-copy {
+    width: 50%;
+  }
+}
+
+section.module > .container-2 h1 {
+  // color: rgba(75, 231, 252, 1);
+  color: $green;
+  font-size: 4vw;
   // text-transform: uppercase;
-  // text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+  text-shadow: 0 0 3px rgba(0, 0, 0, .3);
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 700;
+  margin: 20px 0;
+}
+
+section.module > .container-2 h2 {
+  // color: rgba(75, 231, 252, 1);
+  color: $green;
+  font-size: 4vw;
+  // text-transform: uppercase;
+  text-shadow: 0 0 3px rgba(0, 0, 0, .3);
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 15px 0;
 }
 
 section.module > .container-2 h3 {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 2vw;
+  color:black;
+  font-size: 20px;
+  margin: 0;
   // text-transform: uppercase;
   // text-shadow: 0 0 3px rgba(0, 0, 0, .4);
   font-family: 'Montserrat', Helvetica, sans-serif;
-  font-weight: 700;
+  font-weight: 400;
+
 }
+
+
+
+.posters {
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+
+  > .poster{
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    transition: filter .2s ease-in-out;
+    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(100%); /* FF 35+ */
+
+    &:hover {
+      -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+      filter: grayscale(0%); /* FF 35+ */
+    }
+  }
+}
+
+.guitar-green {
+  width: 45%;
+  height: auto;
+  transition: all .3s ease;
+  position: absolute;
+  top: 65%;
+  left: 99%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  // &:hover{
+  //   top: 62%;
+  //   left: 88%;
+  // }
+}
+
+.guitar-blue {
+  width: 45%;
+  height: auto;
+  transition: all .2s ease;
+  position: absolute;
+  top: 60%;
+  left: 76%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  // &:hover {
+  //   top: 52%;
+  //   left: 72%;
+  // }
+}
+
+.guitar-red {
+  width: 45%;
+  height: auto;
+  transition: all .3s ease;
+  position: absolute;
+  top: 55%;
+  left: 89%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  // &:hover {
+  //   top: 48%;
+  //   left: 85%;
+  // }
+} 
 
 
 
