@@ -13,8 +13,8 @@
    * Finish landing page (AND ALL LINKS!)
    * set up cloudinary for heroku
    * add 'i was there' button to detail page
-   * browse by things
    * seed!
+   * browse by things
    
 
   ### User Metrics

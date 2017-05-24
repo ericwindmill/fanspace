@@ -19,7 +19,7 @@ ActiveRecord::Base.transaction do
     username: 'eric',
     password: 'password',
     email: 'eric@ericwindmill.com',
-    profile_img_url: 'assets/user_images/user_1_pic.png',
+    profile_img_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495466650/design/user_1_pic_r5czsy.png',
     location: 'San Francisco',
     about: 'This is some nice copy to make other users like me more. I know how important it is to base your self-worth on how well liked you are on the internet.',
     rank: 'got that old time feeling',
@@ -30,7 +30,7 @@ ActiveRecord::Base.transaction do
     username: 'guest',
     password: 'password',
     email: 'guest@ericwindmill.com',
-    profile_img_url: 'assets/user_images/default_user2',
+    profile_img_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495466650/design/default_user2_epovjm.png ',
     location: 'The Milkyway Galaxy',
     about: 'Just a thing navigating the earth trying to not be an asshole.',
     rank: 'new user',
@@ -41,7 +41,7 @@ ActiveRecord::Base.transaction do
     username: 'Bear',
     password: 'password',
     email: 'bear@ericwindmill.com',
-    profile_img_url: 'assets/user_images/default_user',
+    profile_img_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495466650/design/default_user_reb7q6.png',
     location: 'Pluto (the planet)',
     about: 'Please be my friend.',
     rank: 'junior member',
@@ -74,9 +74,9 @@ ActiveRecord::Base.transaction do
   Song.create!(title: "I Think I'm Going To Hell", album_id: 1)
   Song.create!(title: "Untitled", album_id: 1)
 
-  at_dawn = Album.create(title: "At Dawn", cover_art_url: 'assets/album_covers/it_still_moves.jpg' )
+  at_dawn = Album.create(title: "At Dawn", cover_art_url: 'https://cloudinary.com/console/media_library#/dialog/image/upload/it_still_moves_qo2jhk' )
   
-  it_still_moves = Album.create(title: "It Still Moves", cover_art_url: 'assets/album_covers/it_still_moves.jpg' )
+  it_still_moves = Album.create(title: "It Still Moves", cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/it_still_moves_qo2jhk.jpg' )
   Song.create!(title: "Mahgeetah", album_id: 3)
   Song.create!(title: "Dancefloors", album_id: 3)
   Song.create!(title: "Golden", album_id: 3)
@@ -101,7 +101,7 @@ ActiveRecord::Base.transaction do
     city: "Portland",
     state: "Oregon",
     country: "USA",
-    poster_img_url:'assets/posters/2005_11_05.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466646/posters/2005_11_05_t4xvcv.jpg'
   )
   SetlistSong.create!(setlist_id: 1, song_id: 1)
   SetlistSong.create!(setlist_id: 1, song_id: 2)
@@ -122,7 +122,7 @@ ActiveRecord::Base.transaction do
     city: "Manchester",
     state: "Tennesee",
     country: "USA",
-    poster_img_url:'assets/posters/2008_06_12.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/posters/2008_06_12_oy4st4.jpg'
   )
   SetlistSong.create!(setlist_id: 2, song_id: 13)
   SetlistSong.create!(setlist_id: 2, song_id: 14)
@@ -145,7 +145,7 @@ ActiveRecord::Base.transaction do
     city: "New York",
     state: "New York",
     country: "USA",
-    poster_img_url:'assets/posters/2008_06_20.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/posters/2008_06_20_qvddjk.jpg'
   )
   SetlistSong.create!(setlist_id: 3, song_id: 22)
   SetlistSong.create!(setlist_id: 3, song_id: 21)
@@ -166,7 +166,7 @@ ActiveRecord::Base.transaction do
     city: "New York",
     state: "New York",
     country: "USA",
-    poster_img_url:'assets/posters/2008_12_31.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/posters/2008_12_31_sjrleo.jpg'
   )
 
   Setlist.create!(
@@ -175,7 +175,7 @@ ActiveRecord::Base.transaction do
     city: "Morrison",
     state: "Colorado",
     country: "USA",
-    poster_img_url:'assets/posters/2011_08_04.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/posters/2011_08_04_tpqwtd.jpg'
   )
 
   Setlist.create!(
@@ -184,7 +184,7 @@ ActiveRecord::Base.transaction do
     city: "Morrison",
     state: "Colorado",
     country: "USA",
-    poster_img_url:'assets/posters/2012_08_03.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466648/posters/2012_08_03_pijwdn.jpg'
   )
 
   Setlist.create!(
@@ -193,7 +193,7 @@ ActiveRecord::Base.transaction do
     city: "Morrison",
     state: "Colorado",
     country: "USA",
-    poster_img_url:'assets/posters/2012_08_03.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466648/posters/2012_08_03_pijwdn.jpg'
   )
 
   Setlist.create!(
@@ -202,7 +202,7 @@ ActiveRecord::Base.transaction do
     city: "Port Chester",
     state: "New York",
     country: "USA",
-    poster_img_url:'assets/posters/2012_12_27.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466648/posters/2012_12_27_lddoxu.jpg'
   )
 
   Setlist.create!(
@@ -211,7 +211,7 @@ ActiveRecord::Base.transaction do
     city: "Port Chester",
     state: "New York",
     country: "USA",
-    poster_img_url:'assets/posters/2012_12_28.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466648/posters/2012_12_28_ufevka.jpg'
   )
 
   Setlist.create!(
@@ -220,7 +220,7 @@ ActiveRecord::Base.transaction do
     city: "Port Chester",
     state: "New York",
     country: "USA",
-    poster_img_url:'assets/posters/2012_12_29.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466648/posters/2012_12_29_incamw.jpg'
   )
 
   Setlist.create!(
@@ -229,7 +229,7 @@ ActiveRecord::Base.transaction do
     city: "San Francisco",
     state: "California",
     country: "USA",
-    poster_img_url:'assets/posters/2015_10_15.jpg'
+    poster_img_url:'https://cloudinary.com/console/media_library#/dialog/image/upload/posters%2F2015_10_15_ojltbp'
   )
 
   Setlist.create!(
@@ -238,7 +238,7 @@ ActiveRecord::Base.transaction do
     city: "San Francisco",
     state: "California",
     country: "USA",
-    poster_img_url:'assets/posters/2015_10_16.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466648/posters/2015_10_16_xtlp84.jpg'
   )
 
   Setlist.create!(
@@ -247,7 +247,7 @@ ActiveRecord::Base.transaction do
     city: "San Francisco",
     state: "California",
     country: "USA",
-    poster_img_url:'assets/posters/2015_10_17.jpg'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466650/posters/2015_10_17_exvbtw.jpg'
   )
 
 
