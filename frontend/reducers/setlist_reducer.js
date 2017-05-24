@@ -5,7 +5,7 @@ const setlistReducer = (state = {}, action) => {
   Object.freeze(state)
   switch (action.type) {
     case RECEIVE_ALL_SETLISTS:
-      return merge({}, state, action.setlists)
+      return merge({}, action.setlists)
     default:
       return state
   }

@@ -73,40 +73,42 @@ handleImageUpload(file) {
           <i className="fa fa-plus-circle" aria-hidden="true"></i>
         </Dropzone>
 
+        <div className="username-location">
+          <label>Username</label> 
+          <input
+            className="update-profile-textbox"
+            type="text"
+            value={this.state.username}
+            placeholder="Username"
+            onChange={this.update('username')}
+          />
 
-        <label>Username</label> 
-        <input
-          className="update-profile-textbox"
-          type="text"
-          value={this.state.username}
-          placeholder="Username"
-          onChange={this.update('username')}
-        />
+          <label>Location</label> 
+          <input
+            className="update-profile-textbox"
+            type="text"
+            value={this.state.location}
+            placeholder="Place"
+            onChange={this.update('location')}
+          />
+        </div>
 
-        <label>Location</label> 
-        <input
-          className="update-profile-textbox"
-          type="text"
-          value={this.state.location}
-          placeholder="Place"
-          onChange={this.update('location')}
-        />
-
-        <label>Bio</label> 
-        <input
-          className="update-profile-bio update-profile-textbox"
-          type="text"
-          value={this.state.tagline}
-          placeholder="Bio"
-          onChange={this.update('tagline')}
-        />
-
+        <div className="bio">
+          <label>Bio</label> 
+          <input
+            className="update-profile-bio update-profile-textbox"
+            type="text"
+            value={this.state.tagline}
+            placeholder="Bio"
+            onChange={this.update('tagline')}
+          />
+        </div>
         
 
 
 
 
-        <button className="update-profile-button">Submit Changes</button>
+        <button className="update-profile-button btn submit">Submit Changes</button>
       </form>
     </div>
     )

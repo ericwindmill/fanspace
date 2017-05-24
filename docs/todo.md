@@ -10,12 +10,13 @@
 
 
   ###Features:
-   * set up cloudinary for heroku
    * style profile
    * add 'i was there' button to detail page
    * Finish landing page (AND ALL LINKS!)
    * seed!
    * browse by things
+   * update profile button rerender bug
+   
    
 
   ### User Metrics

@@ -1,58 +1,65 @@
 $blue: rgb(75, 231, 252);
+$red: rgb(255, 0, 0);
+$green: rgb(0, 134, 57);
+$orange: rgb(210, 138, 62);
+$box-background: rgba(25, 25, 25, 0.84);
+$box-shadow-component: 0 0 20px 2px rgba(0, 0, 0, 0.3);
 
 .profile-detail-main {
   color: white;
+  // background: rgba(255,0,0,.8);
   background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466649/design/profile_background_vlaqqd.png");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
-}
-
-.profile-detail-info {
-  // height: 100%;
-  max-width: 270px;
+  min-height: 100vh;
 }
 
 //layout 
 .profile-detail-grid {
-  display: grid; 
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-around;
-  padding: 45px 0 0 224px;
-  width: 70%;
-  justify-items: center;
-  align-items: center;
-  
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  // display: grid; 
+  // grid-template-columns: 1fr 1fr;
+  padding: 45px 10px 0 224px;
+
+  > .profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    // overflow: auto;
+    // align-items: stretch;
+    flex-grow: 1;
 
     > .profile-detail-column-1 {
-      grid-column: 1;
-      justify-self: end;
-      align-self: end;
-      margin-right: 20px;
+      margin: 20px;
+      background: $box-background;
+      box-shadow: $box-shadow-component;
+      box-sizing: border-box;
+      display: inline-block;
+      flex-grow: 0;
     }
 
     > .profile-detail-column-2 {
-      margin-left: 20px;
-      margin-bottom: 10px;
-      grid-column: 2;
-      align-self: end;
-      justify-self: start;
-
+        margin: 20px;
+        background: $box-background;
+        box-shadow: $box-shadow-component;
+        box-sizing: border-box;
+        padding: 20px;
+        flex-grow: 1;
     }
 
-    > .profile-grid-3 {
-      grid-column: 1 / 3;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
+  }
 
     > .metrics-main {
-      margin-top: 50px;
-      grid-column: 1 / 3
+      width: 80vw;
+      padding: 1em;
+      // grid-column: 1 / 3
       // inner grid in user_metrics.scss
+      box-sizing: border-box;
+      flex-grow: 1;
     }
 }
 
@@ -99,53 +106,70 @@ $blue: rgb(75, 231, 252);
   
   }
 
-.update-profile-button {
-  background: none;
-  border: none; 
-  font-family: 'Montserrat', Helvetica, sans-serif;
-  color: white;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: .8em;
-  margin-bottom: 10px;
-  padding-bottom: 15px;
-
-  &:hover {
-    margin-bottom: -5px;
-  }
-
-  &:hover:after {
-    background: $blue none repeat scroll 0 0;
-    content: "";
-    display: block;
-    height: 2px;
-    width: 50px;
-    margin:auto;
-    margin-top:10px;
-  }
+.update-profile-button.btn {
+  padding: 10px 40px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border: none;
+  font-size: 12px;
 }
 
+.submit {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.profile-grid-3 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    background: $box-background;
+    box-shadow: $box-shadow-component;  
+    padding: 20px;
+} 
+
+
 .profile-update-form {
-  width: 70%;
-  margin-top: 25px;
-  justify-self: center;
+  width: 100%;
+  min-width: 600px;
 
-  > .update-profile-textbox {
-    font-family: 'Montserrat', Helvetica, sans-serif;
-    background: none;
-    width: 100%;
-    border: none;
-    border: 2px solid #BBB;
-    color: #bbb;
-    margin-bottom: 25px;
-    font-size: .8em;
-    padding: 10px 10px;
+  .bio, .username-location, .dropzone {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    align-content: center;
 
-    &:focus {
-      border-color: $blue;
+    > label {
+      grid-column: 1 / 2;
+      justify-self: end;
+      align-self: center;
+      padding: 0 10px;
     }
 
+    > input, i {
+      grid-column: 2 / 6;
+      align-self: center;
+    }
+
+    > .update-profile-textbox {
+      font-family: 'Montserrat', Helvetica, sans-serif;
+      background: none;
+      width: 90%;
+      border: none;
+      border: 2px solid #BBB;
+      color: #bbb;
+      font-size: .8em;
+      padding: 10px 10px;
+      margin: 10px 0;
+
+      &:focus {
+        border-color: $blue;
+      }
+    }
   }
+
+
 }
 
 
