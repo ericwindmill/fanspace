@@ -10,15 +10,14 @@
 
 
   ###Features:
+   * Finish landing page (AND ALL LINKS!)
    * set up cloudinary for heroku
    * log in log out bug ??
    * add 'i was there' button to detail page
-   * setlist detail metrics
    * browse by things
    
 ### User Metrics
-*Album%
-*shows per year
 *missing songs
-*covers
+*covers (this will just be considered another album for now)
 *number of times seeing a song
+* anything 'per'

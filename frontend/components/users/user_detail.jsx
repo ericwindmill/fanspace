@@ -17,6 +17,8 @@ class userDetail extends React.Component {
 
 componentWillMount() {
   this.props.requestSingleUser(this.props.match.params.userId)
+  this.props.requestAllAlbums()
+  this.props.requestAllSetlists()
 }
 
 componentWillReceiveProps(newProps){
@@ -44,6 +46,7 @@ displayUpdate(e) {
 
 
   render() {
+
     const { currentUser, userDetail } = this.props
     let userMatch = false
     if (currentUser.id === userDetail.id) {
@@ -88,6 +91,8 @@ displayUpdate(e) {
                 performances={this.props.performances}
                 uniqSongs={this.props.uniqSongs}
                 albumPercent={this.props.albumPercent}
+                showsPerYear={this.props.showsPerYear}
+                uniqSongsByAlbum={this.props.uniqSongsByAlbum}
             />
           </div>
         </div>

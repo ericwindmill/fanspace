@@ -9,6 +9,7 @@ class UserMetrics extends React.Component {
 
 
   render() {
+
     return(
       <div>
         <h2>Seen {this.props.userDetail.setlist.length} shows</h2>
@@ -24,14 +25,41 @@ class UserMetrics extends React.Component {
         
         <h2> Seen {this.props.performances.length} total performances!</h2>
         <h2> Seen {this.props.uniqSongs.length} unique songs!</h2>
+
         <ul>
-          {this.props.performances.map(song => {
-            return <li key={song.id}> {song.title} </li>
+          {this.props.uniqSongsByAlbum.map(album => {
+            return <li key={album.title}> {album.title} : 
+            
+            <ul key={album.title}>
+              {album.songs.map(song => {
+              return <li key={album.key}> {song} </li> })}
+            </ul>
+
+          </li>
           })}
         </ul>
+
+        <h2> Album Percentages </h2>
+        <ul>
+          {this.props.albumPercent.map(album => {
+            return <li key={album.title}> {album.title} : {album.percent}% </li>
+          })}
+        </ul>
+
+
+
+        <h2> Shows Per Year </h2>
+        <ul>
+          {this.props.showsPerYear.map(year => {
+            return <li key={year.year}> In {year.year} you saw {year.count} shows </li>
+          })}
+        </ul>
+
       </div>
     )
   }
 }
+
+
 
 export default UserMetrics
