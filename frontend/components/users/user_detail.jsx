@@ -81,7 +81,7 @@ displayUpdate(e) {
                   currentUser={this.props.currentUser}
                   updateCurrentUser={this.props.updateCurrentUser} />
             )} />
-          <div className="metrics-main">
+          <div className="metrics-main profile-detail-grid-4">
             <UserMetrics 
                 history={this.props.history}
                 userDetail={this.props.userDetail}
@@ -95,9 +95,8 @@ displayUpdate(e) {
                 uniqSongsByAlbum={this.props.uniqSongsByAlbum}
             />
           </div>
+
         </div>
-
-
       </div>
     )
   }

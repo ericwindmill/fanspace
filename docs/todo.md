@@ -10,9 +10,10 @@
 
 
   ###Features:
-   * Finish landing page (AND ALL LINKS!)
    * set up cloudinary for heroku
+   * style profile
    * add 'i was there' button to detail page
+   * Finish landing page (AND ALL LINKS!)
    * seed!
    * browse by things
    

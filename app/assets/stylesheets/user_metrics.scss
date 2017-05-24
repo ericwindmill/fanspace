@@ -1,0 +1,74 @@
+
+$blue: rgb(75, 231, 252);
+$red: rgb(255, 0, 0);
+$green: rgb(0, 134, 57);
+$orange: rgb(210, 138, 62);
+
+
+.fontastic::before {
+  font-size: 50px;
+}
+
+.icon-ticket-1::before {
+  color: $orange;
+}
+
+.icon-map::before {
+  color: $green;
+}
+
+.icon-theatre::before {
+  color: $red;
+}
+
+.icon-music::before {
+  color: $blue;
+}
+
+.icon-nuclear::before {
+  color: $green;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  padding: 30px;
+
+  > .stats-at-a-glance-table{
+  background: rgba(15, 15, 15, .4);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  justify-content: space-between;
+  justify-items: space-between;
+  width: 80%;
+  color: white;
+  text-align: center;
+  grid-column: 1 / 4;
+
+  > h3 {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    display:block;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    border-bottom: 1px solid black;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+

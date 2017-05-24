@@ -1,186 +1,42 @@
- <div className="parallax">
-      <div id="group1" className="parallax-group">
-        <div className="parallax__layer parallax__layer--base">
-          <div className="landing-copy">
-            <div className="landing-grid-a">
-              <h1 className="copy-header">A place for mega fans.</h1>
-            </div>
-            <Link className="btn landing-btn landing-grid-b" to="/sign-up">Sign Up Today</Link>
-          <div className="landing-grid-c">
-          </div>
-         </div>
-        </div>
-        <div className="parallax__layer parallax__layer--back"></div>
-      </div>
-      <div className="landing-learn-more">
-        <h4 className="landing-learn-more-text">Learn About FansSapce</h4>
-        <i className="fa fa-angle-double-down" aria-hidden="true"></i>
-      </div>
+   
+        <ul>
+          {this.props.userDetail.setlist.map(set => {
+            return <li key={set.id}><Link to={`/setlists/${set.id}`}>{set.date}{set.city}</Link></li>
+          })}
+        </ul>
+        
+        <h2>In {this.props.uniqCities.length} cities</h2>
+        
+        <h2>At {this.props.uniqVenues.length} venues</h2>
+        
+        <h2> Seen {this.props.performances.length} total performances!</h2>
+        <h2> Seen {this.props.uniqSongs.length} unique songs!</h2>
 
+        <ul>
+          {this.props.uniqSongsByAlbum.map(album => {
+            return <li key={album.title}> {album.title} : 
+            
+            <ul key={album.title}>
+              {album.songs.map(song => {
+              return <li key={album.key}> {song} </li> })}
+            </ul>
 
-      
-      <div id="group4" className="parallax-group">
-        <div className="parallax__layer parallax__layer--base">
-          <h1>Fanspace.io</h1>
-          <h2>Connect</h2>
-          <h3>Geek out with with other giant nerds</h3>
-          <h2>Follow </h2>
-          <h3>Keep track of all the past and future shows.</h3>
-          <h2>Track</h2>
-          <h3>Its 2017! You Need Metrics!</h3>
-        </div>
-      </div>
+          </li>
+          })}
+        </ul>
 
-      <div id="group3" className="parallax-group">
-        <div className="parallax__layer parallax__layer--base">
-           <h1> Metrics </h1>
-           <h2> Learn about the shows youve seen </h2>
-           <p> ** insert metrics pictures </p>
-        </div>
-        <div className="parallax__layer parallax__layer--back"></div>
-      </div>
-
-
-      <div id="group4" className="parallax-group">
-        <div className="parallax__layer parallax__layer--base">
-          <h1 className="copy">Its Easy.</h1>
-          <ul>
-            <li>Create an Account</li>
-            <li>Browse the shows</li>
-            <li>Select the shows youve seen</li>
-            <li>See your results!</li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="group3" className="parallax-group">
-        <div className="parallax__layer parallax__layer--base">
-           <h1 className="copy"> Remember: </h1>
-           <h2>You arent a true fan unless you can prove your value!</h2>
-        </div>
-        <div className="parallax__layer parallax__layer--back"></div>
-      </div>
-    </div>
+        <h2> Album Percentages </h2>
+        <ul>
+          {this.props.albumPercent.map(album => {
+            return <li key={album.title}> {album.title} : {album.percent}% </li>
+          })}
+        </ul>
 
 
 
-//  /**********************************
-//        PARALAX EFFECT
-//  **********************************/
-
-
-// .parallax {
-//   height: 500px;
-//   height: 100vh;
-//   overflow-x: hidden;
-//   overflow-y: auto;
-//   -webkit-perspective: 300px;
-//   perspective: 300px;
-// }
-
-// .parallax__group {
-//   position: relative;
-//   height: 500px;
-//   height: 100vh;
-//   -webkit-transform-style: preserve-3d;
-//   transform-style: preserve-3d;
-// }
-
-// .parallax__layer {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-// }
-
-//   .parallax__layer--base {
-//     -webkit-transform: translateZ(0);
-//     transform: translateZ(0);
-//   }
-
-//   .parallax__layer--back {
-//     -webkit-transform: translateZ(-300px) scale(2);
-//     transform: translateZ(-300px) scale(2);
-//   }
-
-
-// #group1 {
-//   &.parallax-group {
-//       position: relative;
-//       height: 500px;
-//       height: 95vh;
-//       -webkit-transform-style: preserve-3d;
-//       transform-style: preserve-3d;
-//   }
-
-//   > .parallax__layer--base {
-//     z-index: 6;
-//   }
-
-//   > .parallax__layer--back {
-//     z-index: 0;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-attachement: fixed;
-//     height: 100vh;
-//     background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
-//     width: 100vw;
-//   }
-
-
-// }
-
-
-// #group3 {
-//   &.parallax-group {
-//       position: relative;
-//       height: 500px;
-//       height: 100vh;
-//       -webkit-transform-style: preserve-3d;
-//       transform-style: preserve-3d;
-//   }
-
-//   > .parallax__layer--base {
-//     z-index: 6;
-
-//   }
-
-//   > .parallax__layer--back {
-//     z-index: -1;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-attachment: fixed;
-//     height: 100vh;
-//     background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
-//     width: 100vw;
-//   }
-// }
-
-
-// #group4 {
-//   z-index: 3;
-
-//   &.parallax-group {
-//       position: relative;
-//       height: 500px;
-//       height: 100vh;
-//       -webkit-transform-style: preserve-3d;
-//       transform-style: preserve-3d;
-//   }
-
-//   > .parallax__layer--base {
-//     background: white;
-//   }
-// }
-
-
-
-// .copy {
-//  text-align: center;
-//  position: absolute;
-//  left: 50%;
-//  top: 50%;
-// -webkit-transform: translate(-50%, -50%);
-//  transform: translate(-50%, -50%);
-// }
+        <h2> Shows Per Year </h2>
+        <ul>
+          {this.props.showsPerYear.map(year => {
+            return <li key={year.year}> In {year.year} you saw {year.count} shows </li>
+          })}
+        </ul>

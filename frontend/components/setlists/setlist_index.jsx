@@ -17,16 +17,24 @@ class SetlistIndex extends React.Component {
 
 
   render() {
-    const { setlists } = this.props
-
-    return(
+    const { setlists, currentUser, newAttend, deleteAttend, requestAllSetlists } = this.props
+      return(
       <main className="setlist-main">
         <LeftNav />
         <section className="setlist-index-component">
           <h1> Explore the Shows </h1>
             <div>
               <ul className="poster-index-grid">
-                {setlists.map(setlist => <SetlistIndexItem key={setlist.id} setlist={setlist} /> )}
+                {setlists.map(setlist => 
+                  <SetlistIndexItem 
+                    key={setlist.id} 
+                    setlist={setlist} 
+                    currentUser={currentUser}
+                    newAttend={newAttend}
+                    deleteAttend={deleteAttend}
+                    requestAllSetlists={requestAllSetlists}
+                   /> 
+                )}
               </ul>
             </div> 
         </section>

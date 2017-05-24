@@ -11,50 +11,39 @@ class UserMetrics extends React.Component {
   render() {
 
     return(
-      <div>
-        <h2>Seen {this.props.userDetail.setlist.length} shows</h2>
-        <ul>
-          {this.props.userDetail.setlist.map(set => {
-            return <li key={set.id}><Link to={`/setlists/${set.id}`}>{set.date}{set.city}</Link></li>
-          })}
-        </ul>
-        
-        <h2>In {this.props.uniqCities.length} cities</h2>
-        
-        <h2>At {this.props.uniqVenues.length} venues</h2>
-        
-        <h2> Seen {this.props.performances.length} total performances!</h2>
-        <h2> Seen {this.props.uniqSongs.length} unique songs!</h2>
+      <div className="metrics-grid">
+        <section className="stats-at-a-glance-table">
+          <h3 className="table-glance-header">Stats At a Glance</h3>
+          <div className="main-shows">
+            <p className="icon-ticket-1 fontastic"></p>
+            <p>Shows</p>
+            <p>{this.props.userDetail.setlist.length}</p>
+          </div>
+          
+          <div className="main-cities">
+            <p className="icon-map fontastic"></p>
+            <p >Cities</p>
+            <p>{this.props.uniqCities.length}</p>
+          </div>
+          
+          <div className="main-venues">
+            <p className="icon-theatre fontastic"></p>
+            <p>Venues</p>
+            <p>{this.props.uniqVenues.length}</p>
+          </div>
 
-        <ul>
-          {this.props.uniqSongsByAlbum.map(album => {
-            return <li key={album.title}> {album.title} : 
-            
-            <ul key={album.title}>
-              {album.songs.map(song => {
-              return <li key={album.key}> {song} </li> })}
-            </ul>
+          <div className="main-performances">
+            <p className="icon-music fontastic"></p>
+            <p>Total Songs</p>
+            <p>{this.props.performances.length}</p>
+          </div>
 
-          </li>
-          })}
-        </ul>
-
-        <h2> Album Percentages </h2>
-        <ul>
-          {this.props.albumPercent.map(album => {
-            return <li key={album.title}> {album.title} : {album.percent}% </li>
-          })}
-        </ul>
-
-
-
-        <h2> Shows Per Year </h2>
-        <ul>
-          {this.props.showsPerYear.map(year => {
-            return <li key={year.year}> In {year.year} you saw {year.count} shows </li>
-          })}
-        </ul>
-
+          <div className="main-songs">
+            <p className="icon-nuclear fontastic"></p>
+            <p>Unique Songs</p>
+            <p>{this.props.uniqSongs.length}</p>
+          </div>
+        </section>
       </div>
     )
   }

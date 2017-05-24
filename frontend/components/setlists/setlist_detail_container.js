@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => ({
   requestSingleSetlist: (id) => dispatch(requestSingleSetlist(id)),
   newAttend: (attend) => dispatch(newAttend(attend)),
-  deleteAttend: (attend) => dispatch(deleteAttend(attend)),
+  deleteAttend: (attend) => dispatch(deleteAttend(attend))
   // newComment: (comment) => dispatch(newComment(comment)),
   // deleteComment: (comment) => dispatch(deleteComment(comment))
 })

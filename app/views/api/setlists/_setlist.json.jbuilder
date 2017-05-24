@@ -5,4 +5,6 @@ end
 json.set do 
   json.array! setlist.songs, partial: 'api/songs/song', as: :song
 end
-
+json.attendees do 
+  json.array! setlist.users, partial: 'api/users/user', as: :user
+end

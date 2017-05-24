@@ -229,7 +229,7 @@ ActiveRecord::Base.transaction do
     city: "San Francisco",
     state: "California",
     country: "USA",
-    poster_img_url:'https://cloudinary.com/console/media_library#/dialog/image/upload/posters%2F2015_10_15_ojltbp'
+    poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466649/posters/2015_10_15_ojltbp.jpg'
   )
 
   Setlist.create!(
