@@ -27,7 +27,7 @@ class SetlistIndexByYear extends React.Component {
               <ul className="setlist-by-list">
                 {setlists.map(year => {
                   return <li className="setlist-by-list-item">
-                    <h1> {year.year} </h1>
+                    <h2> {year.year} </h2>
                     <ul className="poster-index-grid">
                        {year.setlists.map(setlist => {
                       return <SetlistIndexItem 

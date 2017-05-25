@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+@import 'vars';
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -71,10 +71,6 @@ FLAT ICON
   /************************************************************
        RESETS
  ************************************************************/
-/*.app-component {
-  background-color: darkgrey;
-  height: 100vh;
-}*/
 html {
   background: white;
 } 
@@ -84,9 +80,16 @@ html {
 *     TYPOGRAPHY
 ****************************/
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-family: 'Montserrat', Helvetica, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
+  background: none;
+}
+
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 400;
   background: none;
 }
 
@@ -105,7 +108,7 @@ p, a, li, form, textarea, button {
   border-radius: 35px;
   background: white;
   color: white;
-  background-color: #00a3b9;
+  background-color: $blue-green;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -113,9 +116,6 @@ p, a, li, form, textarea, button {
 }
 
 .btn:hover {
-  /*border: solid 2px black;*/
-
-  background-color: #00b6ce;
-
+  background-color: rgb(0, 107, 96)
 }
 

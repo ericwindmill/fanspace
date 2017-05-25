@@ -1,4 +1,4 @@
-$blue: rgb(75, 231, 252);
+@import 'vars';
 
 .left-nav {
   position: fixed;
@@ -36,8 +36,10 @@ $blue: rgb(75, 231, 252);
 }
 
 .browse {
-  text-transform: uppercase;
+  text-transform: lowercase;
+  font-weight: 200;
   margin-bottom: 10px;
+  font-size: .9em;
 }
 
 .browse-list {
@@ -54,10 +56,11 @@ $blue: rgb(75, 231, 252);
   padding: 15px 0;
   margin: 0;
   color: #BBB;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 1.1em;
   
   &:hover {
-    color: $blue
+    color: $blue-green;
   }
 }
 

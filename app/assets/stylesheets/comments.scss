@@ -1,7 +1,4 @@
-// Place all the styles related to the api/comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-$blue: rgb(75, 231, 252);
+@import 'vars';
 /***************************
     COMMENT INDEX
 ***************************/
@@ -77,6 +74,10 @@ li:nth-child(odd) {
      grid-column: 2;
      margin-bottom: 0;
 
+     > p {
+       margin-bottom: 50px;
+     }
+
     > .edit-comments {
         grid-row: 2;
         grid-column: 2;
@@ -99,6 +100,12 @@ li:nth-child(odd) {
         border-bottom: 2px solid #BBB;
         margin: 0 10px;
         width: 100%;
+        height: 45px;
+
+        &:focus {
+          box-shadow: 0 0 2px $blue-green;
+          border: 1px solid $blue-green;
+        }
       }
     } 
    }
@@ -120,7 +127,7 @@ li:nth-child(odd) {
 
   &:hover {
     color: #BBB;
-    border-bottom: solid 1px $blue;
+    border-bottom: solid 1px $blue-green;
     
   } 
 }
@@ -146,14 +153,19 @@ li:nth-child(odd) {
 }
 
 .add-comment-text {
-        color: white;
-        background: none;
-        border-style: none;
-        resize: none;
-        border-bottom: 1px solid #BBB;
-        margin: 0 10px;
-        width: 100%;
-        height: 50px
+    color: white;
+    background: none;
+    border-style: none;
+    resize: none;
+    border-bottom: 1px solid #BBB;
+    margin: 0 10px;
+    width: 100%;
+    height: 50px;
+
+    &:focus {
+      box-shadow: 0 0 2px $blue-green;
+      border: 1px solid $blue-green;
+    }
 }
 
 .comment-add-button {
@@ -167,10 +179,28 @@ li:nth-child(odd) {
   color: white;
   border: none;
   cursor: pointer;
+  height: 45px;
 
   &:hover {
     color: #BBB;
-    border-bottom: solid 1px $blue;
-    
+    border-bottom: solid 1px $blue-green;
   } 
+
+
 }
+
+// .txt-input {
+//   outline: none;
+//   display: block;
+//   width: 90%;
+//   padding: 3px;
+//   border: none;
+//   border-bottom: 1px solid black;
+//   background: transparent;
+//   margin: 0 0 15px;
+//   height: 45px;
+
+//   &:focus {
+//     box-shadow: 0 0 5px $blue-green;
+//     border: 1px solid $blue-green;
+//   }

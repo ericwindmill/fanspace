@@ -1,8 +1,4 @@
-
-$blue: rgb(75, 231, 252);
-$red: rgb(255, 0, 0);
-$green: rgb(0, 134, 57);
-$orange: rgb(210, 138, 62);
+@import 'vars';
 /* ============================================================
   PRIMARY STRUCTURE
 ============================================================ */
@@ -235,7 +231,7 @@ Container 2
     > .header {
       grid-column: 6 / 11;
       grid-row: 1;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     > .discover {
@@ -274,21 +270,21 @@ Container 2
 
 section.module > .container-2 h1 {
   // color: rgba(75, 231, 252, 1);
-  color: $green;
+  color: $blue-green;
   font-size: 4vw;
   grid-column: 1 / 11;
   // text-transform: uppercase;
-  text-shadow: 0 0 3px rgba(0, 0, 0, .3);
+  text-shadow: 0 0 3px rgba(0, 0, 0, .5);
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 700;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 section.module > .container-2 h2 {
   // color: rgba(75, 231, 252, 1);
-  color: $green;
+  color: $blue-green;
   font-size: 3vw;
-  text-shadow: 0 0 3px rgba(0, 0, 0, .3);
+  text-shadow: 0 0 3px rgba(0, 0, 0, .5);
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 700;
   margin: 10px 0;

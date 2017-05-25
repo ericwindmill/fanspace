@@ -1,10 +1,4 @@
-$blue: rgb(75, 231, 252);
-$red: rgb(185, 34, 43);
-$green: rgb(0, 134, 57);
-$orange: rgb(210, 138, 62);
-$box-background: rgba(25, 25, 25, 0.84);
-$box-shadow-component: 0 0 20px 2px rgba(0, 0, 0, 0.3);
-$widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
+@import 'vars';
 
 .fontastic::before {
   font-size: 50px;
@@ -19,11 +13,11 @@ $widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
 }
 
 .icon-theatre::before {
-  color: $red;
+  color: $light-red;
 }
 
 .icon-music::before {
-  color: $blue;
+  color: $blue-green;
 }
 
 .icon-nuclear::before {
@@ -83,7 +77,6 @@ $widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
         padding: 1em;
         color: white;
         list-style: none;
-        border: 1.5px rgba(15, 20, 25, 1) solid;
         display: flex;
         flex-flow: column;
         text-align: center;
@@ -129,7 +122,7 @@ $widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
 
         padding: 1em;
         color: white;
-        border: 1.5px rgba(15, 20, 25, 1) solid;
+        border: $widget-inner-border;
 
       }
     }
@@ -167,7 +160,7 @@ $widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
 
         padding: 1em;
         color: white;
-        border: 1.5px rgba(15, 20, 25, 1) solid;
+        border: $widget-inner-border;
 
       }
     }
@@ -204,7 +197,7 @@ $widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
 
         padding: 1em;
         color: white;
-        border: 1.5px rgba(15, 20, 25, 1) solid;
+        border: $widget-inner-border;
 
       }
     }

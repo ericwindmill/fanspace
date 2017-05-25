@@ -1,4 +1,4 @@
-$blue: rgb(75, 231, 252);
+@import 'vars';
 
 
 .setlist-main {
@@ -22,17 +22,17 @@ $blue: rgb(75, 231, 252);
 
 
 .setlist-index-component {
-  background: rgba(10, 10, 10,1);
+  background: rgba(10, 10, 10, 1);
   min-height: 100vh;
 }
 
 .setlist-index-component h1 {
   margin: 0 auto;
-  color: rgb(75, 231, 252);
+  color: $blue-green;
   display:block;
   text-align: center;
   padding: 20px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .poster-index-grid {
@@ -52,9 +52,8 @@ $blue: rgb(75, 231, 252);
       color: white;
 
       > .setlist-index-info {
-        font-size: .8em;
-        font-weight: 400;
-        border-bottom: solid 1px black;
+        font-size: .9em;
+        font-weight: 200;
         padding-bottom: 3px;
         transition: all .5s ease;
         color: white;
@@ -65,11 +64,13 @@ $blue: rgb(75, 231, 252);
 
     :hover {
       > .setlist-index-info {
-        color: $blue;
+        color: $blue-green;
       }
 
       & > .setlist-index-poster {
         opacity:  0.3;
+
+        
       }
     }
 
@@ -85,9 +86,16 @@ $blue: rgb(75, 231, 252);
   -webkit-box-shadow: inset -5px -25px 100px -22px rgba(0,0,0,1);
   -moz-box-shadow: inset -5px -25px 100px -22px rgba(0,0,0,1);
   box-shadow: inset -5px -25px 100px -22px rgba(0,0,0,1);
+  position: relative;
 
   > .detail-date {
     opacity: 0;
+    z-index: 100;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
 
     &:hover {

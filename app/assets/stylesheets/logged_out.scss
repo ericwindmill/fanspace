@@ -1,4 +1,4 @@
-
+@import 'vars';
  /************************************************************
        LANDING PAGE COMPONENT
  ************************************************************/
@@ -97,14 +97,14 @@ margin-bottom: 0;
   width: 90%;
   padding: 3px;
   border: none;
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 1px solid black;
   background: transparent;
   margin: 0 0 15px;
   height: 45px;
 
   &:focus {
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    border: 1px solid rgba(81, 203, 238, 1);
+    box-shadow: 0 0 5px $blue-green;
+    border: 1px solid $blue-green;
   }
   
 
@@ -124,16 +124,17 @@ margin-bottom: 0;
   text-align: center;
   border: none;
   width: 400px;
+  color: black;
 }
 
 .sign-up-link:hover {
 
-  color: #00a3b9;
+  color:$blue-green;
   padding-bottom: 10px;
 }
 
 .errors {
-  color: red;
+  color: $light-red;
 }
 
 .change-form {

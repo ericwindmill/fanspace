@@ -1,4 +1,8 @@
 
+@import 'vars';
+
+
+
  /************************************************************
        TOP NAVIGATION COMPONENT
  ************************************************************/
@@ -6,7 +10,7 @@
 /****************************
 *     TOP NAV GRID 
 ****************************/
-$blue: rgb(75, 231, 252);
+
 
 
 .top-nav {
@@ -72,6 +76,6 @@ $blue: rgb(75, 231, 252);
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid $blue;
+  border-bottom: 2px solid $blue-green;
 }
 

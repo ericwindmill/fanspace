@@ -1,9 +1,4 @@
-$blue: rgb(75, 231, 252);
-$red: rgb(255, 0, 0);
-$green: rgb(0, 134, 57);
-$orange: rgb(210, 138, 62);
-$box-background: rgba(25, 25, 25, 0.84);
-$box-shadow-component: 0 0 20px 2px rgba(0, 0, 0, 0.3);
+@import 'vars';
 
 .profile-detail-main {
   color: white;
@@ -164,12 +159,11 @@ $box-shadow-component: 0 0 20px 2px rgba(0, 0, 0, 0.3);
       margin: 10px 0;
 
       &:focus {
-        border-color: $blue;
+        box-shadow: 0 0 2px $blue-green;
+        border: 1px solid $blue-green;
       }
     }
   }
-
-
 }
 
 
@@ -185,7 +179,7 @@ $box-shadow-component: 0 0 20px 2px rgba(0, 0, 0, 0.3);
     padding: 10px;
 
     &:hover {
-      color: $blue;
+      color: $blue-green;
     }
   }
 }
