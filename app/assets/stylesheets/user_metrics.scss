@@ -1,5 +1,5 @@
 $blue: rgb(75, 231, 252);
-$red: rgb(255, 0, 0);
+$red: rgb(185, 34, 43);
 $green: rgb(0, 134, 57);
 $orange: rgb(210, 138, 62);
 $box-background: rgba(25, 25, 25, 0.84);
@@ -210,4 +210,18 @@ $widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
     }
   }
 
+
+.per-year-line-graph {
+    background: $box-background;
+    box-shadow: $box-shadow-component;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    max-width: 600px;
+    min-width: 400px;
+    max-height: 400px;
+    flex-grow: 1;
+    display: inline-block;
+    padding: 10px;
+}
 

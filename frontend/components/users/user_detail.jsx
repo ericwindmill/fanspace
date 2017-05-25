@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import LeftNav from '../navs/left_nav_container'
 import UpdateForm from './update_profile_form'
-import DynamicDoughnutExample from './chart'
 import ShowsPerYearAsGraph from './line-graph'
 
 
@@ -147,6 +146,10 @@ displayUpdate(e) {
                 })}
               </ul>
             </section>
+
+          <ShowsPerYearAsGraph 
+            data={this.props.showsPerYearGraph}
+          />
           
 
           <section className="user-setlists">
@@ -169,10 +172,10 @@ displayUpdate(e) {
           <ul>
             {this.props.uniqSongsByAlbum.map(album => {
               return <li className="uniq-songs-album-item" key={album.title}> 
-                <div className="col-1">{album.title} :</div>             
-                  <ul className="col-2" key={album.title}>
+                <div className="col-1">{album.title} : </div>             
+                  <ul className="col-2">
                     {album.songs.map(song => {
-                    return <li key={song.id}> {song} </li> })}
+                    return <li key={song.name}> {song} </li> })}
                   </ul>
             </li>
            })}
@@ -180,8 +183,8 @@ displayUpdate(e) {
         </section>
 
 
-        <DynamicDoughnutExample />
-        <ShowsPerYearAsGraph data={this.props.showsPerYearGraph} />
+
+
       
         </div>
       </div>
