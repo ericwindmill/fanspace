@@ -31,7 +31,7 @@ class TopNav extends React.Component {
     const renderComponent = this.props.currentUser ? this.loggedInNav() : this.loggedOutNav()
     return(
       <div className="top-nav">
-        <Link to='/'><h2 className="title">fanspace</h2></Link>
+        <Link className="title" to='/'><h2 >fanspace</h2></Link>
         {renderComponent}
       </div>
     )

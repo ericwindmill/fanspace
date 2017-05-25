@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
   loadDemoUser(e){
     e.preventDefault()
     this.props.loadDemo().then(() => {
-      this.props.history.push('/setlists')
+      this.props.history.push('/users/1')
     })
   }
 
@@ -54,8 +54,31 @@ class SessionForm extends React.Component {
 
 
   render () {
-    const header = (this.props.formType === 'login') ? "Log In" : "Sign Up"
-    const linkText = (this.props.formType === 'login') ? "Sign Up" : "Log In"
+    const header = (this.props.formType === 'login') ? (
+     "Welcome Back!"  
+    ) : (
+     "Sign Up to Get Started"
+    )
+
+    const buttonText = (this.props.formType === 'login') ? (
+      "Log In"  
+     ) : (
+      "Sign Up"
+    )
+
+    const message = (this.props.formType === 'login') ? (
+        "Already a member?"
+      ) : (
+        "Don't have an account?"
+      )
+
+    const linkText = (this.props.formType === 'login') ? (
+        "Click here to create an account."
+      ) : (
+        "Click here to log in."
+      )
+
+
     const link = (this.props.formType === 'login') ? "/sign-up" : "/log-in"
     return(
       <div className="session-form-container" >
@@ -66,10 +89,14 @@ class SessionForm extends React.Component {
             onChange={this.updateState("username")} placeholder="username"></input>
           <input className="txt-input session-grid-c" type="password" value={this.state.password}
             onChange={this.updateState("password")} placeholder="password"></input>
-          <input className="btn sign-up-btn session-grid-d" type="submit" value={header} onClick={this.handleSubmit}></input>
-        <Link className="sign-up-link session-grid-e" to={link}>or {linkText}</Link>
+          <input className="btn sign-up-btn session-grid-d" type="submit" value={buttonText} onClick={this.handleSubmit}></input>
+          <button className="sign-up-btn btn session-grid-e" onClick={this.loadDemoUser} to="/log-in">Click for Demo</button>
+        
+          <div className="session-grid-f change-form">   
+            {message}
+            <Link className="sign-up-link" to={link}>{linkText}</Link> 
+          </div>
 
-        <Link className="sign-up-link session-grid-f" onClick={this.loadDemoUser} to="/log-in">Click for Demo</Link>
         </form>
       </div>
     )

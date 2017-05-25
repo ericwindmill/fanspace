@@ -6,7 +6,10 @@
 .login-page {
   height: 100vh;
   width: 100vw;
-  background: gainsboro;
+  background: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466650/design/setlist_background_cadezh.png");
+    background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   padding:45px 0;
 }
 
@@ -15,7 +18,7 @@
 
   width: 100%;
   border-radius: 5px;
-  width: 500px;
+  width: 430px;
   margin: 15vh auto;
   background: white;
   padding: 0 0 50px;
@@ -23,7 +26,7 @@
 
 .session-form {
   margin: auto;
-  width: 470px;
+  width: 400px;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 100%;
@@ -98,31 +101,48 @@ margin-bottom: 0;
   background: transparent;
   margin: 0 0 15px;
   height: 45px;
+
+  &:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+  }
   
 
 }
 
 .sign-up-btn {
   margin: 10px 0 0 0;
-  padding: 10px 30%;
+  padding: 10px ;
   text-align: center;
   border: none;
+  width: 400px;
 }
 
 .sign-up-link {
-  padding: 20px 0 12px;
-  color: black;
-  text-decoration: none;
-  margin: auto;
+  margin: 10px 0 0 0;
+  padding: 10px ;
+  text-align: center;
+  border: none;
+  width: 400px;
 }
 
 .sign-up-link:hover {
 
   color: #00a3b9;
   padding-bottom: 10px;
-  border-bottom: 2px solid #00a3b9;
 }
 
 .errors {
   color: red;
+}
+
+.change-form {
+    margin: 10px 0 0 0;
+  padding: 10px ;
+  text-align: center;
+  border: none;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
 }

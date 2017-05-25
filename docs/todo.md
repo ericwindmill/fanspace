@@ -7,8 +7,6 @@
   * make profile images not stretch
   * icons on profile page
   * colors everywhere - maybe deeper?
-  * log-in form 
-  * change 'or Sign Up' 
   * make profile page left nav more relevant
 
 
@@ -16,8 +14,6 @@
 
 
   ###Features:
-
-
    * seed
    * production readme
    * bugs
