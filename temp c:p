@@ -56,31 +56,3 @@ export default React.createClass({
 
 
 
-  <main className="setlist-main">
-        <LeftNav />
-        <section className="setlist-index-component">
-          <h1> Explore the Shows </h1>
-            <div>
-              <ul className="poster-index-grid">
-                {setlists.map(year => {
-                  return <li>
-                    <h2> year </h2>
-                    <ul>
-                       {year.map(setlist => {
-                      return <SetlistIndexItem 
-                        key={setlist.id} 
-                        setlist={setlist} 
-                        currentUser={currentUser}
-                        newAttend={newAttend}
-                        deleteAttend={deleteAttend}
-                        requestAllSetlists={requestAllSetlists}
-                      /> }
-                    )}
-                    </ul>                  
-                  </li>
-                })}
-              </ul>
-            </div> 
-        </section>
-
-      </main>

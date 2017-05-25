@@ -23,7 +23,7 @@ class LeftNav extends React.Component {
           <Link className="left-link shows" to='/setlists'>All Shows</Link>
           <p className="browse">Browse By</p>
           <ul className="browse-list">
-            <Link className="left-link year" to='/setlists'>Year</Link>
+            <Link className="left-link year" to='/setlists/by-year'>Year</Link>
             <Link className="left-link city" to='/setlists'>City</Link>
           </ul>
         </div>
