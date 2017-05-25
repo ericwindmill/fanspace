@@ -10,7 +10,6 @@
 
 
   ###Features:
-   * Finish landing page (AND ALL LINKS!)
    * seed!
    * charts
    * browse by things
