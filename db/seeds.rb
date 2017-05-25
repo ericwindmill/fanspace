@@ -102,11 +102,11 @@
     knot_comes_loose      = Song.create!(title: "Knot Comes Loose", album_id: z.id)
     dondante              = Song.create!(title: "Dondante", album_id: z.id)
   
-  evil_urges_album = Album.create(title: "Evil Urges", cover_art_url: 'hhttp://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/evil_urges.jpg' )
+  evil_urges_album      = Album.create(title: "Evil Urges", cover_art_url: 'hhttp://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/evil_urges.jpg' )
     evil_urges            = Song.create!(title: "Evil Urges", album_id: evil_urges_album.id)
-    touch_me_pt_1         = Song.create!(title: "Touch Me I'm Going to Scream pt. 1'", album_id: evil_urges_album.id)
+    touch_me_pt_1         = Song.create!(title: "Touch Me I'm Going to Scream pt. 1", album_id: evil_urges_album.id)
     highly_suspicious     = Song.create!(title: "Highly Suspicious", album_id: evil_urges_album.id)
-    im_amazed             = Song.create!(title: "I'm Amazed'", album_id: evil_urges_album.id)
+    im_amazed             = Song.create!(title: "I'm Amazed", album_id: evil_urges_album.id)
     thank_you_too         = Song.create!(title: "Thank You Too", album_id: evil_urges_album.id)
     sec_walkin            = Song.create!(title: "Sec Walkin", album_id: evil_urges_album.id)
     two_halves            = Song.create!(title: "Two Halves", album_id: evil_urges_album.id)
@@ -114,29 +114,40 @@
     aluminum_park         = Song.create!(title: "Aluminum Park", album_id: evil_urges_album.id)
     remnants              = Song.create!(title: "Remnants", album_id: evil_urges_album.id)
     smokin_from_shootin   = Song.create!(title: "Smokin From Shootin", album_id: evil_urges_album.id)
-    touch_me_pt_2         = Song.create!(title: "Touch Me I'm Going to Scream pt. 2'", album_id: evil_urges_album.id)
+    touch_me_pt_2         = Song.create!(title: "Touch Me I'm Going to Scream pt. 2", album_id: evil_urges_album.id)
     good_intentions       = Song.create!(title: "Good Intentions", album_id: evil_urges_album.id)
   
   
-  circuital_album = Album.create(title: "Circuital", cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/circuital.jpg' )
+  circuital_album      = Album.create(title: "Circuital", cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/circuital.jpg' )
     victory_dance        = Song.create!(title: "Victory Dance", album_id: circuital_album.id)
     circuital            = Song.create!(title: "Circuital", album_id: circuital_album.id)
     the_day_is_coming    = Song.create!(title: "The Day Is Coming", album_id: circuital_album.id)
     wonderful            = Song.create!(title: "Wonderful (The Way I Feel)", album_id: circuital_album.id)
     outta_my_system      = Song.create!(title: "Outta My System", album_id: circuital_album.id)
-    holdin_onto_black_mteal = Song.create!(title: "Holdin' on to Black Metal'", album_id: circuital_album.id)
+    holdin_onto_black_mteal = Song.create!(title: "Holdin' on to Black Metal", album_id: circuital_album.id)
     first_light          = Song.create!(title: "First Light", album_id: circuital_album.id)
     you_wanna_freak_out  = Song.create!(title: "You Wanna Freak Out", album_id: circuital_album.id)
     sloow_slow_tune      = Song.create!(title: "Slow Slow Tune", album_id: circuital_album.id)
     movin_away           = Song.create!(title: "Movin Away", album_id: circuital_album.id)
          
   
-  the_waterfall = Album.create(title: "The Waterfall", cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/the_waterfall.jpg' )
-           = Song.create!(title: "Good Intentions", album_id: circuital_album.id)
-  
+  the_waterfall       = Album.create(title: "The Waterfall", cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/the_waterfall.jpg' )
+    believe             = Song.create!(title: "Believe", album_id: the_waterfall.id)
+    compund_fracture    = Song.create!(title: "Compound Fracture", album_id: the_waterfall.id)
+    like_a_river        = Song.create!(title: "Like a River", album_id: the_waterfall.id)
+    in_its_infancy      = Song.create!(title: "In It's Infancy (The Waterfall)", album_id: the_waterfall.id)
+    get_the_point       = Song.create!(title: "Get the Point", album_id: the_waterfall.id)
+    spring              = Song.create!(title: "Spring (Among the Living)", album_id: the_waterfall.id)
+    thin_line           = Song.create!(title: "Thin Line", album_id: the_waterfall.id)
+    big_decisions       = Song.create!(title: "Big Decisions", album_id: the_waterfall.id)
+    tropics             = Song.create!(title: "Tropics (Erase Traces", album_id: the_waterfall.id)
+    only_memories_remain= Song.create!(title: "Only Memories Remain", album_id: the_waterfall.id)
+    hillside_song       = Song.create!(title: "Hillside Song", album_id: the_waterfall.id)
+    i_cant_wait         = Song.create!(title: "I Can't Wait", album_id: the_waterfall.id)
+    
   
   covers = Album.create(title: "The Waterfall", cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/the_waterfall.jpg' )
-  
+
   
   b_sides_etc = Album.create(title: "The Waterfall", cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/the_waterfall.jpg' )
   
