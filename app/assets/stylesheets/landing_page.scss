@@ -312,7 +312,7 @@ section.module > .container-2 h3 {
   transition: all .3s ease-in-out;
   -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: grayscale(100%); /* FF 35+ */
-  max-height: 600px;
+  max-height: 500px;
   width: auto;
   justify-self: center;
   &:hover {

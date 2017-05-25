@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom'
 import LeftNav from '../navs/left_nav_container'
 import UpdateForm from './update_profile_form'
 import UserMetrics from './user_metrics'
+import { Doughnut } from 'react-chartjs-2'
 
 class userDetail extends React.Component {
   constructor(props) {
@@ -173,6 +174,7 @@ displayUpdate(e) {
           </ul>
         </section>
 
+      
         </div>
       </div>
     )

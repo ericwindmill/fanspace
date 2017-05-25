@@ -57,7 +57,9 @@ class SetlistIndexItem extends React.Component {
     return (
           <li className="setlist-index-item">
             <Link to={`/setlists/${setlist.id}`}>
-              <div className="setlist-index-poster" style={background_image} alt={setlist.date}></div>
+              <div className="setlist-index-poster" style={background_image} alt={setlist.date}> 
+                <h2 className="detail-date k">{setlist.date}</h2> 
+              </div>
               <p className="setlist-index-info"> {setlist.city}, {setlist.state} - {this.formatDate(setlist.date)}</p>
             </Link> 
             <button type="button" className="btn attends-button"  

@@ -5,16 +5,25 @@
   * Change to new font
   * landing copy
   * make profile images not stretch
-  * update profile form needs to not suck so much
+  * icons on profile page
+  * colors everywhere - maybe deeper?
 
 
 
   ###Features:
-   * seed!
    * charts
+   * interactiviry on profile page
+   * seed
+   * production readme
    * browse by things
-   * update profile button rerender bug
-   clear errors!
+   * bugs:
+    - update profile button rerender bug
+    - clear errors!
+   * Styling Fix and Flare:
+    - AOS Animate landing page screen
+    - CSS list above.
+  * Expand Landing page
+
    
    
 
