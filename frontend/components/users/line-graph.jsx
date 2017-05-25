@@ -1,4 +1,3 @@
-import ReactDOM from 'react-dom'
 import React from 'react'
 import Chart from 'chart.js'
 import {Line} from 'react-chartjs-2';

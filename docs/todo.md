@@ -11,8 +11,8 @@
 
 
   ###Features:
-   * charts
-   * interactiviry on profile page
+
+
    * seed
    * production readme
    * browse by things
@@ -23,8 +23,10 @@
     - AOS Animate landing page screen
     - CSS list above.
     
+  * album percentage seleector  
   * Expand Landing page
-
+   * interactiviry on profile page
+   * album percentage charts
    
    
 
