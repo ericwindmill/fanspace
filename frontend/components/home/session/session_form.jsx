@@ -16,6 +16,8 @@ class SessionForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this)
   }
 
+
+
   loadDemoUser(e){
     e.preventDefault()
     this.props.loadDemo().then(() => {

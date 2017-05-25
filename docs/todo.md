@@ -10,12 +10,12 @@
 
 
   ###Features:
-   * style profile
-   * add 'i was there' button to detail page
    * Finish landing page (AND ALL LINKS!)
    * seed!
+   * charts
    * browse by things
    * update profile button rerender bug
+   clear errors!
    
    
 

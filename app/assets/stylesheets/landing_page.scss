@@ -74,42 +74,31 @@ section.module.parallax {
 /* Makes a fixed background wrapper
 which the user cannot interact with */
 
-.iframe-wrapper {
-  position: fixed;
-  top: -20px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-}
+// .iframe-wrapper {
+//   position: fixed;
+//   top: -20px;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: -1;
+//   pointer-events: none;
+//   overflow: hidden;
+// }
 
-/* Make the iframe keep an aspect ratio, and
-position it in the middle of its parent wrapper*/
+// /* Make the iframe keep an aspect ratio, and
+// position it in the middle of its parent wrapper*/
 
-.iframe-wrapper iframe {
-  width: 100vw;
-  height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-  max-height: 100vh;
-  min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+// .iframe-wrapper iframe {
+//   width: 100vw;
+//   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+//   max-height: 100vh;
+//   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
 
-.mmj-gif-container {
-  width: 100%;
-  height: 0;
-  padding-bottom: 56%;
-  position: relative;
-}
-
-
-.mmj-gif {
-  position:absolute;
-}
 // <div className="iframe-wrapper">  
 //   <iframe src="https://player.vimeo.com/video/121352461?autoplay=1&loop=1&title=0&byline=0&portrait=0"></iframe>  
 // </div>
@@ -225,21 +214,69 @@ Container 2
 .container.container-2 {
   margin: auto ;
   // margin-top: 5%;
-  display: flex;
-  justify-content: space-around;
+  
   position: relative;
   width: 90%;
+
   // height: 80vh;
 
   > .container-2-copy {
-    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(7, 14.28%);
+    height: 100%;
+    grid-gap: 5px;
+
+    > .posters {
+      grid-row: 2 / 11;
+      grid-column: 1 / 7;
+    }
+
+    > .header {
+      grid-column: 6 / 11;
+      grid-row: 1;
+      margin-bottom: 50px;
+    }
+
+    > .discover {
+      grid-column: 7 / 11;
+      grid-row: 2;
+    }
+      
+    > .discover-copy {
+      grid-column: 7 / 11;
+      grid-row: 3;
+    }
+    
+    > .connect {
+      grid-column: 7 / 11;
+      grid-row: 4;
+    }
+      
+    > .connect-copy {
+      grid-column: 7 / 11;
+      grid-row: 5;
+    }
+    
+
+    > .track {
+      grid-column: 7 / 11;
+      grid-row: 6;
+    }
+  
+    > .track-copy {
+      grid-column: 7 / 11;
+      grid-row: 7;
+    }
   }
+
 }
 
 section.module > .container-2 h1 {
   // color: rgba(75, 231, 252, 1);
   color: $green;
   font-size: 4vw;
+  grid-column: 1 / 11;
   // text-transform: uppercase;
   text-shadow: 0 0 3px rgba(0, 0, 0, .3);
   font-family: 'Montserrat', Helvetica, sans-serif;
@@ -250,20 +287,17 @@ section.module > .container-2 h1 {
 section.module > .container-2 h2 {
   // color: rgba(75, 231, 252, 1);
   color: $green;
-  font-size: 4vw;
-  // text-transform: uppercase;
+  font-size: 3vw;
   text-shadow: 0 0 3px rgba(0, 0, 0, .3);
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 700;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 section.module > .container-2 h3 {
   color:black;
   font-size: 20px;
   margin: 0;
-  // text-transform: uppercase;
-  // text-shadow: 0 0 3px rgba(0, 0, 0, .4);
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 400;
 
@@ -271,34 +305,33 @@ section.module > .container-2 h3 {
 
 
 
+
 .posters {
-  overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-
-
-  > .poster{
-    width: 100%;
-    height: auto;
-    max-width: 250px;
-    transition: filter .2s ease-in-out;
-    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(100%); /* FF 35+ */
-
-    &:hover {
-      -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-      filter: grayscale(0%); /* FF 35+ */
-    }
+  box-shadow: 0 0 5px rgba(0, 0, 0, .8);
+  width: 95%;
+  transition: all .3s ease-in-out;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+  max-height: 600px;
+  width: auto;
+  justify-self: center;
+  &:hover {
+    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%); /* FF 35+ */
   }
 }
+
+
+
+
+
+
 
 .guitar-green {
   width: 45%;
   height: auto;
   transition: all .3s ease;
-  position: absolute;
+  position: fixed;
   top: 65%;
   left: 99%;
   -webkit-transform: translate(-50%, -50%);

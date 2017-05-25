@@ -1,39 +1,19 @@
+ <section className="module parallax parallax-2">
+        <div className="container container-3">
+          <h1>Its Easy.</h1>
+          <ul>
+            <li>Create an Account</li>
+            <li>Browse the shows</li>
+            <li>Select the shows youve seen</li>
+            <li>See your results!</li>
+          </ul>
+        </div>
+      </section>
 
-     
-        <ul>
-          {this.props.userDetail.setlist.map(set => {
-            return <li key={set.id}><Link to={`/setlists/${set.id}`}>{set.date}{set.city}</Link></li>
-          })}
-        </ul>
-        
-
-
-
-        <ul>
-          {this.props.uniqSongsByAlbum.map(album => {
-            return <li key={album.title}> {album.title} : 
-            
-            <ul key={album.title}>
-              {album.songs.map(song => {
-              return <li key={album.key}> {song} </li> })}
-            </ul>
-
-          </li>
-          })}
-        </ul>
-
-        <h2> Album Percentages </h2>
-        <ul>
-          {this.props.albumPercent.map(album => {
-            return <li key={album.title}> {album.title} : {album.percent}% </li>
-          })}
-        </ul>
-
-
-
-        <h2> Shows Per Year </h2>
-        <ul>
-          {this.props.showsPerYear.map(year => {
-            return <li key={year.year}> In {year.year} you saw {year.count} shows </li>
-          })}
-        </ul>
+      <section className="module content">
+        <div className="container container-4">
+          <h1> Metrics </h1>
+           <h2> Learn about the shows youve seen </h2>
+           <p> ** insert metrics pictures </p>
+        </div>
+      </section>
