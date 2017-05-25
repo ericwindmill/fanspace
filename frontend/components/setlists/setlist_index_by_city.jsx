@@ -22,13 +22,13 @@ class SetlistIndexByCity extends React.Component {
       <main className="setlist-main">
         <LeftNav />
         <section className="setlist-index-component">
-          <h1> Explore the Shows </h1>
+          <h1> Browse Setlists By City </h1>
             <div>
-              <ul className="poster-index-grid">
+              <ul className="setlist-by-list">
                 {setlists.map(city => {
-                  return <li>
+                  return <li className="setlist-by-list-item">
                     <h2> {city.city} </h2>
-                    <ul>
+                    <ul className="poster-index-grid"  >
                        {city.setlists.map(setlist => {
                       return <SetlistIndexItem 
                         key={setlist.id} 

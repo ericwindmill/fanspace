@@ -7,6 +7,10 @@
   * make profile images not stretch
   * icons on profile page
   * colors everywhere - maybe deeper?
+  * log-in form 
+  * change 'or Sign Up' 
+
+
 
 
 
@@ -15,8 +19,7 @@
 
    * seed
    * production readme
-   * browse by things
-   * bugs:
+   * bugs
     - update profile button rerender bug
     - clear errors!
    * Styling Fix and Flare:

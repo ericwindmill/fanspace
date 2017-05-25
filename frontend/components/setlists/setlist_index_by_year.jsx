@@ -22,13 +22,13 @@ class SetlistIndexByYear extends React.Component {
       <main className="setlist-main">
         <LeftNav />
         <section className="setlist-index-component">
-          <h1> Explore the Shows </h1>
+          <h1>Browse By Year</h1>
             <div>
-              <ul className="poster-index-grid">
+              <ul className="setlist-by-list">
                 {setlists.map(year => {
-                  return <li>
-                    <h2> {year.year} </h2>
-                    <ul>
+                  return <li className="setlist-by-list-item">
+                    <h1> {year.year} </h1>
+                    <ul className="poster-index-grid">
                        {year.setlists.map(setlist => {
                       return <SetlistIndexItem 
                         key={setlist.id} 

@@ -40,10 +40,6 @@ export const SetlistsSortedByCity = state => {
   let setlists = selectAllSetlists(state)
   let sortedSetlist = {}
 
-  // const sorted = setlists.sort(function (a, b) {
-  //   return parseInt(a.date) - parseInt(b.date)
-  // })
-
   setlists.forEach(setlist => {
     let city = setlist.city
     if (!sortedSetlist[city]) {
