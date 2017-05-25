@@ -1,19 +1,100 @@
- <section className="module parallax parallax-2">
-        <div className="container container-3">
-          <h1>Its Easy.</h1>
-          <ul>
-            <li>Create an Account</li>
-            <li>Browse the shows</li>
-            <li>Select the shows youve seen</li>
-            <li>See your results!</li>
-          </ul>
-        </div>
-      </section>
+import ReactDOM from 'react-dom'
+import React from 'react'
+import Chart from 'chart.js'
+import {Line, Bar, Radar, Doughnut} from 'react-chartjs'
 
-      <section className="module content">
-        <div className="container container-4">
-          <h1> Metrics </h1>
-           <h2> Learn about the shows youve seen </h2>
-           <p> ** insert metrics pictures </p>
-        </div>
-      </section>
+Chart.defaults.global.responsive = true
+
+let data = {
+    labels: [
+        "15 Oct",
+        "18 Oct",
+        "21 Oct",
+        "23 Oct",
+        "27 Oct",
+        "30 Oct",
+        "3 Nov",
+        "6 Nov",
+        "9 Nov",
+        "12 Nov",
+        "15 Nov"
+    ],
+    datasets: [
+        {
+            label: "New Signups",
+            fill: false,
+            lineTension: 0.1,
+            borderColor: "#6bd486",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "#6bd486",
+            pointHoverBorderWidth: 2,
+            data: [
+                1000,
+                1200,
+                1000,
+                1500,
+                1300,
+                1900,
+                1700,
+                2000,
+                2100,
+                2200,
+                2400
+            ]
+        }, {
+            label: "Returning Clients",
+            fill: false,
+            lineTension: 0.1,
+            borderColor: "#157efb",
+
+            pointBorderWidth: 1,
+
+            pointHoverBorderColor: "#157efb",
+
+            pointHoverBorderWidth: 2,
+            data: [
+                500,
+                600,
+                550,
+                600,
+                800,
+                900,
+                800,
+                850,
+                800,
+                1000,
+                1200
+            ]
+        }
+    ]
+}
+
+let options = {
+  scaleShowGridLines: true,
+  scaleGridLineColor: 'rgba(0,0,0,.05)',
+  scaleGridLineWidth: 1,
+  scaleShowHorizontalLines: true,
+  scaleShowVerticalLines: false,
+  bezierCurve: true,
+  bezierCurveTension: 0.4,
+  pointDot: true,
+  pointDotRadius: 4,
+  pointDotStrokeWidth: 1,
+  pointHitDetectionRadius: 20,
+  datasetStroke: true,
+  datasetStrokeWidth: 2,
+  datasetFill: true,
+  legendTemplate: '<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+};
+
+class SampleStats extends React.Component {
+    render() {
+        return <Line data={data} options={options} width="600" height="250"/>;
+    };
+}
+
+
+
+export default SampleStats

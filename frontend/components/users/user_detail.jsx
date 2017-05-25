@@ -2,8 +2,11 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import LeftNav from '../navs/left_nav_container'
 import UpdateForm from './update_profile_form'
-import UserMetrics from './user_metrics'
-import { Doughnut } from 'react-chartjs-2'
+import DynamicDoughnutExample from './chart'
+
+
+
+
 
 class userDetail extends React.Component {
   constructor(props) {
@@ -45,8 +48,9 @@ displayUpdate(e) {
 }
 
 
-
   render() {
+
+
 
     const { currentUser, userDetail } = this.props
     let userMatch = false
@@ -167,13 +171,15 @@ displayUpdate(e) {
                 <div className="col-1">{album.title} :</div>             
                   <ul className="col-2" key={album.title}>
                     {album.songs.map(song => {
-                    return <li key={album.key}> {song} </li> })}
+                    return <li key={song.id}> {song} </li> })}
                   </ul>
             </li>
            })}
           </ul>
         </section>
 
+
+        <DynamicDoughnutExample />
       
         </div>
       </div>
