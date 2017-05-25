@@ -16,7 +16,8 @@ const mapStateToProps = state => ({
   uniqSongs: Metrics.uniqSongs(state),
   albumPercent: Metrics.albumPercent(state),
   showsPerYear: Metrics.showsPerYear(state),
-  uniqSongsByAlbum: Metrics.uniqSongsByAlbum(state)
+  uniqSongsByAlbum: Metrics.uniqSongsByAlbum(state),
+  showsPerYearGraph: Metrics.showsPerYearGraph(state)
 })
 
 const mapDispatchToProps = dispatch => ({

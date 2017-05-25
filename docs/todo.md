@@ -22,6 +22,7 @@
    * Styling Fix and Flare:
     - AOS Animate landing page screen
     - CSS list above.
+    
   * Expand Landing page
 
    

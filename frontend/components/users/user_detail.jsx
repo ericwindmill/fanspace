@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom'
 import LeftNav from '../navs/left_nav_container'
 import UpdateForm from './update_profile_form'
 import DynamicDoughnutExample from './chart'
+import ShowsPerYearAsGraph from './line-graph'
 
 
 
@@ -180,6 +181,7 @@ displayUpdate(e) {
 
 
         <DynamicDoughnutExample />
+        <ShowsPerYearAsGraph data={this.props.showsPerYearGraph} />
       
         </div>
       </div>
