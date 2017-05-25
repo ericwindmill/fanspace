@@ -149,8 +149,9 @@ displayUpdate(e) {
               {this.props.userDetail.setlist.map(set => {
                 return (
                   <li className="user-setlist-item" key={set.id}>
-                    <Link to={`/setlists/${set.id}`}>{set.date} {set.city}</Link>
-                    <img className="user-setlist-item-poster" src={set.poster_img_url} />
+                    <Link to={`/setlists/${set.id}`}>{set.date} {set.city}>
+                      <img className="user-setlist-item-poster" src={set.poster_img_url} />
+                    </Link>
                   </li>
                 )
               })}
@@ -158,15 +159,15 @@ displayUpdate(e) {
           </section> 
 
         <section className="uniq-songs-by-album">
+          <h3> Unique Songs By Album </h3>
           <ul>
             {this.props.uniqSongsByAlbum.map(album => {
-              return <li className="uniq-songs-album-item" key={album.title}> {album.title} : 
-            
-              <ul key={album.title}>
-                {album.songs.map(song => {
-                return <li key={album.key}> {song} </li> })}
-              </ul>
-
+              return <li className="uniq-songs-album-item" key={album.title}> 
+                <div className="col-1">{album.title} :</div>             
+                  <ul className="col-2" key={album.title}>
+                    {album.songs.map(song => {
+                    return <li key={album.key}> {song} </li> })}
+                  </ul>
             </li>
            })}
           </ul>

@@ -144,7 +144,7 @@ $widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
     text-align: center;
     margin: 20px;
     max-width: 600px;
-    ming-width: 400px;
+    min-width: 400px;
     max-height: 40vh;
     flex-grow: 1;
 
@@ -153,6 +153,44 @@ $widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
       list-style: none;
 
       > .album-percentage-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        > .col-1 {
+          grid-column: 1 / 2;
+        }
+
+        > .col-2 {
+          grid-column: 2 / 3;
+          align-self: start;
+        }
+
+        padding: 1em;
+        color: white;
+        border: 1.5px rgba(15, 20, 25, 1) solid;
+
+      }
+    }
+  }
+
+
+.uniq-songs-by-album {
+    background: $box-background;
+    box-shadow: $box-shadow-component;
+    color: white;
+    margin-bottom: 50px;
+    text-align: center;
+    margin: 20px;
+    max-width: 600px;
+    min-width: 400px;
+    flex-grow: 1;
+
+    > ul {
+      text-align: left;
+      padding: 0;
+      list-style: none;
+
+      > .uniq-songs-album-item {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
@@ -171,8 +209,5 @@ $widget-inner-border: 1.5px rgba(15, 20, 25, 1) solid;
       }
     }
   }
-
-
-
 
 
