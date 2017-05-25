@@ -20,7 +20,8 @@ class LeftNav extends React.Component {
         <div className="left-nav-flex">
         <div className="left-nav-top">
 
-          <Link className="left-link shows" to='/setlists'>All Shows</Link>
+          <Link className="left-link top-profile" to={`/users/${this.props.currentUser.id}`}>My Stats</Link>
+          <Link className="left-link shows" to='/setlists'>Explore Shows</Link>
           <p className="browse">Browse By</p>
           <ul className="browse-list">
             <Link className="left-link year" to='/setlists/by-year'>Year</Link>
