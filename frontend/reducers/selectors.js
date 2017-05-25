@@ -6,10 +6,31 @@ export const selectAllSetlists = state => (
 )
 
 
-export const selectAttendeeIds = state => {
-  const attendeeIds = state.setlistDetail.attendees.map((user) => {
-    return user.id
+
+export const SetlistsSortedByYear = state => {
+  let setlists = selectAllSetlists(state)
+  let sortedSetlist = {}
+
+  const sorted = setlists.sort(function (a, b) {
+    return parseInt(a.date) - parseInt(b.date)
   })
 
-  return attendeeIds
+  sorted.forEach(setlist => {
+    let year = parseInt(setlist.date)
+    if (!sortedSetlist[year]) {
+      sortedSetlist[year] = [setlist]
+    } else {
+      sortedSetlist[year].push(setlist)
+    }
+  })
+
+  const sortedSetArr = []
+  Object.entries(sortedSetlist).forEach(([key, val]) => {
+    sortedSetArr.push({
+      'year': key,
+      'setlists': val
+    })
+  })
+
+  return sortedSetArr
 }
