@@ -34,3 +34,32 @@ export const SetlistsSortedByYear = state => {
 
   return sortedSetArr
 }
+
+
+export const SetlistsSortedByCity = state => {
+  let setlists = selectAllSetlists(state)
+  let sortedSetlist = {}
+
+  // const sorted = setlists.sort(function (a, b) {
+  //   return parseInt(a.date) - parseInt(b.date)
+  // })
+
+  setlists.forEach(setlist => {
+    let city = setlist.city
+    if (!sortedSetlist[city]) {
+      sortedSetlist[city] = [setlist]
+    } else {
+      sortedSetlist[city].push(setlist)
+    }
+  })
+
+  const sortedSetArr = []
+  Object.entries(sortedSetlist).forEach(([key, val]) => {
+    sortedSetArr.push({
+      'city': key,
+      'setlists': val
+    })
+  })
+
+  return sortedSetArr
+}

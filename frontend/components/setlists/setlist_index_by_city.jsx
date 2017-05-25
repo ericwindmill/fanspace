@@ -5,7 +5,7 @@ import SetlistIndexItem from './setlist_index_item'
 import SetlistDetailContainer from './setlist_detail_container'
 import LeftNav from '../navs/left_nav_container'
 
-class SetlistIndexByYear extends React.Component {
+class SetlistIndexByCity extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -25,11 +25,11 @@ class SetlistIndexByYear extends React.Component {
           <h1> Explore the Shows </h1>
             <div>
               <ul className="poster-index-grid">
-                {setlists.map(year => {
+                {setlists.map(city => {
                   return <li>
-                    <h2> {year.year} </h2>
+                    <h2> {city.city} </h2>
                     <ul>
-                       {year.setlists.map(setlist => {
+                       {city.setlists.map(setlist => {
                       return <SetlistIndexItem 
                         key={setlist.id} 
                         setlist={setlist} 
@@ -50,4 +50,4 @@ class SetlistIndexByYear extends React.Component {
   }         
 }
 
-export default SetlistIndexByYear
+export default SetlistIndexByCity
