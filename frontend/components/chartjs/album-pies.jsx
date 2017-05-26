@@ -18,22 +18,23 @@ class AlbumPiePercent extends React.Component {
 	}
 
 	data(albumTitle) {
-		let currentAlbum;
+		let currentAlbum = {};
 		this.props.data.forEach(album => {
 			if (album.title === albumTitle) {
-				debugger
+				
 				currentAlbum = album;
 			}
 		})
+		console.log(currentAlbum)
 
 
 		const data = {
 			labels: [
 				'Seen',
-				'Still Waitin...',
+				'Still Waitin',
 			],
 			datasets: [{
-				data: [15, (100 - 15)],
+				data: [currentAlbum.percent, (100 - currentAlbum.percent)],
 				backgroundColor: [
 				'#FF6384',
 				'#36A2EB',
