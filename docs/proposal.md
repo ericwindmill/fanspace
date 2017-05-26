@@ -8,10 +8,6 @@
     * Displays concerts that were attended by user.
     *Displays metrics based on concerts attended. 
 
-## Design Docs
-* Wireframes
-* API endpoints
-* DB Schema
 
 ## Implentation Timeline
 
