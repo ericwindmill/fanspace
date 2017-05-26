@@ -127,7 +127,7 @@
     holdin_onto_black_mteal = Song.create!(title: "Holdin' on to Black Metal", album_id: circuital_album.id)
     first_light          = Song.create!(title: "First Light", album_id: circuital_album.id)
     you_wanna_freak_out  = Song.create!(title: "You Wanna Freak Out", album_id: circuital_album.id)
-    sloow_slow_tune      = Song.create!(title: "Slow Slow Tune", album_id: circuital_album.id)
+    slow_slow_tune      = Song.create!(title: "Slow Slow Tune", album_id: circuital_album.id)
     movin_away           = Song.create!(title: "Movin Away", album_id: circuital_album.id)
          
   

@@ -7,6 +7,7 @@
   * icons on profile page
   * setlist hover thing
   * one werer there
+  * branding
 
   ###Features:
    * seed

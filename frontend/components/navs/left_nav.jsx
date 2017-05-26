@@ -16,7 +16,7 @@ class LeftNav extends React.Component {
   render () {
     return(
       <div className="left-nav">
-        <Link to="/setlists"><h3 className={"left-title"}>FANSPACE</h3></Link>
+        <Link to="/setlists"><h3 className={"left-title"}>fanspace</h3></Link>
         <div className="left-nav-flex">
         <div className="left-nav-top">
 

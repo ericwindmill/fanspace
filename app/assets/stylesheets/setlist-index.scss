@@ -5,7 +5,10 @@
   display: flex; 
   padding: 0;
   height: 100%;
-  background-color: black;
+  background: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466650/design/setlist_background_cadezh.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 
   > .left-nav {
     a {
@@ -22,7 +25,10 @@
 
 
 .setlist-index-component {
-  background: rgba(10, 10, 10, 1);
+  background: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466650/design/setlist_background_cadezh.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   min-height: 100vh;
 }
 
