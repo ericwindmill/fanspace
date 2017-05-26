@@ -216,6 +216,25 @@
     it_makes_no_difference = Song.create!(title: "It Makes No Difference (The Band)", album_id: covers.id)
     carried_away = Song.create!(title: "Carried Away (Carl Broemel)", album_id: covers.id)
     all_night_long      = Song.create!(title: "All Night Long (Lionel Richie)", album_id: covers.id)
+    down_on_the_bottom  = Song.create!(title: "Down On The Bottom (The New Basement Tapes)", album_id: covers.id)
+    quick_like_a_flash  = Song.create!(title: "Quick Like a Flash (The New Basement Tapes)", album_id: covers.id)
+    nothing_to_it  = Song.create!(title: "Nothing To It (The New Basement Tapes)", album_id: covers.id)
+    wild_honey  = Song.create!(title: "Wild Honey (Fruit Bats)", album_id: covers.id)
+    this_land_is_your_land = Song.create!(title: "This Land is Your Land (Woody Guthrie))", album_id: covers.id)
+    here_comes_the_sun  = Song.create!(title: "Here Comes the Sun (George Harrison)", album_id: covers.id)
+    wish_you_were_here  = Song.create!(title: "Wish You Were Here (Pink Floyd)", album_id: covers.id)
+    purple_rain  = Song.create!(title: "Purple Rain (Prince)", album_id: covers.id)
+    like_a_rolling_stone= Song.create!(title: "Like a Rolling Stone (Bob Dylan)", album_id: covers.id)
+    you_never_can_tell  = Song.create!(title: "You Never Can Tell (Chuck Berry)", album_id: covers.id)
+    night_time_is_the_right_time = Song.create!(title: "Night Time Is The Right Time (Ray Charles)", album_id: covers.id)
+    mother              = Song.create!(title: "Mother (Pink Floyd)", album_id: covers.id)
+    rebel_rebel         = Song.create!(title: "Rebel Rebel (David Bowie)", album_id: covers.id)
+    sign_o_the_times    = Song.create!(title: "Sign O The Times (Prince)", album_id: covers.id)
+    all_you_need_is_love= Song.create!(title: "All You Need Is Love (The Beatles)", album_id: covers.id)
+    easy                = Song.create!(title: "Easy (Commodores)", album_id: covers.id)
+    father_figure       = Song.create!(title: "Father Figure (George Michael)", album_id: covers.id)
+    another_brick_in_the_wall_pt_2 = Song.create!(title: "Another Brick In the Wall Pt. 2 (Pink Floyd)", album_id: covers.id)
+    what_the_world_needs_now = Song.create!(title: "What the World Needs Now (Burt Bacharach)", album_id: covers.id)
     
 
   
@@ -627,10 +646,30 @@
   SetlistSong.create!(setlist_id: november_15_2015.id, song_id: like_a_river.id)
   SetlistSong.create!(setlist_id: november_15_2015.id, song_id: a_new_life.id)
   SetlistSong.create!(setlist_id: november_15_2015.id, song_id: like_a_river.id)
-  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: like_a_river.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: a_new_life.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: xmas_curtain.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: it_beats_for_you.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: outta_my_system.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: dondante.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: old_sept_blues.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: picture_of_you.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: in_its_infancy.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: they_ran.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: lowdown.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: quick_like_a_flash.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: o_is_the_one_that_is_real.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: what_a_wonderful_man.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: holdin_onto_black_mteal.id)
+  # SetlistSong.create!(setlist_id: november_15_2015.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: knot_comes_loose.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: slow_slow_tune.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: down_on_the_bottom.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: carried_away.id)
+  SetlistSong.create!(setlist_id: november_15_2015.id, song_id: phone_went_west.id)
 
 
-  Setlist.create!(
+  november_16_2015 = Setlist.create!(
     date: Date.new(2015, 10, 16),
     venue: 'Masonic Center',
     city: "San Francisco",
@@ -638,8 +677,30 @@
     country: "USA",
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466648/posters/2015_10_16_xtlp84.jpg'
   )
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: the_dark.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: first_light.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: tonite_i_want_to_celebrate_with_you.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: war_begun.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: i_will_sing_you_songs.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: nothing_to_it.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: easy_morning_rebel.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: only_memories_remain.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: wild_honey.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: wonderful.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: smokin_from_shootin.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: gideon.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: dancefloors.id)
+  # SetlistSong.create!(setlist_id: november_16_2015.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: anytime.id)
+  SetlistSong.create!(setlist_id: november_16_2015.id, song_id: mahgeetah.id)
 
-  Setlist.create!(
+  november_17_2015 = Setlist.create!(
     date: Date.new(2015, 10, 17),
     venue: 'Masonic Center',
     city: "San Francisco",
@@ -648,7 +709,30 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495466650/posters/2015_10_17_exvbtw.jpg'
   )
 
-  Setlist.create!(
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: evil_urges.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: the_way_that_he_sings.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: im_amazed.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: hillside_song.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: where_to_begin.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: thin_line.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: evelyn_is_not_real.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: masterplan.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: lay_low.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: i_think_im_going_to_hell.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: oh_sweet_nuthin.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: run_thru.id)
+  # SetlistSong.create!(setlist_id: november_17_2015.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: touch_me_pt_1.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: cobra.id)
+  SetlistSong.create!(setlist_id: november_17_2015.id, song_id: one_big_holiday.id)
+
+
+  february_4_2017 = Setlist.create!(
     date: Date.new(2017, 2, 4),
     venue: 'Hard Rock Hotel',
     city: 'Riviera Maya',
@@ -657,7 +741,34 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495771846/posters/2017_02_07.png'
   )
 
-  Setlist.create!(
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: this_land_is_your_land.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: im_amazed.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: first_light.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: xmas_curtain.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: lowdown.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: golden.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: here_comes_the_sun.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: picture_of_you.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: wish_you_were_here.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: masterplan.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: o_is_the_one_that_is_real.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: what_a_wonderful_man.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: purple_rain.id)
+  # SetlistSong.create!(setlist_id: february_4_2017.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: bermuda_highwy.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: i_will_be_there_when_you_die.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: the_dark.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: touch_me_pt_1.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: cobra.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: dancefloors.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: phone_went_west.id)
+  SetlistSong.create!(setlist_id: february_4_2017.id, song_id: like_a_rolling_stone.id)
+
+
+  february_5_2017 = Setlist.create!(
     date: Date.new(2017, 2, 5),
     venue: 'Hard Rock Hotel',
     city: 'Riviera Maya',
@@ -666,7 +777,29 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495771846/posters/2017_02_07.png'
   )
 
-  Setlist.create!(
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: outta_my_system.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: it_beats_for_you.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: a_new_life.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: you_never_can_tell.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: night_time_is_the_right_time.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: easy_morning_rebel.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: dondante.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: mother.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: wonderful.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: anytime.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: rebel_rebel.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: run_thru.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: holdin_onto_black_mteal.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: sign_o_the_times.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: highly_suspicious.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: gideon.id)
+  SetlistSong.create!(setlist_id: february_5_2017.id, song_id: all_you_need_is_love.id)
+  
+
+  february_7_2017 = Setlist.create!(
     date: Date.new(2017, 2, 7),
     venue: 'Hard Rock Hotel',
     city: 'Riviera Maya',
@@ -675,6 +808,7 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495771846/posters/2017_02_07.png'
   )
 
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: .id)
 
   Setlist.create!(
     date: Date.new(2016, 10, 28),
