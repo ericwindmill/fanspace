@@ -1,4 +1,4 @@
-#Fanspace
+# Fanspace
 [Franspace](https://fanspaceapp.herokuapp.com/#/)
 
 Fanspace.io is a web application that allows mega-fans of My Morning Jacket connect and track their concert metrics. Users get to 'digitially collect' concert experiences and compare them with other fans. Are you sure you're even a fan if you don't have the metrics to prove it?
@@ -17,7 +17,7 @@ Fanspace is a passion project made by Eric Windmill.
 * Forum-like discussion on each individual setlist.
 * Browsing Setlists by different categories.
 
-##Product Design
+## Product Design
 Fanspace.io was built from conception to MVP in 11 days.
 
 A [proposal](https://github.com/ericwindmill/fanspace/blob/master/docs/proposal.md) was drafted in order to guide me in this process.
