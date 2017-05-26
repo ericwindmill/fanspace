@@ -1,13 +1,12 @@
 ###CSS
-  * The image is colored well, but it could be better. 
   * random backgrounds
   * Change to new font
   * landing copy
   * make profile images not stretch
-  * icons on profile page
+  * icons on profile page ( still shit)
   * setlist hover thing
-  * one werer there
-  * branding
+  * one were there
+  * brand even better
 
   ###Features:
    * seed
@@ -15,6 +14,7 @@
    * bugs
     - update profile button rerender bug
     - clear errors!
+
    * Styling Fix and Flare:
     - AOS Animate landing page screen
     - CSS list above.

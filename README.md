@@ -1,48 +1,36 @@
-# fanspace.io
-
+#Fanspace
 Heroku: [https://fanspaceapp.herokuapp.com/]
-Trello: [https://trello.com/b/WbdGeDnr/fanspace-io]
 
-## Minimum Viable Product
+Fanspace.io is a web application that allows mega-fans of My Morning Jacket connect and track their concert metrics. Users get to 'digitially collect' concert experiences and compare them with other fans.
 
-fanspace.io is a web application built using Ruby on Rails and React/Redux. The MVP of this app satisfies the following at a minimum:
+Fanspace is a passion project made by Eric Windmill.
 
-* Hosting on Heroku
-* New account creation, login, and demo login
-* Production README.md
-* Home Setlist Feed
-    * w/ Search Setlists
-* Setlist Detail
-* Setlist Interaction
-    * Comment and 'I was there' Functionality. (NB: I was there is like follows)
-* User Profile
-    * Displays concerts that were attended by user. 
+## Features
 
-## Design Docs
+* User accounts with secure authentication.
+* Setlist tracking for the band My Morning Jacket.
+* Adding setlists to your digital collection.
+* Displaying your concert metrics on your personal profile.
+* Forum-like discussion on each individual setlist.
+* Browsing Setlists by different categories.
 
-* Wireframes
-* React Components
-* API endpoints
-* DB Schema
-* Sample State
+##Product Design
+Fanspace.io was built from conception to MVP in 11 days.
 
-## Implentation Timeline
+A proposal was drafted in order to guide me in this process.
 
-### Phase 1: Backend Setup and Frontend Auth (2 Days)
-**Objective:** Functioning Authentication and Rails DB
-### Phase 2: Setlist Model, API, and Components (2 Days)
-**Objective:** Setlists can be viewed under each setlist item. 
-### Phase 3: User profiles
-**Objective:** Users have a profile page that displays their custom information.
-### Phase 4: User / Setlist Interaction
-**Objective:** Comments and 'attends' belong to setlists and users. Data reflects in User profile.
+A database schema was designed to help me plan out my app.
 
-### Bonus Features (TBD):
-    Search / BROWSE for Setlists by venue, date opening act, etc... 
-    Google Maps Concert Tracking
-    Messages between users
-    Organize setlists by Tours (think: Notes / Notebooks in evernote)
-    Social Media Sharing
-    Upload photos from shows to corresponding setlist page
-    Nested Comments (Only one level deep)
-    Ranks
+## Technology
+
+Fanspace is a single-page application built on Rails and React.js, with many dependancies included.
+
+* Backend Technology
+* Frontend Technology
+* File storage on Cloudinary
+
+## Future Implementaions
+
+* Fanspace is still in its infancy. The future is bright. 
+
+

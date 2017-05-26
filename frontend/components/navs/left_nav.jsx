@@ -16,7 +16,11 @@ class LeftNav extends React.Component {
   render () {
     return(
       <div className="left-nav">
-        <Link to="/setlists"><h3 className={"left-title"}>fanspace</h3></Link>
+        <Link to="/setlists" className="left-title">
+          <div className="icon-ios-analytics"></div>
+          <h2 className="">fanspace</h2>
+        </Link>
+
         <div className="left-nav-flex">
         <div className="left-nav-top">
 

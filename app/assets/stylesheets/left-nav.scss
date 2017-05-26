@@ -21,16 +21,6 @@
 }
 
 
-.left-title {
-  text-align: center;
-  font-weight: 400;
-  font-size: 2em;
-  margin: 0;
-  padding: 24px;
-  margin-bottom: 35px;
-  border-bottom: solid 1px #BBB;
-  color: white;
-}
 
 .browse {
   text-transform: lowercase;
@@ -95,4 +85,31 @@
 .nav-profile-img {
   width: 50px;
   padding-right: 15px;
+}
+
+
+.left-title {
+  color: white;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 1.4em;
+  display:flex;
+  padding-top: 24px;
+  margin-bottom: 35px;
+  border-bottom: solid 1px #BBB;
+  
+  
+  > h2 {
+    margin: 20px 0;
+    font-weight: 400;
+  }
+  > div {
+    margin: 20px 5px 20px 0;
+    font-size: 1.5em;
+  }
+  .icon-ios-analytics::before {
+    padding: 20px 0;
+  }
+  &:hover {
+    color: $blue-green;
+  }
 }
