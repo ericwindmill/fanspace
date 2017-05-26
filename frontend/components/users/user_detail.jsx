@@ -158,7 +158,7 @@ displayUpdate(e) {
               {this.props.userDetail.setlist.map(set => {
                 return (
                   <li className="user-setlist-item" key={set.id}>
-                    <Link to={`/setlists/${set.id}`}>{set.date} {set.city}>
+                    <Link to={`/setlists/${set.id}`}>{set.date} {set.city}
                       <img className="user-setlist-item-poster" src={set.poster_img_url} />
                     </Link>
                   </li>
