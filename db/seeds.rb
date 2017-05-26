@@ -37,7 +37,7 @@
     tagline: 'We are the innovators... '
   )
 
-    User.create!(
+  User.create!(
     username: 'Bear',
     password: 'password',
     email: 'bear@ericwindmill.com',
@@ -47,6 +47,53 @@
     rank: 'junior member',
     tagline: '...they are the imitators! '
   )
+
+
+  User.create!(
+    username: 'Grahm Parsons',
+    password: 'password',
+    email: 'bear@ericwindmill.com',
+    profile_img_url: 'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,h_600,w_600/v1495819629/seeds/grahm_parsons.jpg',
+    location: 'Out west',
+    about: 'Return of the Grevious Angel....',
+    rank: 'junior member',
+    tagline: '...they are the imitators! '
+  )
+
+  User.create!(
+    username: 'Prince',
+    password: 'password',
+    email: 'bear@ericwindmill.com',
+    profile_img_url: 'http://res.cloudinary.com/ericwindmill/image/upload/c_crop,h_600,w_600/v1495819560/seeds/prince.jpg',
+    location: 'Paisley Park',
+    about: 'Please be my friend.',
+    rank: 'junior member',
+    tagline: 'I make great waffels.'
+  )
+
+  User.create!(
+    username: 'Freddy Mercury',
+    password: 'password',
+    email: 'bear@ericwindmill.com',
+    profile_img_url: 'https://res.cloudinary.com/ericwindmill/image/upload/v1495819502/seeds/freddy_mercury.jpg',
+    location: 'Stonetown, Tanzania',
+    about: 'Please be my friend.',
+    rank: 'junior member',
+    tagline: 'I want to break free...'
+  )
+
+  User.create!(
+    username: 'Stevie Nicks',
+    password: 'password',
+    email: 'bear@ericwindmill.com',
+    profile_img_url: 'http://res.cloudinary.com/ericwindmill/image/upload/c_crop,g_face,w_500,x_380,y_541/v1495819281/seeds/stevie_knicks.jpg',
+    location: 'Pheonix, AZ',
+    about: 'Please be my friend.',
+    rank: 'junior member',
+    tagline: "I'm Stevie Nicks'"
+      )
+
+
 
 
   #############
