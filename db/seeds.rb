@@ -235,6 +235,16 @@
     father_figure       = Song.create!(title: "Father Figure (George Michael)", album_id: covers.id)
     another_brick_in_the_wall_pt_2 = Song.create!(title: "Another Brick In the Wall Pt. 2 (Pink Floyd)", album_id: covers.id)
     what_the_world_needs_now = Song.create!(title: "What the World Needs Now (Burt Bacharach)", album_id: covers.id)
+    long_may_you_run = Song.create!(title: "Long May You Run (Neil Young)", album_id: covers.id)
+    helpless = Song.create!(title: "Helpless (Neil Young)", album_id: covers.id)
+    could_you_be_loved = Song.create!(title: "Could You Be Loves (Bob Marley)", album_id: covers.id)
+    raspberry_beret = Song.create!(title: "Raspberry Beret (Prince)", album_id: covers.id)
+    fade_into_you = Song.create!(title: "Fade Into You (Mazzy Star)", album_id: covers.id)
+    take_me_with_you = Song.create!(title: "Take Me With You (Prince)", album_id: covers.id)
+    peaceful_easy_feeling = Song.create!(title: "Peaceful Easy Feeling (The Eagles)", album_id: covers.id)
+    knockin_on_heavens_doors = Song.create!(title: "Knockin' On Heaven's Doors (Bob Dylan)", album_id: covers.id)
+    young_americans = Song.create!(title: "Young Americans (Daivd Bowie)", album_id: covers.id)
+    i_could_never_take_the_place_of_your_man = Song.create!(title: "I Could Never Take the Place of Your Man (Prince)", album_id: covers.id)
     
 
   
@@ -249,7 +259,9 @@
 
 
   b_sides_etc = Album.create!(title: "B Sides", cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/the_waterfall.jpg' )
-  
+    throwback = Song.create!(title: "Throwback (When We Were Young)", album_id: b_sides_etc.id)
+    throwback = Song.create!(title: "Throwback (When We Were Young", album_id: b_sides_etc.id)
+    throwback = Song.create!(title: "Throwback (When We Were Young", album_id: b_sides_etc.id)
   
   # notes = Album.create!(title: 'Notes', cover_art_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495752710/album%20covers/the_waterfall.jpg')
   #   encore           = Song.create!(title: "Encore:", album_id: notes.id)
@@ -808,9 +820,29 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495771846/posters/2017_02_07.png'
   )
 
-  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: .id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: in_its_infancy.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: war_begun.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: i_will_sing_you_songs.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: the_way_that_he_sings.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: heartbreakin_man.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: easy.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: evil_urges.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: honest_man.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: only_memories_remain.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: father_figure.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: lay_low.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: mahgeetah.id)
+  # SetlistSong.create!(setlist_id: february_7_2017.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: another_brick_in_the_wall_pt_2.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: what_the_world_needs_now.id)
+  SetlistSong.create!(setlist_id: february_7_2017.id, song_id: one_big_holiday.id)
 
-  Setlist.create!(
+  november_28_2016 = Setlist.create!(
     date: Date.new(2016, 10, 28),
     venue: 'Suwannee Hulaween',
     city: "Live Oak",
@@ -819,8 +851,26 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495804786/posters/2016_10_28.jpg'
   )
 
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: evil_urges.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: lay_low.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: rocket_man.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: easy.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: run_thru.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: highly_suspicious.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: another_brick_in_the_wall_pt_2.id)
+  SetlistSong.create!(setlist_id: november_28_2016.id, song_id: one_big_holiday.id)
 
-  Setlist.create!(
+  november_27_2016 = Setlist.create!(
     date: Date.new(2016, 10, 27),
     venue: 'Thomas Wolfe Auditorium',
     city: "Asheville",
@@ -829,8 +879,29 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495804786/posters/2016_10_27.jpg'
   )
 
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: in_its_infancy.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: outta_my_system.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: evil_urges.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: im_amazed.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: lowdown.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: golden.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: wish_you_were_here.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: picture_of_you.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: masterplan.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: run_thru.id)
+  # SetlistSong.create!(setlist_id: november_27_2016.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: i_will_be_there_when_you_die.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: touch_me_pt_1.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: cobra.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: tyrone.id)
+  SetlistSong.create!(setlist_id: november_27_2016.id, song_id: one_big_holiday.id)
 
-  Setlist.create!(
+  november_26_2016 = Setlist.create!(
     date: Date.new(2016, 10, 26),
     venue: 'Tivoli Theatre',
     city: 'Chatanooga',
@@ -839,8 +910,32 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495804785/posters/2016_10_26.jpg'
   )
 
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: xmas_curtain.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: the_dark.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: it_beats_for_you.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: i_will_sing_you_songs.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: rocket_man.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: the_way_that_he_sings.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: a_new_life.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: lay_low.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: smokin_from_shootin.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: strangulation.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: carried_away.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: dondante.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: mother.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: gideon.id)
+  # SetlistSong.create!(setlist_id: november_26_2016.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: bermuda_highwy.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: slow_slow_tune.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: phone_went_west.id)
+  SetlistSong.create!(setlist_id: november_26_2016.id, song_id: mahgeetah.id)
 
-  Setlist.create!(
+  november_23_2016 = Setlist.create!(
     date: Date.new(2016, 10, 23),
     venue: 'Shoreline Ampitheatre',
     city: 'Mountain View',
@@ -849,8 +944,14 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495805233/posters/2016_10_22.jpg'
   )
 
+  SetlistSong.create!(setlist_id: november_23_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: november_23_2016.id, song_id: a_new_life.id)
+  SetlistSong.create!(setlist_id: november_23_2016.id, song_id: wonderful.id)
+  SetlistSong.create!(setlist_id: november_23_2016.id, song_id: golden.id)
+  SetlistSong.create!(setlist_id: november_23_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: november_23_2016.id, song_id: long_may_you_run.id)
 
-  Setlist.create!(
+  november_22_2016 = Setlist.create!(
     date: Date.new(2016, 10, 22),
     venue: 'Shoreline Ampitheatre',
     city: 'Mountain View',
@@ -859,8 +960,14 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495805233/posters/2016_10_22.jpg'
   )
 
+  SetlistSong.create!(setlist_id: november_22_2016.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: november_22_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: november_22_2016.id, song_id: golden.id)
+  SetlistSong.create!(setlist_id: november_22_2016.id, song_id: wonderful.id)
+  SetlistSong.create!(setlist_id: november_22_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: november_22_2016.id, song_id: helpless.id)
 
-  Setlist.create!(
+  august_28_2016 = Setlist.create!(
     date: Date.new(2016, 8, 28),
     venue: 'Lockn Festival',
     city: 'Arrington',
@@ -868,9 +975,27 @@
     country: 'USA',
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495804785/posters/2016_8_28.jpg'
   )
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: what_the_world_needs_now.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: lay_low.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: im_amazed.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: phone_went_west.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: could_you_be_loved.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: mahgeetah.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: purple_rain.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: rebel_rebel.id)
+  SetlistSong.create!(setlist_id: august_28_2016.id, song_id: one_big_holiday.id)
 
 
-  Setlist.create!(
+  june_1_2016 = Setlist.create!(
     date: Date.new(2016, 6, 1),
     venue: 'Cadillac House',
     city: 'New York',
@@ -879,8 +1004,15 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495804786/posters/2016_default.jpg'
   )
 
+  SetlistSong.create!(setlist_id: june_1_2016.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: june_1_2016.id, song_id: know_til_now.id)
+  SetlistSong.create!(setlist_id: june_1_2016.id, song_id: dear_one.id)
+  SetlistSong.create!(setlist_id: june_1_2016.id, song_id: raspberry_beret.id)
+  SetlistSong.create!(setlist_id: june_1_2016.id, song_id: fade_into_you.id)
+  SetlistSong.create!(setlist_id: june_1_2016.id, song_id: of_the_mother_again.id)
+  SetlistSong.create!(setlist_id: june_1_2016.id, song_id: a_new_life.id)
 
-  Setlist.create!(
+  may_29_2016 = Setlist.create!(
     date: Date.new(2016, 5, 29),
     venue: 'Red Rocks Ampitheatre',
     city: 'Morrison',
@@ -889,8 +1021,39 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495804784/posters/2016_05_29.jpg'
   )
 
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: the_dark.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: it_beats_for_you.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: throwback.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: war_begun.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: i_will_sing_you_songs.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: the_bear.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: the_way_that_he_sings.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: take.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: war_begun.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: take_me_with_you.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: lay_low.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: bermuda_highwy.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: a_new_life.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: o_is_the_one_that_is_real.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: what_a_wonderful_man.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: easy_morning_rebel.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: dondante.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: gideon.id)
+  # SetlistSong.create!(setlist_id: may_29_2016.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: peaceful_easy_feeling.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: holdin_onto_black_mteal.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: easy.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: phone_went_west.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: dancefloors.id)
+  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: one_big_holiday.id)
 
-  Setlist.create!(
+
+  may_28_2016 = Setlist.create!(
     date: Date.new(2016, 5, 28),
     venue: 'Red Rocks Ampitheatre',
     city: 'Morrison',
@@ -898,7 +1061,37 @@
     country: 'USA',
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495600264/posters/2016_05_28.jpg'
   )
-  Setlist.create!(
+
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: heartbreakin_man.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: outta_my_system.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: anytime.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: evil_urges.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: in_its_infancy.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: just_one_thing.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: wonderful.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: golden.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: masterplan.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: picture_of_you.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: knockin_on_heavens_doors.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: strangulation.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: smokin_from_shootin.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: run_thru.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: tyrone.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: im_amazed.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: purple_rain.id)
+  # SetlistSong.create!(setlist_id: may_28_2016.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: highly_suspicious.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: touch_me_pt_1.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: cobra.id)
+  SetlistSong.create!(setlist_id: may_28_2016.id, song_id: mahgeetah.id)
+
+  may_26_2016 = Setlist.create!(
     date: Date.new(2016, 5, 26),
     venue: 'Farm Bureau Insurance Lawn',
     city: 'Indianapolis',
@@ -906,7 +1099,31 @@
     country: 'USA',
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495804916/posters/2016_05_26.jpg'
   )
-  Setlist.create!(
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: the_way_that_he_sings.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: im_amazed.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: war_begun.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: in_its_infancy.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: wonderful.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: carried_away.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: touch_me_pt_1.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: touch_me_pt_2.id)
+  # SetlistSong.create!(setlist_id: may_26_2016.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: anytime.id)
+  SetlistSong.create!(setlist_id: may_26_2016.id, song_id: one_big_holiday.id)
+
+
+
+  may_14_2016 = Setlist.create!(
     date: Date.new(2016, 5, 14),
     venue: 'Shaky Knees Festival',
     city: 'Atlanta',
@@ -914,7 +1131,25 @@
     country: 'USA',
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495804784/posters/2016_5_15.jpg'
   )
-  Setlist.create!(
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: evil_urges.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: the_way_that_he_sings.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: mahgeetah.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: lay_low.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: purple_rain.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: may_14_2016.id, song_id: one_big_holiday.id)
+
+  may_13_2016 = Setlist.create!(
     date: Date.new(2016, 5, 13),
     venue: 'Iroquois Ampitheatre',
     city: 'Louisville',
@@ -922,7 +1157,34 @@
     country: 'USA',
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495804785/posters/2016_5_12.jpg'
   )
-  Setlist.create!(
+
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: touch_me_pt_1.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: outta_my_system.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: evil_urges.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: im_amazed.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: in_its_infancy.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: golden.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: i_will_be_there_when_you_die.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: state_of_the_art.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: masterplan.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: run_thru.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: dancefloors.id)
+  # SetlistSong.create!(setlist_id: may_13_2016.id, song_id: encore÷.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: raspberry_beret.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: cobra.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: highly_suspicious.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: young_americans.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: i_could_never_take_the_place_of_your_man.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: anytime.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: one_big_holiday.id)
+
+
+  may_12_2016 = Setlist.create!(
     date: Date.new(2016, 5, 12),
     venue: 'Iroquois Ampitheatre',
     city: 'Louisville',
@@ -931,8 +1193,30 @@
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495804785/posters/2016_5_12.jpg'
   )
 
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: throwback.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: it_beats_for_you.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: the_dark.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: i_will_sing_you_songs.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: a_new_life.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: lay_low.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: what_a_wonderful_man.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: heartbreakin_man.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: dondante.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: gideon.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: purple_rain.id)
+  # SetlistSong.create!(setlist_id: may_13_2016.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: bermuda_highwy.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: wonderful.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: phone_went_west.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: easy_morning_rebel.id)
+  SetlistSong.create!(setlist_id: may_13_2016.id, song_id: mahgeetah.id)
 
-  Setlist.create!(
+  may_2_2016 = Setlist.create!(
     date: Date.new(2016, 5, 2),
     venue: 'ACL Live',
     city: 'Austin',
@@ -940,7 +1224,27 @@
     country: 'USA',
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495804784/posters/2016_5_2.jpg'
   )
-  Setlist.create!(
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: outta_my_system.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: slow_slow_tune.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: throwback.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: only_memories_remain.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: masterplan.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: in_its_infancy.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: i_will_sing_you_songs.id)
+  # SetlistSong.create!(setlist_id: may_2_2016.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: wonderful.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: get_the_point.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: may_2_2016.id, song_id: mahgeetah.id)
+
+
+
+  april_29_2016 = Setlist.create!(
     date: Date.new(2016, 4, 29),
     venue: 'NOLA Jazz Festival',
     city: 'New Orleans',
@@ -948,8 +1252,21 @@
     country: 'USA',
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/v1495804784/posters/2016_4_29.jpg'
   )
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: mahgeetah.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: sign_o_the_times.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: purple_rain.id)
+  SetlistSong.create!(setlist_id: april_29_2016.id, song_id: one_big_holiday.id)
 
-  Setlist.create!(
+  april_28_2016 = Setlist.create!(
     date: Date.new(2016, 4, 28),
     venue: 'Revention Music Center',
     city: 'Houston',
@@ -957,6 +1274,25 @@
     country: 'USA',
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495804784/posters/2016_4_28.jpg'
   )
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: the_dark.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: sign_o_the_times.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: the_way_that_he_sings.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: lay_low.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: throwback.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: purple_rain.id)
+  # SetlistSong.create!(setlist_id: april_28_2016.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: gideon.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: easy_morning_rebel.id)
+  SetlistSong.create!(setlist_id: april_28_2016.id, song_id: one_big_holiday.id)
 
   Setlist.create!(
     date: Date.new(2016, 4, 27),
