@@ -15,7 +15,7 @@
   #############
   User.delete_all
 
-  User.create!(
+  eric = User.create!(
     username: 'eric',
     password: 'password',
     email: 'eric@ericwindmill.com',
@@ -26,7 +26,52 @@
     tagline: "It don't matter what yer doin' as long as yer losin' yo head."
   )
 
-  User.create!(
+
+  Attend.create!(user_id: eric.id, setlist_id: august_28_2016.id )
+  Attend.create!(user_id: eric.id, setlist_id: august_3_2012.id )
+  Attend.create!(user_id: eric.id, setlist_id: august_4_2011.id )
+  Attend.create!(user_id: eric.id, setlist_id: august_4_2012.id )
+  Attend.create!(user_id: eric.id, setlist_id: november_05_2005.id )
+  Attend.create!(user_id: eric.id, setlist_id: november_16_2015.id )
+  Attend.create!(user_id: eric.id, setlist_id: november_17_2015.id )
+  Attend.create!(user_id: eric.id, setlist_id: november_15_2015.id )
+  Attend.create!(user_id: eric.id, setlist_id: may_12_2016.id )
+  Attend.create!(user_id: eric.id, setlist_id: may_13_2016.id )
+  Attend.create!(user_id: eric.id, setlist_id: may_14_2016.id )
+  Attend.create!(user_id: eric.id, setlist_id: february_4_2017.id )
+  Attend.create!(user_id: eric.id, setlist_id: february_5_2017.id )
+  Attend.create!(user_id: eric.id, setlist_id: february_7_2017.id )
+  Attend.create!(user_id: eric.id, setlist_id: april_27_2016.id )
+  Attend.create!(user_id: eric.id, setlist_id: june_20_2008.id )
+  Attend.create!(user_id: eric.id, setlist_id: december_31_2008.id )
+
+  Comment.create!(
+    user_id: eric.id,
+    setlist_id: november_05_2005.id,
+    body: "What a show!"
+  )
+  Comment.create!(
+    user_id: eric.id,
+    setlist_id: august_28_2016.id,
+    body: "I can't believe they covered the Wiggles!"
+  )
+  Comment.create!(
+    user_id: eric.id,
+    setlist_id: november_05_2005.id,
+    body: "Best poster I've ever seen."
+  )
+  Comment.create!(
+    user_id: eric.id,
+    setlist_id: december_28_2012.id,
+    body: "Best version of Carried Away to date."
+  )
+  Comment.create!(
+    user_id: eric.id,
+    setlist_id: august_4_2011.id,
+    body: "Red Rocks"
+  )
+
+  guest = User.create!(
     username: 'guest',
     password: 'password',
     email: 'guest@ericwindmill.com',
@@ -37,19 +82,51 @@
     tagline: 'We are the innovators... '
   )
 
-  User.create!(
-    username: 'Bear',
+  pooch = User.create!(
+    username: 'Pooch',
     password: 'password',
     email: 'bear@ericwindmill.com',
     profile_img_url: 'http://res.cloudinary.com/ericwindmill/image/upload/v1495466650/design/default_user_reb7q6.png',
-    location: 'Pluto (the planet)',
+    location: 'On the road with the Jacket',
     about: 'Please be my friend.',
     rank: 'junior member',
     tagline: '...they are the imitators! '
   )
 
 
-  User.create!(
+  Attend.create!(user_id: pooch.id, setlist_id: february_4_2017.id )
+  Attend.create!(user_id: pooch.id, setlist_id: february_5_2017.id )
+  Attend.create!(user_id: pooch.id, setlist_id: february_7_2017.id )
+  Attend.create!(user_id: pooch.id, setlist_id: june_20_2008.id )
+  Attend.create!(user_id: pooch.id, setlist_id: december_31_2008.id )
+  Attend.create!(user_id: pooch.id, setlist_id: may_12_2016.id )
+  Attend.create!(user_id: pooch.id, setlist_id: may_13_2016.id )
+  Attend.create!(user_id: pooch.id, setlist_id: may_14_2016.id )
+  Attend.create!(user_id: pooch.id, setlist_id: december_27_2012.id )
+  Attend.create!(user_id: pooch.id, setlist_id: december_29_2012.id )
+  Attend.create!(user_id: pooch.id, setlist_id: december_31_2008.id )
+  Attend.create!(user_id: pooch.id, setlist_id: august_28_2016.id )
+  Attend.create!(user_id: pooch.id, setlist_id: august_3_2012.id )
+  Attend.create!(user_id: pooch.id, setlist_id: august_4_2012.id )
+
+  Comment.create!(
+    user_id: pooch.id,
+    setlist_id: august_4_2011.id,
+    body: "The view from side stage was fantastic."
+  )
+  Comment.create!(
+    user_id: pooch.id,
+    setlist_id: may_12_2016.id,
+    body: "Tom's bass lines though...."
+  )
+  Comment.create!(
+    user_id: pooch.id,
+    setlist_id: may_26_2016.id,
+    body: "I could deal without the 68 minute version of  Dondante."
+  )
+
+
+  grahm = User.create!(
     username: 'Grahm Parsons',
     password: 'password',
     email: 'bear@ericwindmill.com',
@@ -60,7 +137,42 @@
     tagline: '...they are the imitators! '
   )
 
-  User.create!(
+  Attend.create!(user_id: grahm.id, setlist_id: february_4_2017.id )
+  Attend.create!(user_id: grahm.id, setlist_id: february_5_2017.id )
+  Attend.create!(user_id: grahm.id, setlist_id: february_7_2017.id )
+  Attend.create!(user_id: grahm.id, setlist_id: june_20_2008.id )
+  Attend.create!(user_id: grahm.id, setlist_id: june_1_2016.id )
+  Attend.create!(user_id: grahm.id, setlist_id: june_12_2008.id )
+  Attend.create!(user_id: grahm.id, setlist_id: may_13_2016.id )
+  Attend.create!(user_id: grahm.id, setlist_id: december_27_2012.id )
+  Attend.create!(user_id: grahm.id, setlist_id: december_29_2012.id )
+  Attend.create!(user_id: grahm.id, setlist_id: december_31_2008.id )
+  Attend.create!(user_id: grahm.id, setlist_id: august_28_2016.id )
+  Attend.create!(user_id: grahm.id, setlist_id: august_3_2012.id )
+  Attend.create!(user_id: grahm.id, setlist_id: december_31_2008.id )
+
+    Comment.create!(
+    user_id: grahm.id,
+    setlist_id: november_26_2016.id,
+    body: "I wrote better painful lyrics."
+  )
+    Comment.create!(
+    user_id: grahm.id,
+    setlist_id: april_28_2016.id,
+    body: "Too much bass, not enough feels.."
+  )
+    Comment.create!(
+    user_id: grahm.id,
+    setlist_id: june_1_2016.id,
+    body: "Eh. Not the best show I've seen.'"
+  )
+    Comment.create!(
+    user_id: grahm.id,
+    setlist_id: june_12_2008.id
+    body: "Zach Galifanakis wtf.'"
+  )
+
+  prince = User.create!(
     username: 'Prince',
     password: 'password',
     email: 'bear@ericwindmill.com',
@@ -71,7 +183,49 @@
     tagline: 'I make great waffels.'
   )
 
-  User.create!(
+
+  Attend.create!(user_id: prince.id, setlist_id: november_05_2005.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_15_2015.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_16_2015.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_17_2015.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_22_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: june_12_2008.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_13_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: june_1_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: december_27_2012.id )
+  Attend.create!(user_id: prince.id, setlist_id: december_29_2012.id )
+  Attend.create!(user_id: prince.id, setlist_id: december_31_2008.id )
+  Attend.create!(user_id: prince.id, setlist_id: august_28_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: august_3_2012.id )
+  Attend.create!(user_id: prince.id, setlist_id: december_31_2008.id )
+
+  Comment.create!(
+    user_id: prince.id,
+    setlist_id: june_12_2008.id,
+    body: "Have you tried my waffle recipe?'"
+  )
+  Comment.create!(
+    user_id: prince.id,
+    setlist_id: august_28_2016.id,
+    body: "Lets Go Crazy"
+  )
+  Comment.create!(
+    user_id: prince.id,
+    setlist_id: november_22_2016.id,
+    body: "One for the ages."
+  )
+  Comment.create!(
+    user_id: prince.id,
+    setlist_id: november_17_2015.id,
+    body: "The best set so far."
+  )
+  Comment.create!(
+    user_id: prince.id,
+    setlist_id: december_31_2008.id,
+    body: "That Nicole Atkins has some big hands."
+  )
+
+  freddy = User.create!(
     username: 'Freddy Mercury',
     password: 'password',
     email: 'bear@ericwindmill.com',
@@ -82,7 +236,48 @@
     tagline: 'I want to break free...'
   )
 
-  User.create!(
+
+  Attend.create!(user_id: prince.id, setlist_id: november_05_2005.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_15_2015.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_16_2015.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_17_2015.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_22_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: june_12_2008.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_13_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_12_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_29_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_2_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_28_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: august_3_2012.id )
+  Attend.create!(user_id: prince.id, setlist_id: december_31_2008.id )
+
+  Comment.create!(
+    user_id: freddy.id,
+    setlist_id: december_31_2008.id,
+    body: "Her hands are pretty big."
+  )
+  Comment.create!(
+    user_id: freddy.id,
+    setlist_id: august_4_2011.id,
+    body: "Strangulation!"
+  )
+  Comment.create!(
+    user_id: freddy.id,
+    setlist_id: february_4_2017.id,
+    body: "Night 1 was so good!"
+  )
+  Comment.create!(
+    user_id: freddy.id,
+    setlist_id: august_4_2011.id,
+    body: "As the greatest vocalist in rock and roll history, I aprrove.."
+  )
+  Comment.create!(
+    user_id: freddy.id,
+    setlist_id: february_5_2017.id,
+    body: "What was better? Night 1 or Night 2?"
+  )
+
+  stevie = User.create!(
     username: 'Stevie Nicks',
     password: 'password',
     email: 'bear@ericwindmill.com',
@@ -92,6 +287,54 @@
     rank: 'junior member',
     tagline: "I'm Stevie Nicks'"
       )
+
+
+  Attend.create!(user_id: prince.id, setlist_id: november_05_2005.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_15_2015.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_16_2015.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_17_2015.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_22_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: june_12_2008.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_13_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_12_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_29_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_2_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: may_28_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: august_3_2012.id )
+  Attend.create!(user_id: prince.id, setlist_id: june_12_2008.id )
+  Attend.create!(user_id: prince.id, setlist_id: december_31_2008.id )
+  Attend.create!(user_id: prince.id, setlist_id: june_1_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: june_20_2008.id )
+  Attend.create!(user_id: prince.id, setlist_id: november_26_2016.id )
+  Attend.create!(user_id: prince.id, setlist_id: december_38_2008.id )
+
+
+
+  Comment.create!(
+    user_id: stevie.id,
+    setlist_id: february_5_2017.id,
+    body: "Night 2."
+  )
+  Comment.create!(
+    user_id: stevie.id,
+    setlist_id: may_28_2016.id,
+    body: "They play a lot of shows in May."
+  )
+  Comment.create!(
+    user_id: stevie.id,
+    setlist_id: may_28_2016.id,
+    body: "Pretty sure the Eagles wrote Witchy Woman about me."
+  )
+  Comment.create!(
+    user_id: stevie.id,
+    setlist_id: august_4_2012.id,
+    body: "Best version of PWW ever, and possibly their best single performance to date."
+  )
+  Comment.create!(
+    user_id: stevie.id,
+    setlist_id: february_7_2017.id,
+    body: "These comments are awfully robotic."
+  )
 
 
 
@@ -508,7 +751,7 @@
   SetlistSong.create!(setlist_id: august_4_2011.id, song_id: anytime.id)
   SetlistSong.create!(setlist_id: august_4_2011.id, song_id: one_big_holiday.id)
 
-  august_3_2012 Setlist.create!(
+  august_3_2012 = Setlist.create!(
     date: Date.new(2012, 8, 03),
     venue: 'Red Rocks Ampitheater',
     city: "Morrison",
@@ -588,7 +831,7 @@
   SetlistSong.create!(setlist_id: august_4_2012.id, song_id: one_big_holiday.id)
 
 
-  december_27_2017 = Setlist.create!(
+  december_27_2012 = Setlist.create!(
     date: Date.new(2012, 12, 27),
     venue: 'Capitol Theater',
     city: "Port Chester",
@@ -1078,8 +1321,6 @@
   SetlistSong.create!(setlist_id: may_29_2016.id, song_id: i_will_sing_you_songs.id)
   SetlistSong.create!(setlist_id: may_29_2016.id, song_id: the_bear.id)
   SetlistSong.create!(setlist_id: may_29_2016.id, song_id: the_way_that_he_sings.id)
-  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: take.id)
-  SetlistSong.create!(setlist_id: may_29_2016.id, song_id: war_begun.id)
   SetlistSong.create!(setlist_id: may_29_2016.id, song_id: take_me_with_you.id)
   SetlistSong.create!(setlist_id: may_29_2016.id, song_id: lay_low.id)
   SetlistSong.create!(setlist_id: may_29_2016.id, song_id: bermuda_highwy.id)
