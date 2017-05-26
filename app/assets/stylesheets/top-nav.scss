@@ -61,10 +61,26 @@
   color: white;
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-size: 1.5em;
+  display:flex;
  
   > h2 {
     margin: 20px 0;
     font-weight: 400;
+
+  }
+
+  > div {
+    margin: 20px 10px;
+    font-size: 1.5em;
+
+  }
+  .icon-ios-analytics::before {
+    padding: 20px 0;
+  }
+
+
+  &:hover {
+    color: $blue-green;
   }
 }
 

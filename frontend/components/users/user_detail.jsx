@@ -92,7 +92,7 @@ displayUpdate(e) {
             <section className="stats-at-a-glance-table">
               <h3 className="table-glance-header">Stats At a Glance</h3>
               <div className="main-shows grid-box">
-                <p className="icon-ticket-1 fontastic"></p>
+                <p className="icon-ticket fontastic"></p>
                 <p>Shows</p>
                 <p>{this.props.userDetail.setlist.length}</p>
               </div>
@@ -110,13 +110,13 @@ displayUpdate(e) {
               </div>
 
               <div className="main-performances grid-box">
-                <p className="icon-music fontastic"></p>
+                <p className="icon-music-2 fontastic"></p>
                 <p>Total Songs</p>
                 <p>{this.props.performances.length}</p>
               </div>
 
               <div className="main-songs grid-box">
-                <p className="icon-nuclear fontastic"></p>
+                <p className="icon-snow fontastic"></p>
                 <p>Unique Songs</p>
                 <p>{this.props.uniqSongs.length}</p>
               </div>
