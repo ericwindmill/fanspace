@@ -75,7 +75,7 @@
        <div className="comment-creator">
          <Link className="comment-creator-name" to={`/users/${comment.user_id}`}>
           <img className="user-comment-img" src={comment.user.profile_img_url} />
-          {comment.user.username}
+          <p>{comment.user.username}</p>
          </Link>
        </div>
        <div className="comment-body">

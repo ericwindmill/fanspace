@@ -133,13 +133,12 @@
     background: $box-background;
     box-shadow: $box-shadow-component;
     color: white;
-    margin-bottom: 50px;
     text-align: center;
     margin: 20px;
-    max-width: 600px;
-    min-width: 400px;
+    width: 400px;
     max-height: 40vh;
     flex-grow: 1;
+    overflow: scroll;
 
     > ul {
       padding: 0;
@@ -177,6 +176,8 @@
     max-width: 600px;
     min-width: 400px;
     flex-grow: 1;
+    max-height: 60vh;
+    overflow: scroll;
 
     > ul {
       text-align: left;

@@ -123,7 +123,7 @@ displayUpdate(e) {
             </section>
 
             <section className="album-percentage-widget">
-              <h3> Album Percentages </h3>
+              <h3> Album Percentages Seen </h3>
               <ul>
                 {this.props.albumPercent.map(album => {
                   return <li className="album-percentage-item" key={album.title}> 
@@ -133,19 +133,7 @@ displayUpdate(e) {
                 })}
               </ul>
             </section>
-
-
-            <section className="shows-per-year-widget">
-              <h3> Shows Per Year </h3>
-              <ul>
-                {this.props.showsPerYear.map(year => {
-                  return <li className="shows-per-year-item" key={year.year}>
-                    <div className="col-1">{year.year}</div> 
-                    <div className="col-2">{year.count}</div>
-                  </li>
-                })}
-              </ul>
-            </section>
+ 
 
           <ShowsPerYearAsGraph 
             data={this.props.showsPerYearGraph}

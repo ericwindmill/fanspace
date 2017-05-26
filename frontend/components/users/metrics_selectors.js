@@ -70,40 +70,38 @@ export const uniqSongsByAlbum = state => {
 
 
 export const albumPercent = state => {
-  const songs = uniqSongs(state)
-  let album = {
-    1: {
-      songs: []
-    },
-    2: {
-      songs: []
-    },
-    3: {
-      songs: []
-    }
-  }
-  songs.forEach(song => {
-    Object.keys(album).forEach(id => {
-      if (parseInt(song.album_id) === parseInt(id) && !(album[id].songs.includes(song.title))) {
-        album[id].songs.push(song.title)
+  // const songs = uniqSongs(state)
+  // let album = {}
+  // songs.forEach(song => {
+  //   if (Object.keys(album).includes(song.album_id.toString())) {
+  //     album[song.album_id].songs.push(song.title)
+  //   } else {
+  //     album[song.album_id] = {songs: [song.title]}
+  //   }
+  // })
+
+  let seen = uniqSongsByAlbum(state)
+  let allAlbums = values(state.albums)
+  let percents = []
+  allAlbums.forEach((album, i) => {
+    let title = album.title
+    let currentAlbum = {}
+    seen.forEach(obj => {
+      if (obj.title === title) {
+        currentAlbum = obj
       }
     })
+    if (Object.keys(currentAlbum).length > 0) {
+      let albumLength = album.songs.length
+      let seenLength = currentAlbum.songs.length
+
+      percents.push({
+        title: album.title,
+        percent: Math.floor((seenLength / albumLength) * 100)
+      })
+    }
   })
 
-  const percents = [
-    {
-      title: 'The Tennesee Fire',
-      percent: Math.floor((album[1].songs.length / 16) * 100)
-    },
-    {
-      title: 'At Dawn',
-      percent: Math.floor((album[2].songs.length / 1) * 100)
-    },
-    {
-      title: 'It Still Moves',
-      percent: Math.floor((album[3].songs.length / 12) * 100)
-    }
-  ]
 
   return percents
 }
