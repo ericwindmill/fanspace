@@ -3,15 +3,10 @@ import Chart from 'chart.js'
 import {Line} from 'react-chartjs-2';
 Chart.defaults.global.responsive = true
 
-
-
 class ShowsPerYearAsGraph extends React.Component {
   constructor(props) {
     super(props)
   }
-
-
-
 
   render() {
     let options = {
@@ -34,7 +29,6 @@ class ShowsPerYearAsGraph extends React.Component {
       </div>
     );
   }
-
 
 }
 

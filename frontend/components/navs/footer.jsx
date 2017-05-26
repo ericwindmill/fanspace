@@ -20,7 +20,7 @@ class FooterNav extends React.Component {
 
         <div className="footer-grid-c">
           <a href='https://mymorningjacket.com/' className='mmj-link nav-link'>My Morning Jacket</a>
-          <p>This app is dedicated to the band that changed my life and the friends Ive made on the journey.</p>
+          <p>This app is dedicated to the band that changed my life and the friends I've made on the journey.</p>
         </div>
 
         <div className="footer-grid-d">

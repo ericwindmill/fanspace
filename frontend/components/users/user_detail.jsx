@@ -3,8 +3,7 @@ import { Link, Route } from 'react-router-dom'
 import LeftNav from '../navs/left_nav_container'
 import UpdateForm from './update_profile_form'
 import ShowsPerYearAsGraph from './line-graph'
-
-
+import AlbumPiePercent from '../chartjs/album-pies'
 
 
 
@@ -169,8 +168,6 @@ displayUpdate(e) {
            })}
           </ul>
         </section>
-
-
 
 
       
