@@ -1294,7 +1294,7 @@
   SetlistSong.create!(setlist_id: april_28_2016.id, song_id: easy_morning_rebel.id)
   SetlistSong.create!(setlist_id: april_28_2016.id, song_id: one_big_holiday.id)
 
-  Setlist.create!(
+  april_27_2016 = Setlist.create!(
     date: Date.new(2016, 4, 27),
     venue: 'The Criterion',
     city: 'Oklahoma City',
@@ -1302,3 +1302,23 @@
     country: 'USA',
     poster_img_url:'http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495804784/posters/2016_4_27.jpg'
   )
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: victory_dance.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: believe.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: evil_urges.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: im_amazed.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: in_its_infancy.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: tropics.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: steam_engine.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: circuital.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: spring.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: off_the_record.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: sign_o_the_times.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: raspberry_beret.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: purple_rain.id)
+  # SetlistSong.create!(setlist_id: april_27_2016.id, song_id: encore.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: throwback.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: mahgeetah.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: compund_fracture.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: wordless_chorus.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: touch_me_pt_2.id)
+  SetlistSong.create!(setlist_id: april_27_2016.id, song_id: one_big_holiday.id)
