@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
   loadDemoUser(e){
     e.preventDefault()
     this.props.loadDemo().then(() => {
-      this.props.history.push('/users/1')
+      this.props.history.push('/users/3')
     })
   }
 

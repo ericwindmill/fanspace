@@ -18,7 +18,7 @@ class LeftNav extends React.Component {
       <div className="left-nav">
         <Link to="/setlists" className="left-title">
           <div className="icon-ios-analytics"></div>
-          <h2 className="">fanspace</h2>
+          <h2 className="">Groovie</h2>
         </Link>
 
         <div className="left-nav-flex">

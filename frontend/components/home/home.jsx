@@ -12,12 +12,12 @@ const Home = () => (
         <div className="background">
 
         </div>
-          <h1>Metrics for Mega Fans</h1>
+          <h1>Metrics for MMJ Mega Fans</h1>
           <h3>Track the concerts you go to, and connect with other fans of the 'the best live band in the world.'</h3>
           <p> - L.A. Weekly </p>
           <Link className="btn landing-btn" to="/sign-up">Sign Up Today</Link>
             <div className="landing-learn-more">
-              <h4 className="landing-learn-more-text">Learn About MMJStatTracker</h4>
+              <h4 className="landing-learn-more-text">Learn About Groovie HQ</h4>
               <i className="fa fa-angle-double-down" aria-hidden="true"></i>
             </div>
         </div>
@@ -29,9 +29,9 @@ const Home = () => (
 
 
           <div className="container-2-copy">
-            <h1 className="header">What's FanSpace?</h1>
+            <h1 className="header">What's Groovie?</h1>
             <h2 className="discover">Discover </h2>
-            <h3 className="discover-copy">A library of MMJ's past show's setlists, posters, and bootlegs.</h3>
+            <h3 className="discover-copy">A library of My Morning Jacket's past show's setlists, posters, and bootlegs.</h3>
             <h2 className="connect">Connect</h2>
             <h3 className="connect-copy">Share your concert experiences with other My Morning Jacket fans.</h3>
             <h2 className="track">Track</h2>
