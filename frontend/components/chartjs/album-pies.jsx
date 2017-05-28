@@ -21,7 +21,6 @@ class AlbumPiePercent extends React.Component {
 		let currentAlbum = {};
 		this.props.data.forEach(album => {
 			if (album.title === albumTitle) {
-				
 				currentAlbum = album;
 			}
 		})
@@ -49,12 +48,22 @@ class AlbumPiePercent extends React.Component {
 	}
 
 	render() {
-		const tnFire = this.data("The Tennessee Fire")
+		const tnFire 				= "The Tennessee Fire"
+		const atDawn 				= this.data("At Dawn")
+		const itStillMoves 	= this.data("The Tennessee Fire")
+		const z 						= this.data("The Tennessee Fire")
+		const evilUrges 		= this.data("The Tennessee Fire")
+		const circuital 		= this.data("The Tennessee Fire")
+		const theWaterfall	= this.data("The Tennessee Fire")
+		
+		this.props.data.map(album => {
+			return {}
+		})
 
 		return(
 			<div>
-        <h2>Tennesee Fire</h2>
-				<Doughnut data={tnFire} />
+        <h2>{tnFire}</h2>
+				<Doughnut data={this.data(tnFire)} />
       </div>
 
 		)
