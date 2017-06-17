@@ -4,7 +4,7 @@ class Api::SetlistsController < ApplicationController
   end
 
   def index
-    @setlists = Setlist.all
+    @setlists = Setlist.includes(:songs, :attends)
   end
 
   def new
