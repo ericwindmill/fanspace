@@ -22,7 +22,7 @@ class SetlistIndexByYear extends React.Component {
       <main className="setlist-main">
         <LeftNav />
         <section className="setlist-index-component">
-          <h1>Browse By Year</h1>
+          <h1>Browse Setlists By Year</h1>
             <div>
               <ul className="setlist-by-list">
                 {setlists.map(year => {

@@ -22,7 +22,7 @@ class SetlistIndex extends React.Component {
       <main className="setlist-main">
         <LeftNav />
         <section className="setlist-index-component">
-          <h1> Explore the Shows </h1>
+          <h1> Explore the Setlists </h1>
             <div>
               <ul className="poster-index-grid">
                 {setlists.map(setlist => 

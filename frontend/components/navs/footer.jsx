@@ -15,7 +15,7 @@ class FooterNav extends React.Component {
         <div className="footer-grid-b">
           <a href='https://github.com/ericwindmill/fanspace' className='social-icon github'> <i className="fa fa-github" aria-hidden="true"></i></a>
           <a href='https://www.linkedin.com/in/eric-windmill-71843849/' className='social-icon linkedin'><i className="fa fa-linkedin-square" aria-hidden="true"></i></a>
-          <a href='mailto:ericwindmill@gmail.com' className='social-icon email'><i className="fa fa-envelope" aria-hidden="true"></i></a>
+          <a href='mailto:eric@ericwindmill.com.com' className='social-icon email'><i className="fa fa-envelope" aria-hidden="true"></i></a>
         </div>
 
         <div className="footer-grid-c">
