@@ -9,7 +9,7 @@ class FooterNav extends React.Component {
       <div className="footer">
 
         <div className="footer-grid-a">
-        <a href='mailto:ericwindmill@gmail.com'><h2 className="email-link">eric@fanspace.io</h2></a>
+        <a href='mailto:eric@ericwindmill.com'><h2 className="email-link">eric@ericwindmill.com</h2></a>
         </div>
 
         <div className="footer-grid-b">
