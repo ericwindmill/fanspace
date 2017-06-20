@@ -2,9 +2,9 @@ class Api::SetlistsController < ApplicationController
   def show
     @setlist = Setlist.find(params[:id])
   end
-
+# .includes(:setlist_songs).includes(:songs)
   def index
-    @setlists = Setlist.includes(:songs, :attends)
+    @setlists = Setlist.includes(:setlist_songs, :songs)
   end
 
   def new
