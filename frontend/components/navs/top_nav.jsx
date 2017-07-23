@@ -13,7 +13,7 @@ class TopNav extends React.Component {
     return (
       <div className="logged-in-nav">
         <Link className="nav-username grid-el-a" to="/setlists">{this.props.currentUser.username}</Link>
-        <NavLink className="nav-link grid-el-b" to="/" onClick={this.props.logout}>Sign Out</NavLink>
+        <NavLink className="nav-link grid-el-b" to="/home" onClick={this.props.logout}>Sign Out</NavLink>
       </div>
     )
   }
@@ -31,7 +31,7 @@ class TopNav extends React.Component {
     const renderComponent = this.props.currentUser ? this.loggedInNav() : this.loggedOutNav()
     return(
       <div className="top-nav">
-        <Link className="title" to='/'><div className="icon-ios-analytics"></div><h2>GroovieHQ</h2></Link>
+        <Link className="title" to='/home'><div className="icon-ios-analytics"></div><h2>GroovieHQ</h2></Link>
         {renderComponent}
       </div>
     )

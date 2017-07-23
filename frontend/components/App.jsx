@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, NavLink } from 'react-router-dom'
+import { Switch, Route, NavLink, Redirect } from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx'
 import SessionFormContainer from './home/session/session_form_container'
 import Home from './home/home'
@@ -15,7 +15,8 @@ import UserDetailContainer from './users/user_detail_container'
 const App = () => (
   <div className="app-component">
     <Switch>
-      <Route exact path='/' component={Home} />
+      <Route exact path='/home' component={Home} />
+      <Route exact path="/" render={() => <Redirect to="/home" />} />
       <ProtectedRoute exact path='/setlists/by-year' component={SetlistIndexByYear}/>
       <ProtectedRoute exact path='/setlists/by-city' component={SetlistIndexByCity}/>
       <ProtectedRoute path='/setlists/:setlistId' component={SetlistDetailContainer} />

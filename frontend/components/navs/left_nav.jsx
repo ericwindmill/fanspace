@@ -40,7 +40,7 @@ class LeftNav extends React.Component {
                 <p className="profile-name">{this.props.currentUser.username}</p>
               </NavLink>
             </div> 
-            <NavLink to='/'onClick={this.props.logout} className="left-link left-log-out">Log Out</NavLink>
+            <NavLink to='/home'onClick={this.props.logout} className="left-link left-log-out">Log Out</NavLink>
           </div>
           </div>
       </div>
