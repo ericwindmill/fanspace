@@ -14,15 +14,6 @@ section.module.parallax-1 {
   background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495762171/design/jim_tom_live_warm_gradient.png");
   height: 90vh;
 }
-section.module.parallax-2 {
-  background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
-  height: 90vh;
-}
-section.module.parallax-3 {
-  background-image: url("http://res.cloudinary.com/ericwindmill/image/upload/v1495466647/design/landing_background_1_jkhfyi.png");
-  height: 90vh;
-}
-
 
 section.module h2 {
   margin-bottom: 40px;
@@ -49,60 +40,6 @@ section.module.parallax {
   background-size: cover;
 }
 
-
-// @media all and (min-width: 600px) {
-//   section.module h2 {
-//     font-size: 42px;
-//   }
-//   section.module p {
-//     font-size: 20px;
-//   }
-//   section.module.parallax h1 {
-//     font-size: 96px;
-//   }
-// }
-// @media all and (min-width: 960px) {
-//   section.module.parallax h1 {
-//     font-size: 160px;
-//   }
-// }
-
-/* Makes a fixed background wrapper
-which the user cannot interact with */
-
-// .iframe-wrapper {
-//   position: fixed;
-//   top: -20px;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   z-index: -1;
-//   pointer-events: none;
-//   overflow: hidden;
-// }
-
-// /* Make the iframe keep an aspect ratio, and
-// position it in the middle of its parent wrapper*/
-
-// .iframe-wrapper iframe {
-//   width: 100vw;
-//   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-//   max-height: 100vh;
-//   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
-// <div className="iframe-wrapper">  
-//   <iframe src="https://player.vimeo.com/video/121352461?autoplay=1&loop=1&title=0&byline=0&portrait=0"></iframe>  
-// </div>
-  //         <img className="guitar-green" src="http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495592752/design/Flying-V-Green.png" />
-  //         <img className="guitar-blue" src="http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495592745/design/Flying-V-Blue.png" />
-  //         <img className="guitar-red" src="http://res.cloudinary.com/ericwindmill/image/upload/c_scale,w_500/v1495592754/design/Flying-V-Red.png" />
-
-
 /* ============================================================
   SECTIONS
 ============================================================ */
@@ -118,7 +55,6 @@ section.module.parallax > .container-1 > h1 {
   left: 50%;
   width: 80%;
   text-align: center;
-  // text-transform: uppercase;
   text-shadow: 0 0 10px rgba(0, 0, 0, .4);
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 700;
@@ -135,7 +71,6 @@ section.module.parallax > .container-1 > h3 {
   left: 50%;
   width: 50%;
   text-align: center;
-  // text-transform: uppercase;
   text-shadow: 0 0 10px rgba(0, 0, 0, .4);
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 400;
@@ -209,12 +144,10 @@ Container 2
 *******************************/
 .container.container-2 {
   margin: auto ;
-  // margin-top: 5%;
   
   position: relative;
   width: 80%;
 
-  // height: 80vh;
 
   > .container-2-copy {
     display: grid;
@@ -305,75 +238,14 @@ section.module > .container-2 h3 {
 .posters {
   box-shadow: 0 0 5px rgba(0, 0, 0, .8);
   width: 95%;
-  transition: all .3s ease-in-out;
-  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: grayscale(100%); /* FF 35+ */
+  transition: all .2s ease-in-out;
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%); 
   max-height: 500px;
-  width: auto;
   justify-self: center;
+
   &:hover {
-    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(0%); /* FF 35+ */
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);
   }
 }
-
-
-
-
-
-
-
-.guitar-green {
-  width: 45%;
-  height: auto;
-  transition: all .3s ease;
-  position: fixed;
-  top: 65%;
-  left: 99%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-  // &:hover{
-  //   top: 62%;
-  //   left: 88%;
-  // }
-}
-
-.guitar-blue {
-  width: 45%;
-  height: auto;
-  transition: all .2s ease;
-  position: absolute;
-  top: 60%;
-  left: 76%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-  // &:hover {
-  //   top: 52%;
-  //   left: 72%;
-  // }
-}
-
-.guitar-red {
-  width: 45%;
-  height: auto;
-  transition: all .3s ease;
-  position: absolute;
-  top: 55%;
-  left: 89%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-  // &:hover {
-  //   top: 48%;
-  //   left: 85%;
-  // }
-} 
-
-
-
-/*******************************
-Container 2
-*******************************/
-

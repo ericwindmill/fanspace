@@ -36,7 +36,7 @@ const Home = () => (
             <h3 className="connect-copy">Share your concert experiences with other My Morning Jacket fans.</h3>
             <h2 className="track">Track</h2>
             <h3 className="track-copy">Keep track of your personal metrics. The shows you've been to, the songs you've seen, and more.</h3>
-            <img className="sf-1 posters" src="http://res.cloudinary.com/ericwindmill/image/upload/v1495466648/posters/2012_08_03_pijwdn.jpg" />
+            <img className="posters" src="http://res.cloudinary.com/ericwindmill/image/upload/v1495466648/posters/2012_08_03_pijwdn.jpg" />
           </div>
         </div>
       </section>
