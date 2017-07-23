@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Groovie HQ
+=======
+# GroovieHQ
+>>>>>>> 97e0444f43f3f06ae4672f6e84ac0d1d6579a4c2
 
 [Groovie](https://fanspaceapp.herokuapp.com/#/) is a web application that allows mega-fans of My Morning Jacket connect and track their concert metrics. Users get to 'digitially collect' concert experiences and compare them with other fans. Are you sure you're even a fan if you don't have the metrics to prove it?
 
